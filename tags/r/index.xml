@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>R on </title>
+    <link>/tags/r/</link>
+    <description>Recent content in R on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Thu, 10 Jan 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/r/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Print(Hello, Brazil!): Uma Análise Quantitativa da Posse de Bolsonaro</title>
+      <link>/post/possedobonoro/</link>
+      <pubDate>Thu, 10 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/possedobonoro/</guid>
+      <description>IntroduçãoDurante períodos eleitorais, a discussão sobre métodos estatísticos sempre vem à tona devido à constante divulgação de pesquisas eleitorais. Em particular, a constante propagação de falácias pelo então candidato Jair Bolsonaro e a discrepância entre os resultados apontados pelas pesquisas e aqueles apurados nas urnas aumentaram muito a disconfiança sobre os métodos utilizados. Para mais detalhes a respeito da metodologia empregada em pesquisas eleitorais, recomendamos este artigo.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,1825 @@
+<!DOCTYPE html>
+<html lang="en-US" />
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    <title>Posse do Bonoro &middot; </title>
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="canonical" href="/post/wtf-is-slug/" />
+
+     <meta name="description" content="IntroduçãoDurante períodos eleitorais, a discussão sobre métodos estatísticos sempre vem à tona devido à constante divulgação de pesquisas eleitorais. Em parti" /> 
+
+     
+    
+    <meta name="twitter:card" content="summary"/>
+    
+ 
+    <meta name="twitter:title" content="Posse do Bonoro"/>
+    <meta name="twitter:description" content="IntroduçãoDurante períodos eleitorais, a discussão sobre métodos estatísticos sempre vem à tona devido à constante divulgação de pesquisas eleitorais. Em parti"/>
+    <meta name="twitter:url" content="/post/wtf-is-slug/" />
+    <meta name="twitter:site" content="@Arilove_"/>
+
+    <meta property="og:site_name" content="" />
+    <meta property="og:title" content="Posse do Bonoro &middot; blablabla" />
+    <meta property="og:url" content="/post/wtf-is-slug/" />
+    <meta property="article:publisher" content="https://www.facebook.com/arielserranoni" />
+
+    <meta property="og:type" content="article" />
+    <meta property="og:description" content="IntroduçãoDurante períodos eleitorais, a discussão sobre métodos estatísticos sempre vem à tona devido à constante divulgação de pesquisas eleitorais. Em parti" />
+
+    <meta property="article:published_time" content="2019-01-10T00:00:00Z" />
+    <meta property="article:tag" content="R" /><meta property="article:tag" content="R" /><meta property="article:tag" content="NLP" />
+
+    <meta property="og:image" content="/img/blog-cover.jpg"/>
+
+    <meta name="generator" content="Hugo 0.54.0" />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="/built/screen.css" /> 
+    <link rel="stylesheet" type="text/css" href="/css/casper-two.css" /> 
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css" />
+    
+
+     
+
+</head>
+
+
+<body class="post-template">
+  <div class="site-wrapper"> 
+
+<header class="site-header outer">
+  <div class="inner">
+    <nav class="site-nav">
+      <div class="site-nav-left">
+        <a class="site-nav-logo" href="#"><img src="/hugo-logo.png" alt="blablabla" /></a>
+
+        <ul class="nav" role="menu">
+        
+        
+        
+            <li class="" role="menuitem">
+              <a href="/">Home</a>
+            </li>
+        
+            <li class="" role="menuitem">
+              <a href="/about/">About me</a>
+            </li>
+        
+            <li class="" role="menuitem">
+              <a href="/categories/">Categories</a>
+            </li>
+        
+      </ul></div>
+
+      <div class="site-nav-right">
+        <div class="social-links">
+                    <a class="social-link social-link-fb" href="https://www.facebook.com/arielserranoni" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg></a>
+
+                    <a class="social-link social-link-tw" href="https://twitter.com/Arilove_" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg></a>
+
+                    <a class="social-link" href="https://github.com/aserranoni" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
+
+                    <a class="social-link" href="https://www.linkedin.com/in/ariel-serranoni-1b762815a" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 50 512 512"><path d="M150.65,100.682c0,27.992-22.508,50.683-50.273,50.683c-27.765,0-50.273-22.691-50.273-50.683 C50.104,72.691,72.612,50,100.377,50C128.143,50,150.65,72.691,150.65,100.682z M143.294,187.333H58.277V462h85.017V187.333z M279.195,187.333h-81.541V462h81.541c0,0,0-101.877,0-144.181c0-38.624,17.779-61.615,51.807-61.615 c31.268,0,46.289,22.071,46.289,61.615c0,39.545,0,144.181,0,144.181h84.605c0,0,0-100.344,0-173.915 s-41.689-109.131-99.934-109.131s-82.768,45.369-82.768,45.369V187.333z" /></svg></a>
+
+                    <a class="social-link" href="https://medium.com/@arielserranoni" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 195 195"><path d="M46.5340803,65.2157554 C46.6968378,63.6076572 46.0836,62.018231 44.8828198,60.93592 L32.6512605,46.2010582 L32.6512605,44 L70.6302521,44 L99.9859944,108.380952 L125.794585,44 L162,44 L162,46.2010582 L151.542017,56.2281011 C150.640424,56.9153477 150.193188,58.0448862 150.380019,59.1628454 L150.380019,132.837155 C150.193188,133.955114 150.640424,135.084652 151.542017,135.771899 L161.755369,145.798942 L161.755369,148 L110.38282,148 L110.38282,145.798942 L120.963119,135.527337 C122.002801,134.487948 122.002801,134.182246 122.002801,132.592593 L122.002801,73.0417402 L92.585901,147.755438 L88.6106443,147.755438 L54.3622782,73.0417402 L54.3622782,123.115814 C54.0767278,125.221069 54.7759199,127.3406 56.2581699,128.863022 L70.0186741,145.55438 L70.0186741,147.755438 L31,147.755438 L31,145.55438 L44.7605042,128.863022 C46.2319621,127.338076 46.8903838,125.204485 46.5340803,123.115814 L46.5340803,65.2157554 Z"/></svg></a>
+        </div>  
+            
+      </div>
+
+    </nav>  
+
+  </div>
+</header>
+
+<main id="site-main" class="site-main outer" role="main">
+  <div class="inner">
+    
+      <article class="post-full post"> 
+    <header class="post-full-header">
+        <section class="post-full-meta">
+            <time class="post-full-meta-date" datetime="2019-01-10">10 January 2019</time>
+                <span class="date-divider">/</span> <a href="/tags/r/">#R</a>&nbsp;<a href="/tags/r/">#R</a>&nbsp;
+        </section>
+        <h1 class="post-full-title">Posse do Bonoro</h1>
+    </header>
+    
+    <figure class="post-full-image" style="background-image: url(/defimg/4.jpg)">
+    </figure>
+
+    <section class="post-full-content">
+        <div class="kg-card-markdown">
+        
+<script src="/rmarkdown-libs/kePrint/kePrint.js"></script>
+<script src="/rmarkdown-libs/htmlwidgets/htmlwidgets.js"></script>
+<script src="/rmarkdown-libs/chart.js/./dist/Chart.min.js"></script>
+<script src="/rmarkdown-libs/chartJSRadar-binding/chartJSRadar.js"></script>
+
+
+<div id="introducao" class="section level2">
+<h2>Introdução</h2>
+<p>Durante períodos eleitorais, a discussão sobre métodos estatísticos sempre vem à tona devido à constante divulgação de pesquisas eleitorais. Em particular, a constante propagação de falácias pelo então candidato Jair Bolsonaro e a discrepância entre os resultados apontados pelas pesquisas e aqueles apurados nas urnas aumentaram muito a disconfiança sobre os métodos utilizados. Para mais detalhes a respeito da metodologia empregada em pesquisas eleitorais, recomendamos <a href="https://www.curso-r.com/blog/2018-08-31-eleitorais">este artigo</a>.</p>
+<p>Aqui vamos expor o processo que percorremos ao realizar a análise contida <a href="https://www.linkedin.com/pulse/printhello-brazil-uma-an%C3%A1lise-do-discurso-de-posse-dos-anjos-junior">nesta série</a>. Para não deixar dúvidas aos mais desavisados, análise de texto não tem <strong>NADA A VER</strong> com pesquisas eleitorais. A potencialmente aparente semelhança que pode ter vindo à mente do leitor se deve somente ao contexto político em que métodos estatísticos estão sendo empregados. Claro, isso não implica que haja qualquer relação entre tais métodos.</p>
+<p>Nossa intenção aqui é expor os resultados que obtivemos de uma maneira mais crua, tocando levemente em aspectos técnicos. Recomendamos o artigo para aqueles curiosos que leram algum dos nossos textos e também para quem quer usar o R para fins semelhantes. Sugerimos a ambos os grupos que façam o download do código, seja para fazer experimentos e extrair suas próprias conclusões a respeito dos discursos presidenciais ou ainda para examinar em maior detalhe os formatos-padrão de tabelas para bibliotecas importantes em análise de textos, como a <code>quanteda</code>, a <code>tidytext</code> e a <code>stm</code>.</p>
+</div>
+<div id="quatro-principios-em-analise-automatizada-de-textos" class="section level2">
+<h2>Quatro Princípios em Análise Automatizada de Textos</h2>
+<p>A ideia de analisar muitos textos simultaneamente parece muito atrativa aos olhos de quem tem gosto pela leitura. Isso se deve à ‘promessa’ de aumentar o número de leituras. Porém, a análise quantitativa de um texto não substitui sua leitura. Este <a href="https://web.stanford.edu/~jgrimmer/tad2.pdf">texto</a> descreve algumas boas práticas para quem faz e também para quem interpreta análises quantitativas de textos. Colocamos para o leitor uma versão resumida dos 4 princípios apresentados na seção 2.</p>
+<p>1.<strong>Todos os Modelos Quantitativos de Linguagem Estão Errados - Mas Alguns são Úteis</strong>: O processo de gerar dados em forma de texto é muito complicado e nem mesmo especialistas em linguística sabem ao certo como funcionam as estruturas de dependência nos, e entre os, diferentes níveis hierarquicos de um texto (capítulos, parágrafos, frases, palavras e etc). Entretanto, ainda conseguimos extrair informações e ideias úteis a partir de modelos quantitativos. Em suma, a qualidade do modelo é descrita pela sua capacidade de cumprir as tarefas para as quais é empregado</p>
+<p>2.<strong>Métodos Quantitativos Ajudam Humanos e Não os Substituem</strong>: Métodos de análise quantitativa já demonstraram boa performance em uma grande variedade de problemas importantes. Contudo, tais técnicas não substituem o pensamento crítico e leitura cuidadosa feita pelos pesquisadores. De fato, conhecer a fundo os dados é essencial para se fazer uma boa análise</p>
+<p>3.<strong>Não Existe um Método Globalmente Ótimo para Análise de Texto</strong>: Diferentes conjuntos de dados nos levam a diferentes perguntas, e cada pergunta merece atenção especial, sendo nescessárias técnicas e modelos (ou “famílias” destes) diferentes para cada propósito. O artigo citado acima também apresenta um resumo das técnicas usadas para alguns objetivos.</p>
+<p>4.<strong>Validar, Validar, Validar</strong>: Esse princípio está muito relacionado à aplicação de modelos de machine learning para a análise de textos. Uma vez que não existe um método globalmente ótimo, é muito importante testar várias possibilidades e comparar seus desempenhos ao se fazer uma análise. É muito importante evitar usar resultados obtidos por um modelo não validado.</p>
+</div>
+<div id="colocando-a-mao-na-massa---importacao-e-tratamento-dos-dados" class="section level2">
+<h2>Colocando a Mão na Massa - Importação e Tratamento dos Dados</h2>
+<p>O primeiro passo para toda e qualquer análise é importar dados para sua plataforma favorita. Aqui, vamos usar uma base coletada no site da <a href="http://www.biblioteca.presidencia.gov.br/publicacoes-oficiais">biblioteca do governo federal</a>. Ela consiste dos discursos de posse dos presidentes Fernando Henrique Cardoso, Luiz Inácio Lula da Silva e Dilma Roussef, cada um em seus dois mandatos, Michel Temer e Jair Bolsonaro. Toda a análise é feita utilizando o RStudio e os pacotes que são carregados a seguir:</p>
+<pre class="r"><code>library(lexiconPT) # Análise de Sentimentos em português
+library(tidyr) # formatação de dados
+library(dplyr) # Tratamento dos gráficos
+library(ggplot2) # Visualizações
+library(igraph) # Fazer Grafos
+library(ggraph) # Visualizar grafos no estilo ggplot
+library(gridExtra) # Mostrando gráficos simultâneamente
+library(tidytext) # Tratamento de texto (tabelas)
+library(stringr) # Tratamento de texto (strings)
+library(corpus) # StopWords
+library(tm)
+library(ggwordcloud) # Nuvens de palavras no estilo ggplot
+library(knitr) # Markdown
+library(kableExtra) # create a nicely formated HTML table
+library(formattable) # for the color_tile function
+library(tidyverse) # tudo de melhor para o R
+library(forcats)
+library(stm) # Modelagem de tópicos
+library(quanteda) # Tratamento de texto
+library(drlib) # função reorder... que é importante para a beleza dos gráficos
+library(radarchart) # Gráficos radar</code></pre>
+<p>Iniciamos carregando a nossa base de dados, juntamente com outras tabelas que contém a traduções dos textos para a língua inglesa. Essas traduções serão importantes e uma lista de <em>stopwords</em>, que são palavras que ocorrem naturalmente muitas vezes em uma língua e assim acabam viesando este tipo de análise. Artigos como “a” e “o” e preposições como “de” e “para” são exemplos de palavras que tendem a aparecer muitas vezes em qualquer texto escrito em português.</p>
+<pre class="r"><code>dados &lt;- read.csv(&quot;dados.csv&quot;, stringsAsFactors = FALSE)[, -1]
+
+names(dados) &lt;- c(&quot;V1&quot;, &quot;presver&quot;, &quot;ano&quot;, &quot;presidente&quot;)
+
+traduc &lt;- read.csv(&quot;traducao.csv&quot;, stringsAsFactors = FALSE)
+
+trnlst &lt;- read.csv(&quot;trnslt.csv&quot;, stringsAsFactors = FALSE)
+
+stp_wrds &lt;- corpus::stopwords_pt
+
+traduc$translatedText[4] &lt;- &quot;come away, flame this dream&quot;</code></pre>
+<p>Agora, vamos definir duas funções que serão nescessárias para o nosso trabalho. A primeira delas é projetada para o tratamento dos dados, colocando todas as palavras em letra minúscula para que não tenhamos distinções indesejadas. Além disso, removemos pontuações e outras “sujeiras” dos dados. A segunda função tem o propósito de substituir a função <code>bind_tf_idf</code> do pacote <code>tidytext</code>. Não ousaremos dizer que a função está errada sem olhar seu código, entretanto acreditamos que ela atribui TF-IDF zero para todas as palavras que aparecem em todos os documentos. Recomendamos que confiram seus resultados ao usar <code>bind_tf_idf</code>.</p>
+<pre class="r"><code>extrai_palavras &lt;- function(df, opt) {
+  ## letra minuscula
+  df[, 1] &lt;- tolower(df[, 1])
+  ## tira quebras de linha e stopwords
+  for (i in seq_along(df$V1)) {
+    df[i, 1] &lt;- gsub(&quot;[\n“”–—]&quot;, &quot; &quot;, removeWords(df[i, 1], stp_wrds))
+  }
+  ## cria vetor de palavras
+  palavras &lt;- unlist(str_split(df$V1[1:NROW(df)], &quot; +&quot;))
+  # tira pontuação
+  palavras &lt;- (removePunctuation(palavras))
+  # tira espaços vazios
+  palavras &lt;- palavras[str_count(palavras) &gt; 1]
+
+  ## cria contagem
+  if (opt == &quot;count&quot;) {
+    palavras_count &lt;- table(palavras)
+
+    return(palavras_count)
+  }
+  ## unique
+  if (opt == &quot;unique&quot;) {
+    return(unique(palavras))
+  }
+}
+
+## Função caseira para calcular o TF-IDF
+
+tf_idf_caseirao &lt;- function(tfrases) {
+  tfrases &lt;- tfrases %&gt;% mutate(idf = 0)
+  for (i in 1:nrow(tfrases)) {
+    tfrases$idf[i] &lt;- 1 / filter(tfrases, word == tfrases$word[i]) %&gt;% nrow()
+  }
+  tfrases &lt;- tfrases %&gt;% mutate(tf_idf = n * idf)
+}</code></pre>
+<p>Agora, usamos a função <code>extrai_palavras</code> para obter os data frames <code>tab_frase</code> e <code>tidyfrase</code>, que estão nos formatos ideais para trabalharmos com os pacotes necessários. Vamos usá-los em grande parte do trabalho.</p>
+<p><strong>AVISO</strong>: Abrir a tabela <code>tab_frase</code> pode travar seu computador!</p>
+<pre class="r"><code>## TABELA TIDYFRASE
+# fazendo a tabela de ocorrencias de palavras por frase
+
+tab_frase &lt;-
+  data.frame(
+    frases = unlist(str_split(dados[1, 1], &quot;[.]&quot;)),
+    stringsAsFactors = FALSE,
+    doc = rep(dados$ano[1]),
+    pres = rep(dados$presidente[1])
+  )
+
+for (i in 2:NROW(dados)) {
+  tab_frase &lt;- rbind(
+    tab_frase,
+    data.frame(
+      frases = str_split(dados[i, 1], &quot;[.]&quot;)[[1]],
+      stringsAsFactors = FALSE,
+      doc = rep(dados$ano[i]),
+      pres = rep(dados$presidente[i])
+    )
+  )
+}
+
+tab_frase[, 1] &lt;- removePunctuation(tab_frase[, 1])
+
+aux &lt;-
+  matrix(0,
+    nrow = nrow(tab_frase),
+    ncol = length(extrai_palavras(dados, &quot;unique&quot;))
+  )
+
+names(aux) &lt;- extrai_palavras(dados, &quot;unique&quot;)
+
+tab_frase &lt;- cbind(tab_frase, aux)
+
+names(tab_frase) &lt;-
+  c(&quot;frases&quot;, &quot;docs&quot;, &quot;presidas&quot;, extrai_palavras(dados, &quot;unique&quot;))
+
+nomes &lt;- names(tab_frase)
+
+tab_frase[-c(163, 338, 548), ] # frases so com espaco
+
+# contando as palavras por frase
+
+for (i in seq_along(tab_frase[, 1])) {
+  x &lt;- as.data.frame(table(unlist(str_split(tab_frase[i, 1], &quot; &quot;))),
+    stringsAsFactors = FALSE
+  )[-1, ]
+
+  for (j in seq_along(x[, 1])) {
+    cnt_aux &lt;- which(nomes == x[j, 1])
+
+    tab_frase[i, cnt_aux] &lt;- x[j, 2]
+  }
+}
+
+tidyfrase &lt;- tab_frase %&gt;% select(frases, docs, presidas)
+tidyfrase &lt;- tidyfrase %&gt;% mutate(nfrase = row_number())
+tidyfrase &lt;- tidyfrase %&gt;% unnest_tokens(word, frases)
+tidyfrase &lt;- tidyfrase %&gt;% filter(!(word %in% stp_wrds))
+
+
+# pode ser feito direto com dados tb!
+un_frases &lt;- tab_frase %&gt;%
+  unnest_tokens(word, frases) %&gt;%
+  count(docs, word, sort = TRUE)
+
+# find the words most distinctive to each document
+tf_frases &lt;- un_frases %&gt;%
+  bind_tf_idf(word, docs, n) %&gt;%
+  arrange(desc(tf_idf))</code></pre>
+</div>
+<div id="primeiras-vizualizacoes---nuvens-de-palavras" class="section level2">
+<h2>Primeiras Vizualizações - Nuvens de Palavras</h2>
+<p>Agora vamos iniciar nosso passeio pelos dados. O caminho que iremos tomar é de fora para dentro. Isto é, começamos respondendo perguntas simples como “Quantas palavras diferentes foram ditas em cada fala?” e depois buscaremos respostas para, por exemplo, “Como medir a similaridade entre dois textos?” e “Quais são os tópicos predominantes em discursos presidenciais?”.</p>
+<p>Começamos com nuvens de palavras mostrando as 30 palavras mais faladas em cada um dos discursos que analisaremos. Observe que, sem os títulos em cada gráfico, fica difícil capturar as diferenças entre os discursos. Parece que existem palavras, como “povo”, “Brasil” e “país” são quase obrigatóriamente repetidas muitas vezes no discurso inaugural de um presidente.</p>
+<pre class="r"><code># BASEADA NA FREQUENCIA
+
+for (i in 1:nrow(dados)) {
+  aux &lt;- arrange(as.data.frame(extrai_palavras(dados[i, ], &quot;count&quot;)), desc(Freq))
+  (ggplot(aux[1:30, ], aes(label = palavras, size = Freq)) +
+    geom_text_wordcloud() +
+    scale_size_area(max_size = 10) +
+    ggtitle(paste(&quot;Nuvem de frequência no discurso de&quot;, as.character(dados$ano[i]), sep = &quot; &quot;)) +
+    theme_minimal()) %&gt;% print()
+}</code></pre>
+<p><img src="/post/2019-01-10-possedobonoro_files/figure-html/nuvabs-1.png" width="672" /><img src="/post/2019-01-10-possedobonoro_files/figure-html/nuvabs-2.png" width="672" /><img src="/post/2019-01-10-possedobonoro_files/figure-html/nuvabs-3.png" width="672" /><img src="/post/2019-01-10-possedobonoro_files/figure-html/nuvabs-4.png" width="672" /><img src="/post/2019-01-10-possedobonoro_files/figure-html/nuvabs-5.png" width="672" /><img src="/post/2019-01-10-possedobonoro_files/figure-html/nuvabs-6.png" width="672" /><img src="/post/2019-01-10-possedobonoro_files/figure-html/nuvabs-7.png" width="672" /><img src="/post/2019-01-10-possedobonoro_files/figure-html/nuvabs-8.png" width="672" /></p>
+<p>Os próximos gráficos também são nuvens de palavras, porém carregam diferenças em relação às vizualizações anteriores. A primeira delas é a função utilizada. Embora sejam ambas da biblioteca <code>ggwordcloud</code>, a primeira se comporta como uma opção para o <em>layer</em> <code>geom</code> do pacote <code>ggplot2</code> e se encaixa perfeitamente com os outros recursos desse pacote. Enquanto isso, a função <code>ggwordcloud2</code> tem o intuito de produzir resultados similares aos obtidos usando o pacote <code>wordcloud2</code>. Além disso, no ’<em>chunk</em> acima usamos o ranqueamento de uma palavra com relação à frequência para determinar se uma palavra apareceria ou não na nuvem de palavras. Abaixo, o critério é outro. Calculamos a média e o desvio padrão da frequência de palavras no texto e escolhemos as palavras com frequência maior ou igual à média mais duas vezes o desvio padrão.</p>
+<pre class="r"><code>## Nuvem - desvio padrão
+
+for (i in 1:nrow(dados)) {
+  aux &lt;- arrange(as.data.frame(extrai_palavras(dados[i, ], &quot;count&quot;)), desc(Freq))
+  med &lt;- mean(aux$Freq)
+  sd &lt;- sd(aux$Freq)
+  aux &lt;- aux %&gt;% filter(Freq - med &gt; 2 * sd)
+  ggwordcloud2(aux) %&gt;% print()
+}</code></pre>
+<p><img src="/post/2019-01-10-possedobonoro_files/figure-html/nuvstat-1.png" width="672" /><img src="/post/2019-01-10-possedobonoro_files/figure-html/nuvstat-2.png" width="672" /><img src="/post/2019-01-10-possedobonoro_files/figure-html/nuvstat-3.png" width="672" /><img src="/post/2019-01-10-possedobonoro_files/figure-html/nuvstat-4.png" width="672" /><img src="/post/2019-01-10-possedobonoro_files/figure-html/nuvstat-5.png" width="672" /><img src="/post/2019-01-10-possedobonoro_files/figure-html/nuvstat-6.png" width="672" /><img src="/post/2019-01-10-possedobonoro_files/figure-html/nuvstat-7.png" width="672" /><img src="/post/2019-01-10-possedobonoro_files/figure-html/nuvstat-8.png" width="672" /></p>
+</div>
+<div id="mil-jeitos-de-contar-palavras" class="section level2">
+<h2>Mil Jeitos de Contar Palavras</h2>
+<p>As tabelas a seguir apresentam algumas medidas referentes ao número de palavras faladas em cada discurso e por cada presidente. A coluna <code>num_words</code> apresenta o número total de palavras em cada instância. Além disso, a coluna <code>uniq</code> apresenta o número de palavras distintas em cada contexto e a coluna <code>stp</code> contém o número de <em>stopwords</em>. Finalmente, a coluna <code>rep</code> contém a razão <code>uniq</code>/<code>num_words</code>. De certa forma, o resultado dessa conta mede a variedade linguística em um documento.</p>
+<p>Pela primeira vez, estamos dividindo a análise em duas perspectivas. Comparação por discursos ou presidentes. Esses dois tipos de abordagem vão ser amplamente aplicados daqui pra frente, às vezes dando lugar a um olhar mais geral. Aqui é importante destacar que para alguns fins, será importante duplicar as medidas em relação aos presidentes Temer e Bolsonaro, pois estes tiveram apenas um discurso de posse, enquanto FHC, Lula e Dilma tiveram dois.</p>
+<p>De maneira simplificada, a nescessidade de duplicar as estatísticas de Temer e Bolsonaro é dada pelas comparações que fazemos. Por exemplo, num contexto em que estamos verificando quais palavras foram mais faladas por CADA presidente, essa ‘gambiarra’ não é nescessária pois, de qualquer maneira, a ordenação dessas estatísticas seria a mesma e a diferença entre elas proporcional. Por outro lado, num contexto em que investigamos quantas vezes cada presidente falou uma determinada palavra, aí sim é indispensável que alteremos as estatísticas para preservar a justiça na comparação ENTRE presidentes.</p>
+<p>Uma outra alternativa para lidar com o problema da comparação ENTRE presidentes seria calcular a frequência relativa de uma palavra nas falas de um presidente, assim, a potencial maior ocorrência das palavras ditas por Lula, Dilma e FHC se ‘dissolve’ no maior número total de palavras ditas pelos mesmos.</p>
+<pre class="r"><code># contagem total de palavras sem retirar stopwords
+full_word_count &lt;- dados %&gt;%
+  unnest_tokens(word, V1) %&gt;%
+  group_by(ano) %&gt;%
+  summarise(num_words = n(), uniq = length(unique(word)), stp = length((word %in% stp_wrds)[word %in% stp_wrds == TRUE]), rep = length(unique(word)) / n()) %&gt;%
+  arrange(desc(num_words))
+
+full_word_count %&gt;%
+  ungroup(num_words, ano) %&gt;%
+  mutate(num_words = color_tile(&quot;white&quot;, &quot;lightgray&quot;)(num_words)) %&gt;%
+  mutate(stp = color_tile(&quot;white&quot;, &quot;lightpink&quot;)(stp)) %&gt;%
+  mutate(uniq = color_tile(&quot;white&quot;, &quot;lightblue&quot;)(uniq)) %&gt;%
+  mutate(rep = color_tile(&quot;white&quot;, &quot;lightgreen&quot;)(rep)) %&gt;%
+  kable(&quot;html&quot;, escape = FALSE, align = &quot;c&quot;, caption = &quot;Total de Palavras por Discurso&quot;) %&gt;%
+  kable_styling(
+    bootstrap_options =
+      c(&quot;striped&quot;, &quot;condensed&quot;, &quot;bordered&quot;),
+    full_width = FALSE
+  )</code></pre>
+<table class="table table-striped table-condensed table-bordered" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:wordcounttable">Table 1: </span>Total de Palavras por Discurso
+</caption>
+<thead>
+<tr>
+<th style="text-align:center;">
+ano
+</th>
+<th style="text-align:center;">
+num_words
+</th>
+<th style="text-align:center;">
+uniq
+</th>
+<th style="text-align:center;">
+stp
+</th>
+<th style="text-align:center;">
+rep
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center;">
+2015
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #d3d3d3">4561</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #add8e6">1468</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffb6c1">1994</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.3218592</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+2003
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #dbdbdb">3883</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #afd9e6">1440</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc2cb">1721</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #dffadf">0.3708473</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+2007
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #dcdcdc">3755</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #b7dce9">1347</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc6cf">1636</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #e7fbe7">0.3587217</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+2011
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #dedede">3617</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #c0e1ec">1231</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc9d1">1574</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #f3fdf3">0.3403373</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+1995
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #e2e2e2">3266</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #c1e1ec">1227</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffced5">1485</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #dcf9dc">0.3756889</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+2016
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #e9e9e9">2744</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #d2e9f1">1017</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd9df">1231</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #dffadf">0.3706268</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+1999
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #eaeaea">2633</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #d0e8f0">1044</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffdae0">1215</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #cef7ce">0.3965059</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+2019
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">990</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">489</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">446</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #90ee90">0.4939394</span>
+</td>
+</tr>
+</tbody>
+</table>
+<pre class="r"><code># contagem total de palavras sem retirar stopwords
+full_word_count &lt;- dados %&gt;%
+  unnest_tokens(word, V1) %&gt;%
+  group_by(presidente) %&gt;%
+  summarise(num_words = n(), uniq = length(unique(word)), stp = length((word %in% stp_wrds)[word %in% stp_wrds == TRUE]), rep = length(unique(word)) / n()) %&gt;%
+  arrange(desc(num_words))
+
+
+full_word_count %&gt;%
+  ungroup(num_words, presidente) %&gt;%
+  mutate(num_words = color_tile(&quot;white&quot;, &quot;lightgray&quot;)(num_words)) %&gt;%
+  #  mutate(presidente = color_bar(&quot;lightgray&quot;)(presidente)) %&gt;%
+  mutate(stp = color_tile(&quot;white&quot;, &quot;lightpink&quot;)(stp)) %&gt;%
+  mutate(uniq = color_tile(&quot;white&quot;, &quot;lightblue&quot;)(uniq)) %&gt;%
+  mutate(rep = color_tile(&quot;white&quot;, &quot;lightgreen&quot;)(rep)) %&gt;%
+  kable(&quot;html&quot;, escape = FALSE, align = &quot;c&quot;, caption = &quot;Total de Palavras por Presidente&quot;) %&gt;%
+  kable_styling(
+    bootstrap_options =
+      c(&quot;striped&quot;, &quot;condensed&quot;, &quot;bordered&quot;),
+    full_width = FALSE
+  )</code></pre>
+<table class="table table-striped table-condensed table-bordered" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:wordcounttable">Table 1: </span>Total de Palavras por Presidente
+</caption>
+<thead>
+<tr>
+<th style="text-align:center;">
+presidente
+</th>
+<th style="text-align:center;">
+num_words
+</th>
+<th style="text-align:center;">
+uniq
+</th>
+<th style="text-align:center;">
+stp
+</th>
+<th style="text-align:center;">
+rep
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center;">
+dilma
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #d3d3d3">8178</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #b1d9e7">2165</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffb6c1">3568</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0.2647347</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+lula
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #d6d6d6">7638</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #add8e6">2251</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffbac5">3357</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #f0fcf0">0.2947107</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+fhc
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #e0e0e0">5899</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #bddfeb">1898</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffcad2">2700</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #e3fae3">0.3217494</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+temer
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #f4f4f4">2744</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #e6f3f7">1017</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffecef">1231</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #cbf7cb">0.3706268</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+bolsonaro
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">990</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">489</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">446</span>
+</td>
+<td style="text-align:center;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #90ee90">0.4939394</span>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Agora que já sabemos quantas palavras foram ditas nas ocasiões estudadas e temos uma idéia sobre a quantidade de repetição em cada uma, vamos reconhecer que ainda não sabemos quase nada sobre o que de fato foi dito. Em seguida, queremos ter uma visão geral sobre o comprimento das palavras utilizadas. Para isso, comparamos as distribuições dessa quantidade no geral, em cada discurso, de cada presidente, e na língua portuguesa. Obtivemos uma aproximação para a distribuição geral na língua através dos dados <code>sentiLex_lem_PT02</code> que estão disponíveis juntamente com o pacote <code>lexiconPT</code>.</p>
+<p>Nas vizualizações a seguir temos a distribuição do comprimento das palavras conforme mencionado acima. A altura de cada barra representa o número de palavras com um certo número de letras. Enquanto isso, a cor de uma barra representa o número de termos distintos com aquele comprimento que foram ditos. Quanto mais clara a barra, mais termos diferentes.</p>
+<pre class="r"><code>#####################
+
+# word length dist
+
+word_lengths &lt;- dados %&gt;%
+  unnest_tokens(word, V1) %&gt;%
+  mutate(word_length = nchar(word)) %&gt;%
+  filter(!(word %in% stp_wrds))
+
+word_lengths %&gt;%
+  ggplot(aes(word_length),
+    binwidth = 1
+  ) +
+  geom_histogram(aes(fill = ..count..),
+    breaks = seq(1, max(word_lengths$word_length), by = 2),
+    show.legend = FALSE
+  ) +
+  labs(x = &quot;Comprimento&quot;, y = &quot;Frequência&quot;) +
+  ggtitle(&quot;Distribuição do Comprimento de Palavras no Geral&quot;) +
+  theme(
+    plot.title = element_text(hjust = 0.5),
+    panel.grid.minor = element_blank()
+  )</code></pre>
+<p><img src="/post/2019-01-10-possedobonoro_files/figure-html/wordlength-1.png" width="672" /></p>
+<pre class="r"><code>#####################
+
+# word length dist por presidente
+
+
+word_lengths %&gt;%
+  ggplot(aes(word_length, fill = presidente),
+    binwidth = 1
+  ) +
+  geom_histogram(aes(fill = ..count..),
+    breaks = seq(1, max(word_lengths$word_length), by = 2),
+    show.legend = FALSE
+  ) +
+  facet_wrap(~presidente, scales = &quot;free&quot;, labeller = labeller(presidas = c(bolsonaro = &quot;Bolsonaro&quot;, dilma = &quot;Dilma&quot;, fhc = &quot;FHC&quot;, lula = &quot;Lula&quot;, temer = &quot;Temer&quot;))) +
+  labs(x = &quot;Comprimento&quot;, y = &quot;Frequência&quot;) +
+  ggtitle(&quot;Distribuição do Comprimento de Palavras por Presidente&quot;) +
+  theme(
+    plot.title = element_text(hjust = 0.5),
+    panel.grid.minor = element_blank()
+  )</code></pre>
+<p><img src="/post/2019-01-10-possedobonoro_files/figure-html/wordlength-2.png" width="672" /></p>
+<pre class="r"><code># word length dist por doc
+
+
+word_lengths %&gt;%
+  ggplot(aes(word_length, fill = ano),
+    binwidth = 1
+  ) +
+  geom_histogram(aes(fill = ..count..),
+    breaks = seq(1, max(word_lengths$word_length), by = 2),
+    show.legend = FALSE
+  ) +
+  facet_wrap(~ano, scales = &quot;free&quot;) +
+  labs(x = &quot;Comprimento&quot;, y = &quot;Frequência&quot;) +
+  ggtitle(&quot;Distribuição do comprimento de palavras&quot;) + theme(
+    plot.title = element_text(hjust = 0.5),
+    panel.grid.minor = element_blank()
+  )</code></pre>
+<p><img src="/post/2019-01-10-possedobonoro_files/figure-html/wordlength-3.png" width="672" /></p>
+<pre class="r"><code>## Comparando dentro da lingua usando a tabela sentilex
+
+distpcomp &lt;- sentiLex_lem_PT02 %&gt;% as.data.frame() %&gt;% select(term) %&gt;% mutate(tam = nchar(term))
+
+distpcomp %&gt;%
+  ggplot(aes(tam, fill = ano),
+    binwidth = 1
+  ) +
+  geom_histogram(aes(fill = ..count..),
+    breaks = seq(1, max(word_lengths$word_length), by = 2),
+    show.legend = FALSE
+  ) +
+  ggtitle(&quot;Distribuição do comprimento de palavras na língua&quot;) +
+  labs(x = &quot;Comprimento&quot;, y = &quot;Frequência&quot;) +
+  theme(
+    plot.title = element_text(hjust = 0.5),
+    panel.grid.minor = element_blank()
+  )</code></pre>
+<p><img src="/post/2019-01-10-possedobonoro_files/figure-html/wordlength-4.png" width="672" /></p>
+<p>As próximas perguntas que surgem naturalmente são quais palavras foram mais ditas e quando isso aconteceu. O gráfico a seguir mostra quais foram as palavras mais faladas no total e a sua distribuição por discurso.</p>
+<p><strong>P.S</strong>: O gráfico também fica bonito dividindo por presidente ;)</p>
+<pre class="r"><code>####################
+
+# total de ocorrencia de palavras
+plot_total &lt;- tf_frases %&gt;%
+  group_by(word) %&gt;%
+  mutate(total = sum(n), discs = length(docs)) %&gt;%
+  filter(str_count(word) &gt; 3) %&gt;%
+  ungroup()
+
+plot_total %&gt;%
+  mutate(word = reorder(word, total)) %&gt;%
+  filter(!(word %in% stp_wrds)) %&gt;%
+  group_by(word) %&gt;%
+  filter(total &gt; 30) %&gt;%
+  ggplot() +
+  geom_col(aes(word, n, fill = as.factor(docs))) +
+  scale_fill_brewer(type = &quot;qual&quot;, palette = &quot;Dark2&quot;) +
+  theme(
+    plot.title = element_text(hjust = 0.5),
+    panel.grid.major = element_blank()
+  ) +
+  xlab(&quot;&quot;) +
+  ylab(&quot;Frequência&quot;) +
+  ggtitle(&quot;Palavras mais Frequentes no Geral&quot;) +
+  coord_flip() +
+  theme(
+    plot.subtitle = element_text(vjust = 1),
+    plot.caption = element_text(vjust = 1)
+  ) + labs(x = NULL, fill = &quot;Ano&quot;)</code></pre>
+<p><img src="/post/2019-01-10-possedobonoro_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+<p>Uma boa maneira de se vizualizar distribuições de números absolutos é o gráfico de radar. Abaixo temos as distribuições das frequências das palavras “governo” e “brasileiros”. Aqui temos um bom exemplo de uma situação em que é indispensável duplicar as medidas de Temer e Bolsonaro.</p>
+<pre class="r"><code>palavras_chave2 &lt;- c(&quot;governo&quot;, &quot;brasileiros&quot;, &quot;mulheres&quot;)
+
+
+radartab &lt;- tidyfrase %&gt;%
+  filter(word %in% palavras_chave2) %&gt;%
+  count(word, presidas, sort = TRUE) %&gt;%
+  mutate(n = n + (presidas == &quot;temer&quot; | presidas == &quot;bolsonaro&quot;) * n) %&gt;%
+  as.data.frame()
+
+for (i in 1:nrow(radartab)) {
+  if (radartab$presidas[i] == &quot;bolsonaro&quot; | radartab$presidas[i] == &quot;temer&quot;) {
+    radartab$n[i] &lt;- 2 * radartab$n[i]
+  }
+}
+
+# radartab&lt;- radartab %&gt;% mutate(percent = (as.numeric(n)/ 15) * 100 ) %&gt;%
+radartab &lt;- radartab %&gt;%
+  spread(word, n) %&gt;%
+  select(presidas, governo, brasileiros, mulheres)
+
+chartJSRadar(radartab,
+  showToolTipLabel = FALSE,
+  main = &quot;Distribuição de Palavra por Presidente&quot;
+)</code></pre>
+<canvas id="htmlwidget-1" class="chartJSRadar html-widget" width="672" height="480"></canvas>
+<script type="application/json" data-for="htmlwidget-1">{"x":{"data":{"labels":["bolsonaro","dilma","fhc","lula","temer"],"datasets":[{"label":"governo","data":[4,28,20,22,28],"backgroundColor":"rgba(255,0,0,0.2)","borderColor":"rgba(255,0,0,0.8)","pointBackgroundColor":"rgba(255,0,0,0.8)","pointBorderColor":"#fff","pointHoverBackgroundColor":"#fff","pointHoverBorderColor":"rgba(255,0,0,0.8)"},{"label":"brasileiros","data":[16,35,23,10,28],"backgroundColor":"rgba(0,255,0,0.2)","borderColor":"rgba(0,255,0,0.8)","pointBackgroundColor":"rgba(0,255,0,0.8)","pointBorderColor":"#fff","pointHoverBackgroundColor":"#fff","pointHoverBorderColor":"rgba(0,255,0,0.8)"},{"label":"mulheres","data":[null,7,2,4,null],"backgroundColor":"rgba(0,0,255,0.2)","borderColor":"rgba(0,0,255,0.8)","pointBackgroundColor":"rgba(0,0,255,0.8)","pointBorderColor":"#fff","pointHoverBackgroundColor":"#fff","pointHoverBorderColor":"rgba(0,0,255,0.8)"}]},"options":{"responsive":true,"title":{"display":true,"text":"Distribuição de Palavra por Presidente"},"scale":{"ticks":{"min":0},"pointLabels":{"fontSize":18}},"tooltips":{"enabled":false,"mode":"label"},"legend":{"display":true}}},"evals":[],"jsHooks":[]}</script>
+<p>Também mostramos as sete palavras mais faladas em cada discurso e por cada presidente e, em caso de empate, eliminamos arbitrariamente alguns dos ‘últimos’ elementos, usando a função <code>slice</code> unicamente para melhorar a vizualização. Aqui temos um exemplo de gráfico que, na divisão por presidente, não é estritamente nescessário multiplicar as métricas de Temer e Bolsonaro, uma vez que essas são computadas independentemente umas das outras. Aqui o fizemos, novamente por motivos estéticos. (experimente os efeitos de comentar as linhas indicadas abaixo)</p>
+<pre class="r"><code># Palavras mais faladas por discurso
+tidyfrase %&gt;%
+  group_by(docs) %&gt;%
+  count(word, docs, sort = TRUE) %&gt;%
+  top_n(7) %&gt;% # Me comente
+  slice(1:7) %&gt;%
+  ungroup() %&gt;%
+  mutate(term = reorder_within(word, n, docs)) %&gt;%
+  ggplot(aes(term, n, fill = as.factor(docs))) +
+  geom_col(alpha = 0.8, show.legend = FALSE) +
+  facet_wrap(~docs, scales = &quot;free_y&quot;) +
+  scale_fill_brewer(type = &quot;qual&quot;, palette = &quot;Dark2&quot;) +
+  coord_flip() +
+  scale_x_reordered() +
+  labs(
+    x = NULL, y = &quot;Frequência&quot;,
+    title = &quot;Palavras mais Frequentes por Discurso&quot;,
+    subtitle = &quot; &quot;
+  )</code></pre>
+<p><img src="/post/2019-01-10-possedobonoro_files/figure-html/mostundesirablefreq%20-1.png" width="672" /></p>
+<pre class="r"><code># Palavras mais faladas por presidente
+tidyfrase %&gt;%
+  group_by(presidas) %&gt;%
+  count(word, presidas, sort = TRUE) %&gt;%
+  mutate(n = n + (presidas == &quot;temer&quot; | presidas == &quot;bolsonaro&quot;) * n) %&gt;%
+  top_n(7) %&gt;% # Me comente também
+  slice(1:7) %&gt;%
+  ungroup() %&gt;%
+  mutate(term = reorder_within(word, n, presidas)) %&gt;%
+  ggplot(aes(term, n, fill = as.factor(presidas))) +
+  geom_col(alpha = 0.8, show.legend = FALSE) +
+  facet_wrap(~presidas, scales = &quot;free_y&quot;, labeller = labeller(presidas = c(bolsonaro = &quot;Bolsonaro&quot;, dilma = &quot;Dilma&quot;, fhc = &quot;FHC&quot;, lula = &quot;Lula&quot;, temer = &quot;Temer&quot;))) +
+  scale_fill_brewer(type = &quot;qual&quot;, palette = &quot;Set1&quot;) +
+  coord_flip() +
+  scale_x_reordered() +
+  labs(
+    x = NULL, y = &quot;Frequência&quot;,
+    title = &quot;Palavras mais Frequentes por Presidente&quot;,
+    subtitle = &quot; &quot;
+  )</code></pre>
+<p><img src="/post/2019-01-10-possedobonoro_files/figure-html/mostundesirablefreq%20-2.png" width="672" /></p>
+<p>De certa forma, os gráficos acima confirmam a nossa impressão ao olhar as primeiras nuvens de palavras: existem palavras que se repetem muitas vezes num discurso presidencial por natureza. Esse fato nos atrapalha na tarefa de identificar as diferenças entre cada instância. Para lidar com esse problema, usamos uma técnica muito simples e surpreendentemente ,comum em análise automatizada de textos, que é eliminar sumariamente esses termos, esperando que os próximos no ranking tragam informações relevantes. Além disso, eliminamos as palavras “é”, “assim” e “ainda”. Finalmente, vamos eliminar palavras com três letras ou menos.</p>
+<pre class="r"><code>undesirable_words &lt;- (((plot_total %&gt;% select(word, n) %&gt;% arrange(desc(n)))$word) %&gt;% unique())[1:15]
+undesirable_words &lt;- c(as.character(undesirable_words), &quot;é&quot;, &quot;assim&quot;, &quot;ainda&quot;)</code></pre>
+<p>Vejamos a seguir os efeitos que essas mudanças produzem nos nossos resultados:</p>
+<pre class="r"><code># Palavras mais faladas por discurso
+tidyfrase %&gt;%
+  filter(!(word %in% undesirable_words)) %&gt;%
+  filter(nchar(word) &gt; 3) %&gt;%
+  group_by(docs) %&gt;%
+  count(word, docs, sort = TRUE) %&gt;%
+  top_n(7) %&gt;% # Me comente
+  slice(1:7) %&gt;%
+  ungroup() %&gt;%
+  mutate(term = reorder_within(word, n, docs)) %&gt;%
+  ggplot(aes(term, n, fill = as.factor(docs))) +
+  geom_col(alpha = 0.8, show.legend = FALSE) +
+  facet_wrap(~docs, scales = &quot;free_y&quot;) +
+  scale_fill_brewer(type = &quot;qual&quot;, palette = &quot;Dark2&quot;) +
+  coord_flip() +
+  scale_x_reordered() +
+  labs(
+    x = NULL, y = &quot;Frequência&quot;,
+    title = &quot;Palavras mais Frequentes por Discurso&quot;,
+    subtitle = &quot; &quot;
+  )</code></pre>
+<p><img src="/post/2019-01-10-possedobonoro_files/figure-html/mostfreqwordspeechpres-1.png" width="672" /></p>
+<pre class="r"><code># Palavras mais faladas por presidente
+
+tidyfrase %&gt;%
+  filter(!(word %in% undesirable_words)) %&gt;%
+  filter(nchar(word) &gt; 3) %&gt;%
+  group_by(presidas) %&gt;%
+  count(word, presidas, sort = TRUE) %&gt;%
+  mutate(n = n + (presidas == &quot;temer&quot; | presidas == &quot;bolsonaro&quot;) * n) %&gt;%
+  top_n(7) %&gt;%
+  slice(1:7) %&gt;%
+  ungroup() %&gt;%
+  mutate(term = reorder_within(word, n, presidas)) %&gt;%
+  ggplot(aes(term, n, fill = as.factor(presidas))) +
+  geom_col(alpha = 0.8, show.legend = FALSE) +
+  facet_wrap(~presidas, scales = &quot;free_y&quot;, labeller = labeller(presidas = c(bolsonaro = &quot;Bolsonaro&quot;, dilma = &quot;Dilma&quot;, fhc = &quot;FHC&quot;, lula = &quot;Lula&quot;, temer = &quot;Temer&quot;))) +
+  scale_fill_brewer(type = &quot;qual&quot;, palette = &quot;Set1&quot;) +
+  coord_flip() +
+  scale_x_reordered() +
+  labs(
+    x = NULL, y = &quot;Frequência&quot;,
+    title = &quot;Palavras mais Frequentes por Presidente&quot;,
+    subtitle = &quot; &quot;
+  )</code></pre>
+<p><img src="/post/2019-01-10-possedobonoro_files/figure-html/mostfreqwordspeechpres-2.png" width="672" /></p>
+<p>À primeira vista, parece que nossa última filtragem produziu resultados positivos em termos de informação. Adotaremos esse procedimento em muitos lugares daqui em diante.</p>
+</div>
+<div id="a-estatistica-tf-idf" class="section level2">
+<h2>A Estatística TF-IDF</h2>
+<p>Finalmente chegou a hora de incorporar a estatística TF-IDF, que já citamos acima, na nossa análise. O TF-IDF de uma palavra em relação a um texto em um conjunto de documentos é dado pelo número de aparições dessa palavra no texto dividido pelo número de documentos em que a palavra aparece. O número de aparições de uma palavra idealmente indica sua importância dentro de um texto. Em contrapartida, o número de textos em que a palavra aparece indica a importância da palavra no contexto dos documentos. Sendo assim, essa medida quantifica o quão importante um palavra é para um texto em particular, dentro de um conjunto de documentos. Se temos um conjunto de <span class="math inline">\(i=1,\cdots,n\)</span> textos, então o TF-IDF da palavra <span class="math inline">\(w\)</span> no texto <span class="math inline">\(i\)</span> é dado por <span class="math display">\[T_i(w)=\frac{N_i(w)}{K(w)}.\]</span></p>
+<p>Onde <span class="math inline">\(N_i(w)\)</span> é o número de vezes que a palavra <span class="math inline">\(w\)</span> aparece no texto <span class="math inline">\(i\)</span> e <span class="math inline">\(K(w)\)</span> é o número de documentos que contém <span class="math inline">\(w\)</span>. Daqui pra frente, nos aproveitaremos dessa ideia das mais diversas formas. A maneira mais natural de usar o TF-IDF no nosso contexto é considerar que cada discurso é um documento, de modo que medimos as palavras relevantes em cada documento. Uma pequena variação dessa linha de pensamento se dá ao considerarmos cada presidente em si um documento, assim mensuramos a importância dada por cada pessoa aos termos.</p>
+<pre class="r"><code>## TF-IDF de PALAVRAS POR DISCURSO
+
+tfrases2 &lt;- tidyfrase %&gt;%
+  filter(!(word %in% undesirable_words)) %&gt;%
+  filter(nchar(word) &gt; 3) %&gt;%
+  group_by(docs) %&gt;%
+  count(word, docs, sort = TRUE) %&gt;%
+  tf_idf_caseirao()
+
+
+tfrases2 %&gt;%
+  top_n(7) %&gt;%
+  slice(1:7) %&gt;%
+  ungroup() %&gt;%
+  mutate(term = reorder_within(word, tf_idf, docs)) %&gt;%
+  ggplot(aes(term, tf_idf, fill = as.factor(docs))) +
+  geom_col(alpha = 0.8, show.legend = FALSE) +
+  scale_fill_brewer(type = &quot;qual&quot;, palette = &quot;Dark2&quot;) +
+  facet_wrap(~docs, scales = &quot;free_y&quot;) +
+  coord_flip() +
+  scale_x_reordered() +
+  labs(
+    x = NULL, y = &quot;TF-IDF&quot;,
+    title = &quot;TF-IDF de Palavras por Discurso&quot;,
+    subtitle = &quot; &quot;
+  )</code></pre>
+<p><img src="/post/2019-01-10-possedobonoro_files/figure-html/tfidfspeech-1.png" width="672" /></p>
+<pre class="r"><code># TF-IDF de PALAVRAS por presidente
+
+tfrases &lt;- tidyfrase %&gt;%
+  filter(!(word %in% undesirable_words)) %&gt;%
+  filter(nchar(word) &gt; 3) %&gt;%
+  group_by(presidas) %&gt;%
+  count(word, presidas, sort = TRUE) %&gt;%
+  tf_idf_caseirao() %&gt;%
+  mutate(tf_idf = tf_idf + (presidas == &quot;temer&quot; | presidas == &quot;bolsonaro&quot;) * tf_idf)
+
+
+
+tfrases %&gt;%
+  top_n(7) %&gt;%
+  slice(1:7) %&gt;%
+  ungroup() %&gt;%
+  mutate(term = reorder_within(word, tf_idf, presidas)) %&gt;%
+  ggplot(aes(term, tf_idf, fill = as.factor(presidas))) +
+  geom_col(alpha = 0.8, show.legend = FALSE) +
+  facet_wrap(~presidas, scales = &quot;free_y&quot;, labeller = labeller(presidas = c(bolsonaro = &quot;Bolsonaro&quot;, dilma = &quot;Dilma&quot;, fhc = &quot;FHC&quot;, lula = &quot;Lula&quot;, temer = &quot;Temer&quot;))) +
+  scale_fill_brewer(type = &quot;qual&quot;, palette = &quot;Set1&quot;) +
+  coord_flip() +
+  scale_x_reordered() +
+  labs(
+    x = NULL, y = &quot;TF-IDF&quot;,
+    title = &quot;TF-IDF de Palavras por Presidente&quot;,
+    subtitle = &quot; &quot;
+  )</code></pre>
+<p><img src="/post/2019-01-10-possedobonoro_files/figure-html/tfidfspeech-2.png" width="672" /></p>
+<p>Em seguida, fizemos uma grande variedade de nuvens de palavras utilizando vários tipos de nuvens de palavras baseadas no TF-IDF das palavras, não incluímos esses resultados no texto para economizar um pouco da paciência do leitor.</p>
+<pre class="r"><code># #Nuvem - numero abs - presidas
+#
+# pres&lt;-unique(tfrases$presidas)
+# for(i in 1:length(pres)){
+#   aux&lt;-filter(as.data.frame(tfrases%&gt;%ungroup()), presidas==pres[i])
+#   aux&lt;-arrange(aux, desc(tf_idf))
+#   aux&lt;- aux %&gt;% group_by(presidas)
+#   aux&lt;- aux %&gt;% top_n(15) %&gt;% ungroup()
+#   aux&lt;-select(aux,word,tf_idf)
+#   ggwordcloud2(aux) %&gt;% print()
+#
+# }
+#
+#
+# #Nuvem - desvio padrão - ano
+#
+# anos&lt;-unique(tfrases2$docs)
+# for(i in 1:length(anos)){
+#   aux&lt;-filter(as.data.frame(tfrases2%&gt;%ungroup()), docs==anos[i])
+#   aux&lt;-arrange(aux, desc(tf_idf))
+#   med&lt;-mean(aux$tf_idf)
+#   sd&lt;- sd(aux$tf_idf)
+#   aux&lt;-aux %&gt;% filter( tf_idf-med &gt; 2*sd)
+#   aux&lt;-select(aux,word,tf_idf)
+#   ggwordcloud2(aux) %&gt;% print()
+#
+#   }
+#
+#
+# #Nuvem - abs- ano
+#
+# anos&lt;-unique(tfrases2$docs)
+# for(i in 1:length(anos)){
+#   aux&lt;-filter(as.data.frame(tfrases2%&gt;%ungroup()), docs==anos[i])
+#   aux&lt;-arrange(aux, desc(tf_idf))
+#   aux&lt;- aux %&gt;% top_n(15)
+#   aux&lt;-select(aux,word,tf_idf)
+#   ggwordcloud2(aux) %&gt;% print()
+#
+#   }
+#</code></pre>
+<p>Agora teremos várias ramificações na nossa análise. A ordenação dos tópicos daqui em diante foi projetada unicamente para preservar a harmonia entre as variáveis do código.</p>
+</div>
+<div id="bigramas" class="section level2">
+<h2>Bigramas</h2>
+<p>Acabamos de realizar uma análise descritiva relativamente simples dos discursos de posse desde 1995. Apesar disso, há de se destacar que toda a análise foi baseada apenas na frequência de palavras isoladas. O problema mais básico que surge nesse tipo de abordagem é desconsiderar completamente o contexto em que as palavras se encontram. Numa tentativa de lidar parcialmente com esse incoveniente, vamos agora análisar bigramas, que são conjuntos de duas palavras consecutivas em um texto. Em primeiro lugar vamos arrumar nossos dados, note que vamos usar a função <code>unnest_tokens</code> assim como no início. Sem ela nosso trabalho seria bem mais difícil!</p>
+<pre class="r"><code>## Bigramas - Organizando as Tabelas
+
+bigrams &lt;- tab_frase %&gt;% select(frases, docs, presidas) %&gt;% mutate(nfrase = row_number()) %&gt;% unnest_tokens(bigram, frases, token = &quot;ngrams&quot;, n = 2)
+
+bigrams_separated &lt;- bigrams %&gt;%
+  separate(bigram, c(&quot;word1&quot;, &quot;word2&quot;), sep = &quot; &quot;)
+
+## ADICIONAR OUTRAS PALAVRAS PARA FILTRAR????
+bigrams_filter &lt;- bigrams_separated %&gt;%
+  filter(!(word1 %in% undesirable_words)) %&gt;%
+  filter(nchar(word1) &gt; 3) %&gt;%
+  filter(!(word2 %in% undesirable_words)) %&gt;%
+  filter(nchar(word2) &gt; 3) %&gt;%
+  filter(!(word1 %in% stp_wrds)) %&gt;%
+  filter(!(word2 %in% stp_wrds))
+
+
+bigrams_pres &lt;- bigrams_filter %&gt;%
+  filter(word1 != word2) %&gt;%
+  unite(word, word1, word2, sep = &quot; &quot;, remove = FALSE) %&gt;%
+  count(word, presidas, sort = TRUE) %&gt;%
+  group_by(presidas)
+
+bigrams_discursos &lt;- bigrams_filter %&gt;%
+  filter(word1 != word2) %&gt;%
+  unite(word, word1, word2, sep = &quot; &quot;, remove = FALSE) %&gt;%
+  count(word, docs, sort = TRUE) %&gt;%
+  group_by(docs)</code></pre>
+<p>Agora, vamos mostar gráficos de frequência de bigramas dividindo por discurso e presidente, exatamente como fizemos para palavras isoladas.</p>
+<pre class="r"><code>## Primeiros GRAFICOS - Frequencia de bigramas
+
+bigrams_pres %&gt;%
+  top_n(7) %&gt;%
+  slice(1:7) %&gt;%
+  ungroup() %&gt;%
+  mutate(term = reorder_within(word, n, presidas)) %&gt;%
+  ggplot(aes(term, n, fill = as.factor(presidas))) +
+  geom_col(alpha = 0.8, show.legend = FALSE) +
+  facet_wrap(~presidas, scales = &quot;free_y&quot;, labeller = labeller(presidas = c(bolsonaro = &quot;Bolsonaro&quot;, dilma = &quot;Dilma&quot;, fhc = &quot;FHC&quot;, lula = &quot;Lula&quot;, temer = &quot;Temer&quot;))) +
+  scale_fill_brewer(type = &quot;qual&quot;, palette = &quot;Set1&quot;) +
+  coord_flip() +
+  scale_x_reordered() +
+  labs(
+    x = NULL, y = &quot;Frequência&quot;,
+    title = &quot;Frequencia de Bigramas por Presidente&quot;,
+    subtitle = &quot; &quot;
+  )</code></pre>
+<p><img src="/post/2019-01-10-possedobonoro_files/figure-html/firstbigraphics-1.png" width="672" /></p>
+<pre class="r"><code>bigrams_discursos %&gt;%
+  top_n(7) %&gt;%
+  slice(1:7) %&gt;%
+  ungroup() %&gt;%
+  mutate(term = reorder_within(word, n, docs)) %&gt;%
+  ggplot(aes(term, n, fill = as.factor(docs))) +
+  scale_fill_brewer(type = &quot;qual&quot;, palette = &quot;Dark2&quot;) +
+  geom_col(show.legend = FALSE) +
+  facet_wrap(~docs, scales = &quot;free_y&quot;) +
+  coord_flip() +
+  scale_x_reordered() +
+  labs(
+    x = NULL, y = &quot;Frequência&quot;,
+    title = &quot;Frequencia de Bigramas por Discurso&quot;,
+    subtitle = &quot; &quot;
+  )</code></pre>
+<p><img src="/post/2019-01-10-possedobonoro_files/figure-html/firstbigraphics-2.png" width="672" /></p>
+<p>Também decidimos calcular o TF-IDF de bigramas num texto, por que não? A adaptação que fizemos no TF-IDF é bem pequena. Apenas utilizamos a frequência de bigramas ao invés da frequência de palavras.</p>
+<pre class="r"><code>## MAIS GRAFICOS - TD-IDF de Bigramas- pq nao?
+
+bigramspres_tdidf &lt;- bigrams_pres %&gt;% tf_idf_caseirao()
+
+bigramsdoc_tdidf &lt;- bigrams_discursos %&gt;% tf_idf_caseirao()
+
+
+## GRAFICO BIGRAMAS-TF-IDF PRESIDENTE
+bigramspres_tdidf %&gt;%
+  top_n(8) %&gt;%
+  slice(1:8) %&gt;%
+  ungroup() %&gt;%
+  mutate(term = reorder_within(word, tf_idf, presidas)) %&gt;%
+  ggplot(aes(term, tf_idf, fill = as.factor(presidas))) +
+  geom_col(alpha = 0.8, show.legend = FALSE) +
+  facet_wrap(~presidas, scales = &quot;free_y&quot;, labeller = labeller(presidas = c(bolsonaro = &quot;Bolsonaro&quot;, dilma = &quot;Dilma&quot;, fhc = &quot;FHC&quot;, lula = &quot;Lula&quot;, temer = &quot;Temer&quot;))) +
+  scale_fill_brewer(type = &quot;qual&quot;, palette = &quot;Set1&quot;) +
+  coord_flip() +
+  scale_x_reordered() +
+  labs(
+    x = NULL, y = &quot;TF-IDF&quot;,
+    title = &quot;TF-IDF de Bigramas por Presidente&quot;,
+    subtitle = &quot;&quot;
+  )</code></pre>
+<p><img src="/post/2019-01-10-possedobonoro_files/figure-html/bigramtfidf-1.png" width="672" /></p>
+<pre class="r"><code>## GRAFICO BIGRAMAS-TD-IDF DISCURSO
+bigramsdoc_tdidf %&gt;%
+  top_n(7) %&gt;%
+  slice(1:7) %&gt;%
+  ungroup() %&gt;%
+  mutate(
+    term = reorder_within(word, tf_idf, docs)
+  ) %&gt;%
+  ggplot(aes(term, tf_idf, fill = as.factor(docs))) +
+  geom_col(alpha = 0.8, show.legend = FALSE) +
+  facet_wrap(~docs, scales = &quot;free_y&quot;) +
+  scale_fill_brewer(type = &quot;qual&quot;, palette = &quot;Dark2&quot;) +
+  coord_flip() +
+  scale_x_reordered() +
+  labs(
+    x = NULL, y = &quot;TF-IDF&quot;,
+    title = &quot;TF-IDF de Bigramas por Discurso&quot;,
+    subtitle = &quot; &quot;
+  )</code></pre>
+<p><img src="/post/2019-01-10-possedobonoro_files/figure-html/bigramtfidf-2.png" width="672" /></p>
+</div>
+<div id="graficos" class="section level2">
+<h2>Graf(ic)os</h2>
+<p><a href="https://www.ime.usp.br/~yw/2018/grafinhos/aulas/cap1-new.pdf">Grafos</a> são uma excelente maneira de se vizualizar conexões entre objetos. Existe uma infinidade de possibilidades ao se representar dados desse modo. Pra começo de conversa, temos que escolher quem são os vértices e arestas do nosso grafo. Em segundo lugar, é preciso escolher o que significa dois objetos estarem conectados. Daí pra frente, existe um oceano de possibilidades: podemos decidir se existem ligações mais fortes que outras, se há direção ou simetria nas mesmas, se podemos conectar mais de dois vértices de uma só vez, entre tantas outras. No nosso contexto, duas das perguntas que podemos tentar responder com grafos incluem:</p>
+<ol style="list-style-type: decimal">
+<li><p>Considerando palavras como vértices e dado um conjunto de palavras-chave, quais são as palavras que mais aparecem associadas a elas? Nesse caso podemos, por exemplo, adotar a força da conexão entre duas palavras como a quantidade de bigramas em que duas palavras estão pareadas. Outra possibilidade seria calcular a força da conexão entre duas palavras como a razão entre o número de vezes em que cada palavra aparece versus o número de vezes que ela está pareada com a outra. Assim teríamos uma nova adaptação do TF-IDF para bigramaas.</p></li>
+<li><p>Considerando presidentes ou discursos como vértices, qual é o nível de similaridade entre duas instâncias? Nesse caso, claramente teremos arestas com valores correspondentes à similaridade calculada entre dois textos. Na sequência discutiremos um pouco mais sobre como obter um valor númerico que represente semelhança entre documentos.</p></li>
+</ol>
+<p>Em seguida iremos utilizar a biblioteca <code>igraph</code> para transformar um <code>data.frame</code> num grafo e o pacote <code>ggraph</code> para nossas vizualizações.</p>
+<pre class="r"><code>## GRAFO DE BIGRAMAS
+
+palavras_chave &lt;- c(&quot;acabar&quot;, &quot;diminuir&quot;, &quot;combater&quot;, &quot;erradicar&quot;, &quot;contra&quot;, &quot;não&quot;, &quot;pobreza&quot;, &quot;violência&quot;, &quot;fome&quot;, &quot;medo&quot;)
+
+bigrams_chave &lt;- bigrams_separated %&gt;%
+  filter(word1 %in% palavras_chave | word2 %in% palavras_chave) %&gt;%
+  count(word1, word2, sort = TRUE) %&gt;%
+  filter(!(word1 %in% stp_wrds | word2 %in% stp_wrds)) %&gt;% ## VAI DE MORGAN CARAI
+  filter(!(word1 %in% undesirable_words | word2 %in% undesirable_words)) %&gt;%
+  mutate(contribution = n) %&gt;% # DA PRA FAZER UM ÍNDICE MAIS FERA AQUI
+  arrange(desc(abs(contribution))) %&gt;%
+  group_by(word1) %&gt;%
+  slice(seq_len(40)) %&gt;%
+  arrange(word1, desc(contribution)) %&gt;%
+  ungroup()
+
+bigram_graph &lt;- bigrams_chave %&gt;%
+  graph_from_data_frame() # From `igraph`
+
+set.seed(133)
+
+a &lt;- grid::arrow(type = &quot;closed&quot;, length = unit(.15, &quot;inches&quot;))
+
+ggraph(bigram_graph, layout = &quot;fr&quot;) +
+  geom_edge_link(alpha = .25) +
+  geom_edge_density(aes(fill = n)) +
+  geom_node_point(color = &quot;purple1&quot;, size = 1) + # Purple for Prince!
+  geom_node_text(aes(label = name), repel = TRUE) +
+  theme_void() + theme(
+    legend.position = &quot;none&quot;,
+    plot.title = element_text(hjust = 0.5)
+  ) +
+  ggtitle(&quot;Bigram Network&quot;)</code></pre>
+<p><img src="/post/2019-01-10-possedobonoro_files/figure-html/bigramnet-1.png" width="672" /></p>
+<div id="redes-de-similaridade" class="section level3">
+<h3>Redes de Similaridade</h3>
+<p>Uma coisa importante a se questionar sobre um conjunto de textos é o grau de similaridade entre eles. O principal empecilho que surge ao abordar esse problema é o de como quantificar a similaridade entre dois documentos. Uma primeira ideia seria contabilizar o número de palavras compartilhadas pelos textos. Entretanto, acreditamos que essa idéia pode ser melhor aproveitada para conjuntos de documentos maiores e mais variados, pois no nosso caso, teríamos muita similaridade entre todos os textos devido à natureza da ocasião. Alternativamente, vamos considerar o nível de similaridade entre dois textos com a soma do TF-IDF das palavras que aparecem em ambos. Quanto mais alto é esse número, mais palavras importantes são compartilhadas pelos textos.</p>
+<pre class="r"><code>## Via single words-docs##
+
+## Cria data frame
+textsimwdocs &lt;- data.frame()
+
+for (i in tfrases2$docs %&gt;% unique()) {
+  for (j in tfrases2$docs %&gt;% unique()) {
+    words1 &lt;- (tfrases2 %&gt;% filter(docs == i))$word %&gt;% unique()
+    words2 &lt;- (tfrases2 %&gt;% filter(docs == j))$word %&gt;% unique()
+    aux &lt;- tfrases2 %&gt;% filter(word %in% words1 &amp;&amp; word %in% words2)
+    num &lt;- sum(aux$tf_idf)
+    textsimwdocs &lt;- rbind(textsimwdocs, c(i, j, num))
+  }
+}
+colnames(textsimwdocs) &lt;- c(&quot;x1&quot;, &quot;x2&quot;, &quot;sim&quot;)
+textsimwdocs &lt;- textsimwdocs %&gt;% filter(textsimwdocs$x1 != textsimwdocs$x2)
+
+## GRAFO
+
+similarity_graphwdocs &lt;- textsimwdocs %&gt;%
+  graph_from_data_frame() # From `igraph`
+
+set.seed(1)
+
+a &lt;- grid::arrow(type = &quot;closed&quot;, length = unit(.15, &quot;inches&quot;))
+
+ggraph(similarity_graphwdocs, layout = &quot;fr&quot;) +
+  geom_edge_link(alpha = .8) +
+  geom_edge_link(aes(edge_colour = (sim / 10000000), edge_width = 5)) +
+  scale_edge_colour_gradient(
+    low = &quot;#3d45be&quot;, high = &quot;#db423d&quot;,
+    space = &quot;Lab&quot;, na.value = &quot;grey50&quot;, guide = &quot;edge_colourbar&quot;
+  ) +
+  geom_node_point(color = &quot;black&quot;, size = 5) +
+  geom_node_text(aes(label = name), repel = TRUE) +
+  theme_void() + theme(
+    legend.position = &quot;none&quot;,
+    plot.title = element_text(hjust = 0.5)
+  ) +
+  ggtitle(&quot;Rede de Similaridade Baseada no TF-IDF de Palavras&quot;)</code></pre>
+<p><img src="/post/2019-01-10-possedobonoro_files/figure-html/similaritynetwords-1.png" width="672" /></p>
+<pre class="r"><code>## Via presidents
+## Duplicar Temer e bonoro
+tfrases &lt;- tfrases %&gt;%
+  mutate(tf_idf = tf_idf + (presidas == &quot;temer&quot; | presidas == &quot;bolsonaro&quot;) * tf_idf)
+
+
+tfrases$presidas &lt;- tfrases$presidas %&gt;% as.character()
+
+# Cria data frame
+textsimwpres &lt;- data.frame()
+pr &lt;- tfrases$presidas %&gt;% unique()
+
+
+for (i in 1:length(pr)) {
+  for (j in 1:length(pr)) {
+    words1 &lt;- (tfrases %&gt;% filter(presidas == pr[i]))$word %&gt;% unique()
+    words2 &lt;- (tfrases %&gt;% filter(presidas == pr[j]))$word %&gt;% unique()
+    aux &lt;- tfrases %&gt;% filter(word %in% words1 &amp; word %in% words2)
+    num &lt;- sum(aux$tf_idf)
+    textsimwpres &lt;- rbind(textsimwpres, c(i, j, num))
+  }
+}
+
+colnames(textsimwpres) &lt;- c(&quot;x1&quot;, &quot;x2&quot;, &quot;sim&quot;)
+textsimwpres &lt;- textsimwpres %&gt;% filter(textsimwpres[, 1] != textsimwpres[, 2])
+
+# GRAFO
+
+similarity_graphwpres &lt;- textsimwpres %&gt;%
+  graph_from_data_frame() # From `igraph`
+
+set.seed(1)
+
+a &lt;- grid::arrow(type = &quot;closed&quot;, length = unit(.15, &quot;inches&quot;))
+
+ggraph(similarity_graphwpres, layout = &quot;fr&quot;) +
+  geom_edge_link(alpha = .8) +
+  geom_edge_link(aes(edge_colour = (sim / 10000), edge_width = 5)) +
+  scale_edge_colour_gradient(
+    low = &quot;#3d45be&quot;, high = &quot;#db423d&quot;,
+    space = &quot;Lab&quot;, na.value = &quot;grey50&quot;, guide = &quot;edge_colourbar&quot;
+  ) +
+  geom_node_point(color = &quot;black&quot;, size = 5) +
+  geom_node_text(aes(label = c(&quot;Dilma&quot;, &quot;Lula&quot;, &quot;FHC&quot;, &quot;Temer&quot;, &quot;Bolsonaro&quot;)), repel = TRUE) +
+  theme_void() + theme(
+    legend.position = &quot;none&quot;,
+    plot.title = element_text(hjust = 0.5)
+  ) +
+  ggtitle(&quot;Rede de Similaridade Baseada no TF-IDF de Palavras&quot;)</code></pre>
+<p><img src="/post/2019-01-10-possedobonoro_files/figure-html/similaritynetwords-2.png" width="672" /></p>
+<p>Agora vamos experimentar fazer outras redes de similaridade, mas desta vez vamos partir do TF-IDF de bigramas que calculamos recentemente e aplicar exatamente os mesmos meios usados acima.</p>
+<pre class="r"><code># Similaridade Via Bigramas-Docs
+
+textsimbdocs &lt;- data.frame()
+
+for (i in bigramsdoc_tdidf$docs %&gt;% unique()) {
+  for (j in bigramsdoc_tdidf$docs %&gt;% unique()) {
+    words1 &lt;- (bigramsdoc_tdidf %&gt;% filter(docs == i))$word %&gt;% unique()
+    words2 &lt;- (bigramsdoc_tdidf %&gt;% filter(docs == j))$word %&gt;% unique()
+    aux &lt;- bigramsdoc_tdidf %&gt;% filter(word %in% words1 &amp;&amp; word %in% words2)
+    num &lt;- sum(aux$tf_idf)
+    textsimbdocs &lt;- rbind(textsimwdocs, c(i, j, num))
+  }
+}
+
+colnames(textsimbdocs) &lt;- c(&quot;x1&quot;, &quot;x2&quot;, &quot;sim&quot;)
+textsimbdocs &lt;- textsimbdocs %&gt;% filter(textsimbdocs$x1 != textsimbdocs$x2)
+
+similarity_graphbdocs &lt;- textsimbdocs %&gt;%
+  graph_from_data_frame() # From `igraph`
+
+set.seed(1)
+
+a &lt;- grid::arrow(type = &quot;closed&quot;, length = unit(.15, &quot;inches&quot;))
+
+ggraph(similarity_graphbdocs, layout = &quot;fr&quot;) +
+  geom_edge_link(alpha = .8) +
+  geom_edge_link(aes(edge_colour = (sim / 10000000), edge_width = 5)) +
+  scale_edge_colour_gradient(
+    low = &quot;#3d45be&quot;, high = &quot;#db423d&quot;,
+    space = &quot;Lab&quot;, na.value = &quot;grey50&quot;, guide = &quot;edge_colourbar&quot;
+  ) +
+  geom_node_point(color = &quot;black&quot;, size = 5) +
+  geom_node_text(aes(label = name), repel = TRUE) +
+  theme_void() + theme(
+    legend.position = &quot;none&quot;,
+    plot.title = element_text(hjust = 0.5)
+  ) +
+  ggtitle(&quot;Rede de Similaridade Baseada no TF-IDF de Bigramas&quot;)</code></pre>
+<p><img src="/post/2019-01-10-possedobonoro_files/figure-html/similaritynetbigrams-1.png" width="672" /></p>
+<pre class="r"><code>## Via presidents
+
+bigramspres_tdidf &lt;- bigramspres_tdidf %&gt;%
+  mutate(tf_idf = tf_idf + (presidas == &quot;temer&quot; | presidas == &quot;bolsonaro&quot;) * tf_idf)
+
+
+bigramspres_tdidf$presidas &lt;- bigramspres_tdidf$presidas %&gt;% as.character()
+textsimbpres &lt;- data.frame()
+prb &lt;- bigramspres_tdidf$presidas %&gt;% unique()
+
+
+for (i in 1:length(prb)) {
+  for (j in 1:length(prb)) {
+    words1 &lt;- (bigramspres_tdidf %&gt;% filter(presidas == prb[i]))$word %&gt;% unique()
+    words2 &lt;- (bigramspres_tdidf %&gt;% filter(presidas == prb[j]))$word %&gt;% unique()
+    aux &lt;- bigramspres_tdidf %&gt;% filter(word %in% words1 &amp; word %in% words2)
+    num &lt;- sum(aux$tf_idf)
+    textsimbpres &lt;- rbind(textsimbpres, c(i, j, num))
+  }
+}
+
+colnames(textsimbpres) &lt;- c(&quot;x1&quot;, &quot;x2&quot;, &quot;sim&quot;)
+textsimbpres &lt;- textsimbpres %&gt;% filter(textsimbpres[, 1] != textsimbpres[, 2])
+
+
+
+
+similarity_graphbpres &lt;- textsimbpres %&gt;%
+  graph_from_data_frame() # From `igraph`
+
+set.seed(1)
+
+a &lt;- grid::arrow(type = &quot;closed&quot;, length = unit(.15, &quot;inches&quot;))
+
+ggraph(similarity_graphbpres, layout = &quot;fr&quot;) +
+  geom_edge_link(alpha = .8) +
+  geom_edge_link(aes(edge_colour = (sim / 10000), edge_width = 5)) +
+  scale_edge_colour_gradient(
+    low = &quot;#3d45be&quot;, high = &quot;#db423d&quot;,
+    space = &quot;Lab&quot;, na.value = &quot;grey50&quot;, guide = &quot;edge_colourbar&quot;
+  ) +
+  geom_node_point(color = &quot;black&quot;, size = 5) +
+  geom_node_text(aes(label = c(&quot;Dilma&quot;, &quot;Lula&quot;, &quot;FHC&quot;, &quot;Temer&quot;, &quot;Bolsonaro&quot;)), repel = TRUE) +
+  theme_void() + theme(
+    legend.position = &quot;none&quot;,
+    plot.title = element_text(hjust = 0.5)
+  ) +
+  ggtitle(&quot;Rede de Similaridade Baseada no TF-IDF de Bigramas&quot;)</code></pre>
+<p><img src="/post/2019-01-10-possedobonoro_files/figure-html/similaritynetbigrams-2.png" width="672" /></p>
+</div>
+</div>
+<div id="modelagem-de-topicos" class="section level2">
+<h2>Modelagem de Tópicos</h2>
+<p>Numa tentativa de ajudar o leitor a se adequar ao quarto princípio exposto no início do texto, vamos tentar explicar brevemente como funcionam os modelos estruturais de tópicos, ou sua tradução favorita para <em>Structural Topic Models</em>. Estes são o principal objeto tratado pelo pacote <code>stm</code>, cuja descrição está <a href="https://cran.r-project.org/web/packages/stm/vignettes/stmVignette.pdf">disponível na internet</a>. Possivelmente, o modelo de tópicos mais conhecido é o <a href="https://en.wikipedia.org/wiki/Latent_Dirichlet_allocation">LDA</a> (<em>Latent Dirichilet Allocation</em>). Ao aplicar esta técnica, considera-se que cada documento é uma mistura de tópicos, desconhecidos <em>a priori</em>, em alguma proporção também desconhecida. Além disso, cada tópico é visto como uma mistura de palavras, em outra proporção desconhecida. O LDA estima a proporção de cada tópico para cada documento e também a distribuição de termos em cada tópico. O nome do modelo se deve à utilização da conjugação <a href="https://people.eecs.berkeley.edu/~stephentu/writeups/dirichlet-conjugate-prior.pdf">Dirichilet-Multinomial</a>, o que é comum em estatística bayesiana ao se tratar problemas de ‘categorização’. Modelos estruturais são, de maneira muito resumida, LDAs modificados com a opção extra de considerar metadados(autor, data etc.) dos documentos e complicando um pouquinho as contas ao se utilizar de <a href="https://pt.wikipedia.org/wiki/Regress%C3%A3o_log%C3%ADstica">regressão logística</a> em alguns passos intermediários.</p>
+<p>Existem inúmeros jeitos diferentes de aplicar o modelo e vamos explorar um pouco deles ao fazer alguns testes. Para isso, vamos primeiro deixar nossos dados no formato ideal para as funções do <code>stm</code>. Não existe apenas uma maneira de se tratar um <code>data frame</code> e no próximo <em>chunk</em> exploramos duas dessas possibilidades: A primeira delas é a função <code>cast_dfm</code> do pacote <code>tidytext</code> e a segunda é a função <code>textProcessor</code> do próprio pacote <code>stm</code>. Apesar de ambas terem formato semelhante ao <code>tab_frase</code> (e portanto também podem travar seu computador) é interessante ver como essas funções transformam tabelas diferentes em similares. Enquanto a função <code>cast_dfm</code> traz a vantagem de se encaixar bem com formatos alheios ao <code>stm</code>. Por outro lado, tratar dados utilizando a função <code>textProcessor</code> simplifica muito o processo de mineração de dados, levando-os diretamente de um formato crú para um modelo de machine learning com poucas linhas de código.</p>
+<p>O modelo dividido por frases não apresenta resultados interpretáveis pois, devido às constantes filtragens que ocorrem durante o processo, acabamos com documentos tão pequenos que é impossível dividí-los em tópicos. Devido ao tamanho da nossa base de dados, não esperamos resultados muito significativos da aplicação do modelo.</p>
+<pre class="r"><code>#DATA VIA TIDYTEXT 
+
+dfmpres &lt;- tidyfrase %&gt;%
+  #filter(presidas==&quot;bolsonaro&quot;)%&gt;%
+  filter(!(word%in% undesirable_words)) %&gt;%
+  filter(nchar(word)&gt;3)%&gt;%  
+  count(presidas,docs, word, sort = TRUE) %&gt;%
+  cast_dfm(presidas,word, n)
+
+dfmspeech &lt;- tidyfrase %&gt;%
+   filter(!(word%in% undesirable_words)) %&gt;%  
+  filter(nchar(word)&gt;3)%&gt;%
+  count(docs, word, sort = TRUE) %&gt;%
+    cast_dfm(docs, word, n)
+
+dfmpres_sparse &lt;- tidyfrase %&gt;%
+  #filter(presidas==&quot;bolsonaro&quot;)%&gt;%
+  filter(!(word%in% undesirable_words)) %&gt;%
+  filter(nchar(word)&gt;3)%&gt;%
+  count(presidas, word, sort = TRUE) %&gt;%
+    cast_sparse(presidas, word, n)
+
+dfmspeech_sparse &lt;- tidyfrase %&gt;%
+  filter(!(word%in% undesirable_words)) %&gt;%
+  filter(nchar(word)&gt;3)%&gt;%  
+  count(docs, word, sort = TRUE) %&gt;%
+    cast_sparse(docs, word, n)
+
+##DATA VIA STM
+
+topicsdatafrases&lt;-tab_frase %&gt;% 
+      select(frases,docs,presidas)
+     
+topicsdatafrases&lt;-textProcessor(topicsdatafrases$frases, metadata = topicsdatafrases,
+                                customstopwords =c(stp_wrds,undesirable_words), language = &quot;pt&quot;, 
+                                stem = FALSE ) </code></pre>
+<pre><code>## Building corpus... 
+## Converting to Lower Case... 
+## Removing punctuation... 
+## Removing stopwords... 
+## Remove Custom Stopwords...
+## Removing numbers... 
+## Creating Output...</code></pre>
+<pre class="r"><code>inter&lt;- prepDocuments(topicsdatafrases$documents, topicsdatafrases$vocab, topicsdatafrases$meta)</code></pre>
+<pre><code>## Removing 2733 of 4562 terms (2733 of 12591 tokens) due to frequency 
+## Removing 11 Documents with No Words 
+## Your corpus now has 1219 documents, 1829 terms and 9858 tokens.</code></pre>
+<pre class="r"><code>frs&lt;- topicsdatafrases$documents
+vocab&lt;-topicsdatafrases$vocab
+meta&lt;-topicsdatafrases$meta</code></pre>
+<p>Estamos lidando com um modelo que requer um número <code>K</code> pré-fixado de tópicos a serem descobertos. Visando obter uma boa performance, vamos utilizar a função <code>searchK</code> para realizar alguns testes que nos dão algumas dicas sobre qual valor escolher. As pistas que obteremos a seguir são:</p>
+<ul>
+<li><strong>Coerência Semântica</strong>: É um valor que mede o quanto as palavras mais provaveis em cada tópico co-ocorrem.</li>
+<li><strong>Exclusividade</strong>: É um valor que mede a co-ocorrência palavras de um tópico com palavras de outro.</li>
+<li><strong>Resíduo</strong>: É apenas o valor final da função perda usada pelo modelo.</li>
+<li><strong>Verossimilhança de Validação</strong>: O parâmetro <code>N</code> abaixo é o número de documentos que deixaremos não serão usados no treinamento do modelo. A verossimilhança de validação é uma medida do quão bem os <code>N</code> documentos se encaixam nos resultados obtidos do treinamento.</li>
+</ul>
+<pre class="r"><code>kmodelwspeech&lt;-searchK(dfmspeech, K=c(2:15), N=2, init.type=&quot;Spectral&quot;, verbose=FALSE)</code></pre>
+<pre><code>## Warning in stm(documents = heldout$documents, vocab = heldout$vocab, K
+## = k, : K=2 is equivalent to a unidimensional scaling model which you may
+## prefer.</code></pre>
+<pre class="r"><code>kmodelwspeech$results%&gt;%
+  gather(Metric, Value, -K) %&gt;%
+  filter(Metric==&quot;exclus&quot;|Metric==&quot;semcoh&quot;|Metric==&quot;residual&quot;|Metric==&quot;heldout&quot;)%&gt;%
+  ggplot(aes(K, Value, color = Metric)) +
+  geom_line(size = 1.5, alpha = 0.7, show.legend = FALSE) +
+  facet_wrap(~Metric, scales = &quot;free_y&quot;) +
+  labs(x = &quot;K (number of topics)&quot;,
+       y = NULL,
+       title = &quot;Avaliação do modelo versus Número de tópicos&quot;,
+       subtitle = &quot;These diagnostics indicate that a good number of topics would be around 60&quot;)</code></pre>
+<p><img src="/post/2019-01-10-possedobonoro_files/figure-html/wsearchingk-1.png" width="672" /></p>
+<pre class="r"><code>kmodelwspeech$results %&gt;%
+  select(K, exclus, semcoh) %&gt;%
+  #filter(K %in% c(20) %&gt;%
+  unnest() %&gt;%
+  mutate(K = as.factor(K)) %&gt;%
+  ggplot(aes(semcoh, exclus, color = K)) +
+  geom_point(size = 2, alpha = 0.7) +
+  labs(x = &quot;Semantic coherence&quot;,
+       y = &quot;Exclusivity&quot;,
+       title = &quot;Comparing exclusivity and semantic coherence&quot;,
+       subtitle = &quot;Models with fewer topics have higher semantic coherence for more topics, but lower exclusivity&quot;)</code></pre>
+<p><img src="/post/2019-01-10-possedobonoro_files/figure-html/wsearchingk-2.png" width="672" /></p>
+<p>Olhando para os resultados acima vamos utilizar <code>K=7</code> no modelo dividido por discursos. Uma outra opção (mais rápida) é atribuir <span class="math inline">\(K=0\)</span>. Nesse caso a própria função escolhe o valor de <span class="math inline">\(K\)</span> ‘ideal’ para aplicar o modelo. Deixamos abaixo um exemplo de aplicação de cada uma dessas opções. Calculados os coeficientes do modelo, vamos organizá-los em duas matrizes. Os coeficientes <code>gamma</code> retornados pelo modelo são a resposta obtida pelo mesmo sobre a composição dos textos em termos dos tópicos. Os coeficientes <code>beta</code> representam a composição dos tópicos em termos de palavras.</p>
+<pre class="r"><code>##Modelagem
+
+topicmodel_pres &lt;- stm(dfmpres, K = 0, 
+                   verbose = FALSE, init.type=&quot;Spectral&quot;)
+ 
+topicmodel_speech &lt;- stm(dfmspeech, K = 7, 
+                   verbose = FALSE, init.type = &quot;Spectral&quot;)
+
+
+##tidy models
+
+
+td_betapres &lt;- tidy(topicmodel_pres)
+
+td_gamapres &lt;-tidy(topicmodel_pres, matrix = &quot;gamma&quot;)
+
+td_betaspeech &lt;- tidy(topicmodel_speech)
+
+td_gamaspeech &lt;- tidy(topicmodel_speech, matrix = &quot;gamma&quot;)</code></pre>
+<p>Finalmente chegou o momento de vizualizarmos os resultados do modelo. Primeiro vejamos o modelo dividido por presidentes, lembramos que o número de tópicos foi escolhiddo automaticamente:</p>
+<pre class="r"><code>td_betapres %&gt;%
+    group_by(topic) %&gt;%
+    top_n(10, beta) %&gt;%
+    slice(1:5)%&gt;%
+    ungroup() %&gt;%
+    mutate(topic = paste0(&quot;Topic &quot;, topic),
+           term = reorder_within(term, beta, topic)) %&gt;%
+    ggplot(aes(term, beta, fill = as.factor(topic))) +
+    geom_col(alpha = 0.8, show.legend = FALSE) +
+    facet_wrap(~ topic, scales = &quot;free_y&quot;) +
+    coord_flip() +
+    scale_x_reordered() +
+    labs(x = NULL, y = expression(beta),
+         title = &quot;Highest word probabilities for each topic&quot;,
+         subtitle = &quot;Different words are associated with different topics&quot;)</code></pre>
+<p><img src="/post/2019-01-10-possedobonoro_files/figure-html/topicplottingpres-1.png" width="672" /></p>
+<pre class="r"><code>  radargama&lt;-td_gamapres%&gt;%spread(topic, gamma)%&gt;%select(2:4)
+  
+  chartJSRadar(radargama,showToolTipLabel = FALSE,
+               main = &quot;Distribuição de Tópico por Presidente&quot;, labs =(rownames(radargama)))</code></pre>
+<canvas id="htmlwidget-2" class="chartJSRadar html-widget" width="672" height="480"></canvas>
+<script type="application/json" data-for="htmlwidget-2">{"x":{"data":{"labels":["1","2","3","4","5"],"datasets":[{"label":"1","data":[3.203763808945e-006,0.000530991374290056,9.53036210160223e-006,3.55470517998275e-006,0.508975735507754],"backgroundColor":"rgba(255,0,0,0.2)","borderColor":"rgba(255,0,0,0.8)","pointBackgroundColor":"rgba(255,0,0,0.8)","pointBorderColor":"#fff","pointHoverBackgroundColor":"#fff","pointHoverBorderColor":"rgba(255,0,0,0.8)"},{"label":"2","data":[6.11193547569761e-006,6.47943861079401e-006,0.0556565213507702,7.59614463893779e-006,2.40714820241546e-005],"backgroundColor":"rgba(0,255,0,0.2)","borderColor":"rgba(0,255,0,0.8)","pointBackgroundColor":"rgba(0,255,0,0.8)","pointBorderColor":"#fff","pointHoverBackgroundColor":"#fff","pointHoverBorderColor":"rgba(0,255,0,0.8)"},{"label":"3","data":[6.04761086692591e-006,6.55073974264879e-006,0.0427501629289103,7.59208386367509e-006,2.43013984871201e-005],"backgroundColor":"rgba(0,0,255,0.2)","borderColor":"rgba(0,0,255,0.8)","pointBackgroundColor":"rgba(0,0,255,0.8)","pointBorderColor":"#fff","pointHoverBackgroundColor":"#fff","pointHoverBorderColor":"rgba(0,0,255,0.8)"}]},"options":{"responsive":true,"title":{"display":true,"text":"Distribuição de Tópico por Presidente"},"scale":{"ticks":{"min":0},"pointLabels":{"fontSize":18}},"tooltips":{"enabled":false,"mode":"label"},"legend":{"display":true}}},"evals":[],"jsHooks":[]}</script>
+<pre class="r"><code>radargama&lt;-td_gamapres%&gt;%spread(document, gamma)%&gt;%select(2:6)
+  
+  chartJSRadar(radargama,showToolTipLabel = FALSE,
+               main = &quot;Distribuição de Presidente por Tópico&quot;, labs =(rownames(radargama)))</code></pre>
+<canvas id="htmlwidget-3" class="chartJSRadar html-widget" width="672" height="480"></canvas>
+<script type="application/json" data-for="htmlwidget-3">{"x":{"data":{"labels":["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48","49","50","51","52","53","54","55","56","57","58","59","60","61","62","63","64","65","66","67","68","69","70","71","72","73","74","75","76","77","78","79"],"datasets":[{"label":"1","data":[3.203763808945e-006,6.11193547569761e-006,6.04761086692591e-006,6.11193547569927e-006,1.00909373129813e-005,6.1119354756927e-006,6.11193547569613e-006,6.04761653032799e-006,1.07281006021373e-005,6.11193547569571e-006,0.00311400980935699,6.11193547569634e-006,6.11193547569446e-006,1.99945282759066e-005,5.6722789094582e-006,0.000755285024578586,0.00293287314080383,1.19820487825622e-005,1.19820487825622e-005,0.00128658969162094,6.11193547570309e-006,0.0047559226916302,1.25516216718101e-005,1.23049837421585e-005,1.72964761048048e-005,0.00219546415773453,1.09104598339393e-005,1.72964761048045e-005,4.11639979041066e-006,6.11193547569976e-006,1.00909373129808e-005,8.3833862901896e-005,0.00047635481170423,0.000776824134996934,1.23049837435613e-005,4.11639979039997e-006,0.0347397353175141,4.11229239916821e-006,8.38338629019105e-005,0.00219546415772998,4.11639979048634e-006,4.11229239916751e-006,8.38338629019055e-005,1.78993840564178e-005,5.91438802353066e-006,0.00475592269128956,6.11193547569282e-006,0.0131709584549862,0.0845168195332167,0.0066308791415936,6.11193547569647e-006,0.00167374103926924,0.00209619156237528,0.273120032912513,4.11229239916818e-006,0.396551260537808,4.11229239916771e-006,3.15263007830298e-005,5.9461833868881e-006,1.7296476104805e-005,1.09104598339281e-005,0.000414573722665186,0.113656047727837,0.00325728989806327,1.72964761048048e-005,4.11229239916852e-006,1.09104598339352e-005,1.19820487825622e-005,6.04761075481361e-006,1.09104598339409e-005,0.00351409887252993,0.0058833054662112,0.0347397353175053,0.0020158781108394,6.02336402254471e-006,1.99945641204365e-005,4.11639979046676e-006,1.19820487825622e-005,5.58370367210481e-005],"backgroundColor":"rgba(255,0,0,0.2)","borderColor":"rgba(255,0,0,0.8)","pointBackgroundColor":"rgba(255,0,0,0.8)","pointBorderColor":"#fff","pointHoverBackgroundColor":"#fff","pointHoverBorderColor":"rgba(255,0,0,0.8)"},{"label":"2","data":[0.000530991374290056,6.47943861079401e-006,6.55073974264879e-006,6.47943861079368e-006,0.00324272360177615,6.47943861080136e-006,6.47943861079681e-006,6.5505909319745e-006,1.49786242909269e-005,6.4794386107969e-006,4.30407754604466e-005,6.4794386107972e-006,6.47943861079621e-006,1.99427098518988e-005,1.77205013646812e-005,3.11279789171643e-005,0.00403244080495807,0.00839697679348836,0.00839697679349026,1.68831409762637e-005,6.47943861079671e-006,2.65050079285056e-005,0.00257006782921887,2.16947230060602e-005,0.00663331299521511,0.00302105764923506,1.51555285506372e-005,0.00663331299521528,0.0850488378885479,6.47943861079682e-006,0.00324272360177459,6.52474251480112e-005,0.000687959988166016,0.00103446309272445,2.16947230110446e-005,0.085048837898763,5.80386036943384e-005,0.110834235643737,6.52474251480139e-005,0.00302105764922893,0.0850488378603874,0.110834235641959,6.52474251480136e-005,3.73667294047859e-005,6.39964738203577e-006,2.65050079287598e-005,6.47943861079798e-006,2.78146064719993e-005,6.13988843315697e-005,4.6826844345229e-005,6.47943861079438e-006,0.00166513239532435,0.00435202943281122,3.33038991624776e-005,0.110834235641982,2.38060993425871e-005,0.110834235639595,6.78324267451925e-005,6.43034905389811e-006,0.00663331299521549,1.51555285506341e-005,0.000553797120216387,0.00184171811283978,0.00119377466429649,0.0066333129952146,0.110834235640428,1.51555285506342e-005,0.00839697679348982,6.55074269024987e-006,1.51555285506369e-005,0.00479295000081659,0.00316281978526929,5.80386036943373e-005,0.00391322078653791,6.53434519123783e-006,1.99427387118255e-005,0.0850488378725039,0.00839697679349,0.00161226596979676],"backgroundColor":"rgba(0,255,0,0.2)","borderColor":"rgba(0,255,0,0.8)","pointBackgroundColor":"rgba(0,255,0,0.8)","pointBorderColor":"#fff","pointHoverBackgroundColor":"#fff","pointHoverBorderColor":"rgba(0,255,0,0.8)"},{"label":"3","data":[9.53036210160223e-006,0.0556565213507702,0.0427501629289103,0.0556565213507953,0.0012040030944208,0.0556565213498756,0.0556565213504821,0.0427588480601472,9.97835758564025e-006,0.0556565213505976,3.83418383823727e-005,0.0556565213504866,0.0556565213506977,0.0164058658175983,0.000809136567192174,2.35042356301137e-005,0.00206943352605262,3.43083503365783e-005,3.43083503365791e-005,0.00980395424509702,0.0556565213517876,0.0047921080618199,1.98024833122726e-005,0.0206040178426768,2.64940344978057e-005,0.00113418911001543,1.01408002277173e-005,2.6494034497806e-005,6.85696960476608e-006,0.0556565213512346,0.00120400309442024,5.08518569018086e-005,0.000506940362884982,3.82339969566931e-005,0.0206040180016607,6.85696960477217e-006,5.34629341153388e-005,6.90164739692628e-006,5.08518569018117e-005,0.00113418911001325,6.85696960485774e-006,6.90164739691797e-006,5.08518569018109e-005,0.000684071754265846,0.0418145666918148,0.0047921080614799,0.055656521350113,0.0133591404594115,5.87103349158034e-005,4.0923130365316e-005,0.0556565213503121,0.0025607408765779,0.00106527174865287,0.000705403591452844,6.9016473969188e-006,1.82602691585529e-005,6.90164739691137e-006,4.37268313774204e-005,0.0422370500974933,2.64940344978054e-005,1.01408002277185e-005,0.00229485966694708,4.8664916774874e-005,0.00139354611885013,2.64940344978055e-005,6.90164739691433e-006,1.01408002277175e-005,3.43083503365772e-005,0.0427499909179891,1.0140800227717e-005,0.00373462866685615,0.00399463097183168,5.34629341153391e-005,0.0016732184710196,0.0411517410402922,0.0164075240963294,6.85696960484941e-006,3.43083503365778e-005,0.000424035037524642],"backgroundColor":"rgba(0,0,255,0.2)","borderColor":"rgba(0,0,255,0.8)","pointBackgroundColor":"rgba(0,0,255,0.8)","pointBorderColor":"#fff","pointHoverBackgroundColor":"#fff","pointHoverBorderColor":"rgba(0,0,255,0.8)"},{"label":"4","data":[3.55470517998275e-006,7.59614463893779e-006,7.59208386367509e-006,7.5961446389413e-006,7.53840192604243e-006,7.59614463893318e-006,7.59614463893639e-006,7.59205187580069e-006,0.141714540314161,7.59614463893621e-006,0.00829014173731672,7.59614463893695e-006,7.59614463893199e-006,0.0123406619389898,5.06191564434084e-006,0.014601427126169,1.55144683083973e-005,6.79693928599334e-006,6.79693928599323e-006,1.22777169705721e-005,7.59614463894612e-006,1.73661412661263e-005,0.00748243168860543,4.74287608964688e-006,0.0110897770100311,1.61904406144624e-005,0.152532310984723,0.0110897770100311,6.81758075662166e-006,7.59614463894112e-006,7.53840192604216e-006,0.00355519930358303,0.00771011625483565,1.51790650908287e-005,4.74287608921347e-006,6.81758075660005e-006,2.44507268014058e-005,6.77874665219513e-006,0.00355519930358303,1.61904406144542e-005,6.81758075672565e-006,6.77874665218872e-006,0.00355519930358304,0.00901991014370422,7.58747483295661e-006,1.73661412663033e-005,7.59614463893235e-006,1.77918653393548e-005,0.0381549976146651,0.018008458272984,7.59614463893687e-006,0.00732453308957015,1.55379979914711e-005,3.18920174839591e-005,6.77874665219108e-006,3.60988778839211e-005,6.77874665218719e-006,0.0196157260719146,7.59600140778497e-006,0.0110897770100314,0.152532310983338,0.00561916992022082,3.06292308652242e-005,0.0118640478039779,0.0110897770100301,6.77874665218594e-006,0.152532310984264,6.79693928599321e-006,7.59208449739622e-006,0.152532310984314,1.44653705437584e-005,0.00992848185647953,2.44507268014058e-005,0.0101957216074597,7.59633138020416e-006,0.0123407958463974,6.81758075669446e-006,6.79693928599305e-006,7.88429880224936e-005],"backgroundColor":"rgba(255,255,0,0.2)","borderColor":"rgba(255,255,0,0.8)","pointBackgroundColor":"rgba(255,255,0,0.8)","pointBorderColor":"#fff","pointHoverBackgroundColor":"#fff","pointHoverBorderColor":"rgba(255,255,0,0.8)"},{"label":"5","data":[0.508975735507754,2.40714820241546e-005,2.43013984871201e-005,2.40714820241639e-005,3.22870597452977e-005,2.40714820241517e-005,2.40714820241554e-005,2.43010617900139e-005,5.04463821369504e-005,2.40714820241499e-005,7.89209215657512e-005,2.40714820241577e-005,2.40714820241459e-005,4.3139297513301e-005,0.0119712195817242,8.31388561740711e-005,4.73483383362572e-005,0.0292903739867542,0.0292903739867589,3.44986998679985e-005,2.40714820241717e-005,4.70811349410034e-005,0.0036489617033386,0.0594641451347242,5.54069944650292e-005,4.97477189748552e-005,5.07915725949346e-005,5.54069944650301e-005,2.89222661772294e-005,2.40714820241649e-005,3.22870597452968e-005,0.00952264840816549,0.00759866780002381,0.0113056854239729,0.0594641453007167,2.89222661771859e-005,0.0763091627328113,2.88840039471515e-005,0.00952264840816571,4.97477189748371e-005,2.89222661776489e-005,2.88840039471201e-005,0.0095226484081655,0.00441289906791532,2.43798942661404e-005,4.70811349418377e-005,2.40714820241504e-005,4.61522785095721e-005,0.000106164950228344,9.46217769419689e-005,2.40714820241519e-005,0.0023602261272569,4.83242389183983e-005,7.20815665093223e-005,2.88840039471282e-005,7.77285636089138e-005,2.88840039471001e-005,0.0203628499546629,2.43844954459846e-005,5.54069944650298e-005,5.07915725949022e-005,0.00279582129443912,7.34603671147503e-005,0.00254394408958439,5.54069944650288e-005,2.88840039471084e-005,5.07915725949231e-005,0.0292903739867584,2.43014051566531e-005,5.07915725949439e-005,4.56985383541901e-005,0.00203362595030424,0.0763091627328064,0.00223140723033284,2.43555884461045e-005,4.31392536686888e-005,2.89222661775546e-005,0.0292903739867589,0.000184089840790791],"backgroundColor":"rgba(255,0,255,0.2)","borderColor":"rgba(255,0,255,0.8)","pointBackgroundColor":"rgba(255,0,255,0.8)","pointBorderColor":"#fff","pointHoverBackgroundColor":"#fff","pointHoverBorderColor":"rgba(255,0,255,0.8)"}]},"options":{"responsive":true,"title":{"display":true,"text":"Distribuição de Presidente por Tópico"},"scale":{"ticks":{"min":0},"pointLabels":{"fontSize":18}},"tooltips":{"enabled":false,"mode":"label"},"legend":{"display":true}}},"evals":[],"jsHooks":[]}</script>
+<p>Muitas vezes ao conhecer um modelo novo, o primeiro impulso de um estudante é tentar aplicá-lo o mais rápido possível e vizualizar que tipo de resultado é ‘cuspido’ pelo modelo. Essa empolgação muitas vezes nos leva a aplicar o modelo automatizando-o o máximo possível, invariavelmente sob a premissa de que “quem fez o modelo sabia o que estava fazendo”. Por mais que essa suposição seja (eu espero) muitas vezes verdadeira, sempre é preciso adequar as técnicas já existentes para o contexto do problema. Por isso, exemplificamos aqui o que pode acontecer ao utilizar indevidamente a opção <code>K=0</code>. Na mesma linha de pensamento, recomendamos o uso da opção <code>init.type=&quot;Spectral&quot;</code> pois, dentre as opções disponíveis, é a única que produz resultados determinísticos.</p>
+<p>Vamos aos resultados do modelo dividido por discursos:</p>
+<pre class="r"><code>td_betaspeech %&gt;%
+    group_by(topic) %&gt;%
+    top_n(10, beta) %&gt;%
+    ungroup() %&gt;%
+    mutate(topic = paste0(&quot;Topic &quot;, topic),
+           term = reorder_within(term, beta, topic)) %&gt;%
+    ggplot(aes(term, beta, fill = as.factor(topic))) +
+    geom_col(alpha = 0.8, show.legend = FALSE) +
+    facet_wrap(~ topic, scales = &quot;free_y&quot;) +
+    coord_flip() +
+    scale_x_reordered() +
+    labs(x = NULL, y = expression(beta),
+    title = &quot;Highest word probabilities for each topic&quot;,
+    subtitle = &quot;Different words are associated with different topics&quot;)</code></pre>
+<p><img src="/post/2019-01-10-possedobonoro_files/figure-html/wtopicplottingspeech-1.png" width="672" /></p>
+<pre class="r"><code>radargama&lt;-td_gamaspeech%&gt;%spread(document, gamma)%&gt;%select(2:9)
+  
+  chartJSRadar(radargama,showToolTipLabel = FALSE,
+               main = &quot;Distribuição de Tópico por Discurso&quot;, labs =(rownames(radargama)))</code></pre>
+<canvas id="htmlwidget-4" class="chartJSRadar html-widget" width="672" height="480"></canvas>
+<script type="application/json" data-for="htmlwidget-4">{"x":{"data":{"labels":["1","2","3","4","5","6","7"],"datasets":[{"label":"1","data":[8.18106912813469e-005,5.7216047011941e-005,4.84738756330913e-005,0.999537941393442,4.71389406763474e-005,0.000148426517767929,7.8992534186455e-005],"backgroundColor":"rgba(255,0,0,0.2)","borderColor":"rgba(255,0,0,0.8)","pointBackgroundColor":"rgba(255,0,0,0.8)","pointBorderColor":"#fff","pointHoverBackgroundColor":"#fff","pointHoverBorderColor":"rgba(255,0,0,0.8)"},{"label":"2","data":[6.29832721945738e-005,4.36931160758437e-005,3.07454488198652e-005,0.000103113375618178,2.90975175458842e-005,0.999688710115995,4.16571537508317e-005],"backgroundColor":"rgba(0,255,0,0.2)","borderColor":"rgba(0,255,0,0.8)","pointBackgroundColor":"rgba(0,255,0,0.8)","pointBorderColor":"#fff","pointHoverBackgroundColor":"#fff","pointHoverBorderColor":"rgba(0,255,0,0.8)"},{"label":"3","data":[7.41095391438091e-005,6.94782685407366e-005,7.24499735966886e-005,5.8345790821097e-005,0.99957329489063,6.6936091779746e-005,8.53854454868857e-005],"backgroundColor":"rgba(0,0,255,0.2)","borderColor":"rgba(0,0,255,0.8)","pointBackgroundColor":"rgba(0,0,255,0.8)","pointBorderColor":"#fff","pointHoverBackgroundColor":"#fff","pointHoverBorderColor":"rgba(0,0,255,0.8)"},{"label":"4","data":[8.13741750243898e-005,7.6617759976277e-005,6.59883757863401e-005,8.19877536333411e-005,6.88779103299347e-005,8.36229268904468e-005,0.999541531098359],"backgroundColor":"rgba(255,255,0,0.2)","borderColor":"rgba(255,255,0,0.8)","pointBackgroundColor":"rgba(255,255,0,0.8)","pointBorderColor":"#fff","pointHoverBackgroundColor":"#fff","pointHoverBorderColor":"rgba(255,255,0,0.8)"},{"label":"5","data":[7.01860248907934e-005,4.82787481065348e-005,3.5623344235639e-005,0.00011960658127245,3.28523287960411e-005,0.999634482161267,5.89708114325929e-005],"backgroundColor":"rgba(255,0,255,0.2)","borderColor":"rgba(255,0,255,0.8)","pointBackgroundColor":"rgba(255,0,255,0.8)","pointBorderColor":"#fff","pointHoverBackgroundColor":"#fff","pointHoverBorderColor":"rgba(255,0,255,0.8)"},{"label":"6","data":[8.43004107058951e-005,8.06947933128957e-005,0.999504073562349,6.90765519283369e-005,8.27239018159261e-005,8.46090020404859e-005,9.45217778462144e-005],"backgroundColor":"rgba(0,255,255,0.2)","borderColor":"rgba(0,255,255,0.8)","pointBackgroundColor":"rgba(0,255,255,0.8)","pointBorderColor":"#fff","pointHoverBackgroundColor":"#fff","pointHoverBorderColor":"rgba(0,255,255,0.8)"},{"label":"7","data":[8.97858814393479e-005,0.999506546376686,7.39905564517288e-005,7.32494575825825e-005,7.02446040528597e-005,8.78842815871368e-005,9.82988422000432e-005],"backgroundColor":"rgba(255,165,0,0.2)","borderColor":"rgba(255,165,0,0.8)","pointBackgroundColor":"rgba(255,165,0,0.8)","pointBorderColor":"#fff","pointHoverBackgroundColor":"#fff","pointHoverBorderColor":"rgba(255,165,0,0.8)"},{"label":"8","data":[0.99877017597591,0.000197543102067675,0.000168742263538464,0.000216286524071313,0.000171058775867656,0.00027025253403074,0.00020594082451336],"backgroundColor":"rgba(160,32,240,0.2)","borderColor":"rgba(160,32,240,0.8)","pointBackgroundColor":"rgba(160,32,240,0.8)","pointBorderColor":"#fff","pointHoverBackgroundColor":"#fff","pointHoverBorderColor":"rgba(160,32,240,0.8)"}]},"options":{"responsive":true,"title":{"display":true,"text":"Distribuição de Tópico por Discurso"},"scale":{"ticks":{"min":0},"pointLabels":{"fontSize":18}},"tooltips":{"enabled":false,"mode":"label"},"legend":{"display":true}}},"evals":[],"jsHooks":[]}</script>
+<pre class="r"><code>  radargama&lt;-td_gamaspeech%&gt;%spread(topic, gamma)%&gt;%select(-1)
+  
+  chartJSRadar(radargama,showToolTipLabel = FALSE,
+               main = &quot;Distribuição de Discurso por Tópico&quot;, labs =(rownames(radargama)))</code></pre>
+<canvas id="htmlwidget-5" class="chartJSRadar html-widget" width="672" height="480"></canvas>
+<script type="application/json" data-for="htmlwidget-5">{"x":{"data":{"labels":["1","2","3","4","5","6","7","8"],"datasets":[{"label":"1","data":[8.18106912813469e-005,6.29832721945738e-005,7.41095391438091e-005,8.13741750243898e-005,7.01860248907934e-005,8.43004107058951e-005,8.97858814393479e-005,0.99877017597591],"backgroundColor":"rgba(255,0,0,0.2)","borderColor":"rgba(255,0,0,0.8)","pointBackgroundColor":"rgba(255,0,0,0.8)","pointBorderColor":"#fff","pointHoverBackgroundColor":"#fff","pointHoverBorderColor":"rgba(255,0,0,0.8)"},{"label":"2","data":[5.7216047011941e-005,4.36931160758437e-005,6.94782685407366e-005,7.6617759976277e-005,4.82787481065348e-005,8.06947933128957e-005,0.999506546376686,0.000197543102067675],"backgroundColor":"rgba(0,255,0,0.2)","borderColor":"rgba(0,255,0,0.8)","pointBackgroundColor":"rgba(0,255,0,0.8)","pointBorderColor":"#fff","pointHoverBackgroundColor":"#fff","pointHoverBorderColor":"rgba(0,255,0,0.8)"},{"label":"3","data":[4.84738756330913e-005,3.07454488198652e-005,7.24499735966886e-005,6.59883757863401e-005,3.5623344235639e-005,0.999504073562349,7.39905564517288e-005,0.000168742263538464],"backgroundColor":"rgba(0,0,255,0.2)","borderColor":"rgba(0,0,255,0.8)","pointBackgroundColor":"rgba(0,0,255,0.8)","pointBorderColor":"#fff","pointHoverBackgroundColor":"#fff","pointHoverBorderColor":"rgba(0,0,255,0.8)"},{"label":"4","data":[0.999537941393442,0.000103113375618178,5.8345790821097e-005,8.19877536333411e-005,0.00011960658127245,6.90765519283369e-005,7.32494575825825e-005,0.000216286524071313],"backgroundColor":"rgba(255,255,0,0.2)","borderColor":"rgba(255,255,0,0.8)","pointBackgroundColor":"rgba(255,255,0,0.8)","pointBorderColor":"#fff","pointHoverBackgroundColor":"#fff","pointHoverBorderColor":"rgba(255,255,0,0.8)"},{"label":"5","data":[4.71389406763474e-005,2.90975175458842e-005,0.99957329489063,6.88779103299347e-005,3.28523287960411e-005,8.27239018159261e-005,7.02446040528597e-005,0.000171058775867656],"backgroundColor":"rgba(255,0,255,0.2)","borderColor":"rgba(255,0,255,0.8)","pointBackgroundColor":"rgba(255,0,255,0.8)","pointBorderColor":"#fff","pointHoverBackgroundColor":"#fff","pointHoverBorderColor":"rgba(255,0,255,0.8)"},{"label":"6","data":[0.000148426517767929,0.999688710115995,6.6936091779746e-005,8.36229268904468e-005,0.999634482161267,8.46090020404859e-005,8.78842815871368e-005,0.00027025253403074],"backgroundColor":"rgba(0,255,255,0.2)","borderColor":"rgba(0,255,255,0.8)","pointBackgroundColor":"rgba(0,255,255,0.8)","pointBorderColor":"#fff","pointHoverBackgroundColor":"#fff","pointHoverBorderColor":"rgba(0,255,255,0.8)"},{"label":"7","data":[7.8992534186455e-005,4.16571537508317e-005,8.53854454868857e-005,0.999541531098359,5.89708114325929e-005,9.45217778462144e-005,9.82988422000432e-005,0.00020594082451336],"backgroundColor":"rgba(255,165,0,0.2)","borderColor":"rgba(255,165,0,0.8)","pointBackgroundColor":"rgba(255,165,0,0.8)","pointBorderColor":"#fff","pointHoverBackgroundColor":"#fff","pointHoverBorderColor":"rgba(255,165,0,0.8)"}]},"options":{"responsive":true,"title":{"display":true,"text":"Distribuição de Discurso por Tópico"},"scale":{"ticks":{"min":0},"pointLabels":{"fontSize":18}},"tooltips":{"enabled":false,"mode":"label"},"legend":{"display":true}}},"evals":[],"jsHooks":[]}</script>
+<p>Aqui já temos resultados mais interessantes, o último gráfico mostra que o modelo, a partir dos discursos, agrupou discursos com o mesmo autor como sendo do mesmo tópico!</p>
+<div id="topicos-com-bigramas" class="section level3">
+<h3>Tópicos com Bigramas</h3>
+<p>Agora, aplicamos o mesmo procedimento descrito acima, porém baseado em bigramas. Será que obtemos resultados parecidos? Devido aos resultados obtidos ao deixar automática a escolha de <code>K</code>, vamos agora escolher esse parâmetro manualmente tanto no modelo por presidentes tanto no de discursos.</p>
+<pre class="r"><code>dfmdpres &lt;- bigrams_filter %&gt;%
+  #filter(presidas==&quot;bolsonaro&quot;)%&gt;%
+  filter(!(word1%in% undesirable_words)) %&gt;% 
+  filter(!(word2%in%undesirable_words)) %&gt;% 
+  filter(nchar(word1)&gt;3)%&gt;%
+  filter(nchar(word2)&gt;3)%&gt;%
+  unite(bigram,word1,word2,sep=&quot; &quot;,remove = FALSE)%&gt;%
+  count(presidas, bigram, sort = TRUE) %&gt;%
+  cast_dfm(presidas, bigram, n)
+
+dfmdspeech &lt;- bigrams_filter %&gt;%
+  filter(!(word1%in% undesirable_words)) %&gt;% 
+  filter(!(word2%in%undesirable_words)) %&gt;% 
+  filter(nchar(word1)&gt;3)%&gt;%
+  filter(nchar(word2)&gt;3)%&gt;%
+  unite(bigram,word1,word2,sep=&quot; &quot;,remove = FALSE)%&gt;%
+  count(docs, bigram, sort = TRUE) %&gt;%
+  cast_dfm(docs, bigram, n)
+
+
+dfmdpres_sparse &lt;- bigrams_filter %&gt;%
+  #filter(presidas==&quot;bolsonaro&quot;)%&gt;%
+  filter(!(word1%in% undesirable_words)) %&gt;% 
+  filter(!(word2%in%undesirable_words)) %&gt;% 
+  filter(nchar(word1)&gt;3)%&gt;%
+  filter(nchar(word2)&gt;3)%&gt;%
+  unite(bigram,word1,word2,sep=&quot; &quot;,remove = FALSE)%&gt;%
+  count(presidas, bigram, sort = TRUE) %&gt;%
+  cast_sparse(presidas, bigram, n)
+
+dfmdspeech_sparse &lt;- bigrams_filter %&gt;%
+  filter(!(word1%in% undesirable_words)) %&gt;% 
+  filter(!(word2%in%undesirable_words)) %&gt;% 
+  filter(nchar(word1)&gt;3)%&gt;%
+  filter(nchar(word2)&gt;3)%&gt;%
+  unite(bigram,word1,word2,sep=&quot; &quot;,remove = FALSE)%&gt;%
+  count(docs, bigram, sort = TRUE) %&gt;%
+  cast_sparse(docs, bigram, n)</code></pre>
+<pre class="r"><code>kbmodelwspeech&lt;-searchK(dfmdpres, K=c(2:15), N=2, init.type=&quot;Spectral&quot;, verbose=FALSE)</code></pre>
+<pre><code>## Warning in stm(documents = heldout$documents, vocab = heldout$vocab, K
+## = k, : K=2 is equivalent to a unidimensional scaling model which you may
+## prefer.</code></pre>
+<pre class="r"><code>dfmdpres %&gt;%View()
+
+kbmodelwspeech$results%&gt;%
+  gather(Metric, Value, -K) %&gt;%
+  filter(Metric==&quot;exclus&quot;|Metric==&quot;semcoh&quot;|Metric==&quot;residual&quot;|Metric==&quot;heldout&quot;)%&gt;%
+  ggplot(aes(K, Value, color = Metric)) +
+  geom_line(size = 1.5, alpha = 0.7, show.legend = FALSE) +
+  facet_wrap(~Metric, scales = &quot;free_y&quot;) +
+  labs(x = &quot;K (number of topics)&quot;,
+       y = NULL,
+       title = &quot;Avaliação do modelo versus Número de tópicos&quot;)</code></pre>
+<p><img src="/post/2019-01-10-possedobonoro_files/figure-html/bigsearchkspeech-1.png" width="672" /></p>
+<pre class="r"><code>kbmodelwspeech$results %&gt;%
+  select(K, exclus, semcoh) %&gt;%
+  #filter(K %in% c(20) %&gt;%
+  unnest() %&gt;%
+  mutate(K = as.factor(K)) %&gt;%
+  ggplot(aes(semcoh, exclus, color = K)) +
+  geom_point(size = 2, alpha = 0.7) +
+  labs(x = &quot;Coerência Semântica&quot;,
+       y = &quot;Exclusividade&quot;,
+       title = &quot;Comparando Exclusividade e Coerência Semântica&quot;)</code></pre>
+<p><img src="/post/2019-01-10-possedobonoro_files/figure-html/bigsearchkspeech-2.png" width="672" /></p>
+<p>Dessa vez vemos uma relação exatamente inversa entre coerência semântica exclusividade, enquanto o residual e a verossimilhança ficam constantemente ruins.</p>
+<p>Agora vamos ver o que aconteceu com o modelo dividido em discursos:</p>
+<pre class="r"><code>kbmodelspeech&lt;-searchK(dfmdspeech, K=c(2:15), N=2, init.type=&quot;Spectral&quot;, verbose=FALSE)</code></pre>
+<pre><code>## Warning in stm(documents = heldout$documents, vocab = heldout$vocab, K
+## = k, : K=2 is equivalent to a unidimensional scaling model which you may
+## prefer.</code></pre>
+<pre class="r"><code>kbmodelspeech$results%&gt;%
+  gather(Metric, Value, -K) %&gt;%
+  filter(Metric==&quot;exclus&quot;|Metric==&quot;semcoh&quot;|Metric==&quot;residual&quot;|Metric==&quot;heldout&quot;)%&gt;%
+  ggplot(aes(K, Value, color = Metric)) +
+  geom_line(size = 1.5, alpha = 0.7, show.legend = FALSE) +
+  facet_wrap(~Metric, scales = &quot;free_y&quot;) +
+  labs(x = &quot;K (number of topics)&quot;,
+       y = NULL,
+       title = &quot;Avaliação do modelo versus Número de tópicos&quot;,
+       subtitle = &quot;These diagnostics indicate that a good number of topics would be around 60&quot;)</code></pre>
+<p><img src="/post/2019-01-10-possedobonoro_files/figure-html/presi-1.png" width="672" /></p>
+<pre class="r"><code>kbmodelwspeech$results %&gt;%
+  select(K, exclus, semcoh) %&gt;%
+  #filter(K %in% c(20) %&gt;%
+  unnest() %&gt;%
+  mutate(K = as.factor(K)) %&gt;%
+  ggplot(aes(semcoh, exclus, color = K)) +
+  geom_point(size = 2, alpha = 0.7) +
+  labs(x = &quot;Coerência Semântica&quot;,
+       y = &quot;Exclusividade&quot;,
+       title = &quot;Comparando Exclusividade e Coerência Semântica&quot;)</code></pre>
+<p><img src="/post/2019-01-10-possedobonoro_files/figure-html/presi-2.png" width="672" /></p>
+<p>Po Finalmente, vamos aplicar o modelo e dar uma olhada nos seus resultados.</p>
+<pre class="r"><code>topicmodeld_pres &lt;- stm(dfmdpres, K = 6, 
+                   verbose = FALSE, init.type=&quot;Spectral&quot; )
+
+topicmodeld_speech &lt;- stm(dfmdspeech, K = 6, 
+                   verbose = FALSE, init.type = &quot;Spectral&quot;)
+
+tdd_betapres &lt;- tidy(topicmodeld_pres)
+
+tdd_betaspeech &lt;- tidy(topicmodeld_speech)
+
+tdd_gamapres&lt;-tidy(topicmodeld_pres, matrix = &quot;gamma&quot; )
+
+tddgamaspeech&lt;- tidy(topicmodeld_speech, matrix=&quot;gamma&quot;)</code></pre>
+<pre class="r"><code>tdd_betapres %&gt;%
+    group_by(topic) %&gt;%
+    top_n(10, beta) %&gt;%
+    slice(1:10)%&gt;%
+    ungroup() %&gt;%
+    mutate(topic = paste0(&quot;Topic &quot;, topic),
+           term = reorder_within(term, beta, topic)) %&gt;%
+    ggplot(aes(term, beta, fill = as.factor(topic))) +
+    geom_col(alpha = 0.8, show.legend = FALSE) +
+    facet_wrap(~ topic, scales = &quot;free_y&quot;) +
+    coord_flip() +
+    scale_x_reordered() +
+    labs(x = NULL, y = expression(beta),
+         title = &quot;Bigramas com Maior Probabilidade em cada tópico&quot;)</code></pre>
+<p><img src="/post/2019-01-10-possedobonoro_files/figure-html/bigraphipres-1.png" width="672" /></p>
+<pre class="r"><code>  radargama&lt;-tddgamaspeech%&gt;%spread(document, gamma)%&gt;%select(-1)
+  
+ chartJSRadar(radargama,showToolTipLabel = FALSE,
+               main = &quot;Distribuição de Tópico por Discurso&quot;, labs =(rownames(radargama)))</code></pre>
+<canvas id="htmlwidget-6" class="chartJSRadar html-widget" width="672" height="480"></canvas>
+<script type="application/json" data-for="htmlwidget-6">{"x":{"data":{"labels":["1","2","3","4","5","6"],"datasets":[{"label":"1","data":[9.24709012522306e-005,9.91470613697546e-005,8.47533311591501e-005,0.000106314318068569,0.000110310390922364,0.999507003997228],"backgroundColor":"rgba(255,0,0,0.2)","borderColor":"rgba(255,0,0,0.8)","pointBackgroundColor":"rgba(255,0,0,0.8)","pointBorderColor":"#fff","pointHoverBackgroundColor":"#fff","pointHoverBorderColor":"rgba(255,0,0,0.8)"},{"label":"2","data":[0.000118556056845805,9.89474736114652e-005,0.000122147558616468,0.99941149474423,9.66540831475908e-005,0.000152200083547389],"backgroundColor":"rgba(0,255,0,0.2)","borderColor":"rgba(0,255,0,0.8)","pointBackgroundColor":"rgba(0,255,0,0.8)","pointBorderColor":"#fff","pointHoverBackgroundColor":"#fff","pointHoverBorderColor":"rgba(0,255,0,0.8)"},{"label":"3","data":[8.31020610348985e-005,8.69686398695367e-005,7.71066577403947e-005,9.55265139386915e-005,9.85243076696364e-005,0.999558771819747],"backgroundColor":"rgba(0,0,255,0.2)","borderColor":"rgba(0,0,255,0.8)","pointBackgroundColor":"rgba(0,0,255,0.8)","pointBorderColor":"#fff","pointHoverBackgroundColor":"#fff","pointHoverBorderColor":"rgba(0,0,255,0.8)"},{"label":"4","data":[9.05993981680603e-005,7.55452360190403e-005,9.4230109682607e-005,0.999546543032343,7.51525646342708e-005,0.000117929659151838],"backgroundColor":"rgba(255,255,0,0.2)","borderColor":"rgba(255,255,0,0.8)","pointBackgroundColor":"rgba(255,255,0,0.8)","pointBorderColor":"#fff","pointHoverBackgroundColor":"#fff","pointHoverBorderColor":"rgba(255,255,0,0.8)"},{"label":"5","data":[0.000143947556327631,0.000143110143616136,0.000136921723316773,0.000172014700747587,0.999170599982387,0.000233405893605645],"backgroundColor":"rgba(255,0,255,0.2)","borderColor":"rgba(255,0,255,0.8)","pointBackgroundColor":"rgba(255,0,255,0.8)","pointBorderColor":"#fff","pointHoverBackgroundColor":"#fff","pointHoverBorderColor":"rgba(255,0,255,0.8)"},{"label":"6","data":[0.000232865629375816,0.99871384323031,0.000217151585003942,0.000270546561908819,0.000218731408469132,0.000346861584931984],"backgroundColor":"rgba(0,255,255,0.2)","borderColor":"rgba(0,255,255,0.8)","pointBackgroundColor":"rgba(0,255,255,0.8)","pointBorderColor":"#fff","pointHoverBackgroundColor":"#fff","pointHoverBorderColor":"rgba(0,255,255,0.8)"},{"label":"7","data":[0.000199346449340697,0.000178887444874126,0.99892673057599,0.000262863013225196,0.000174682478140245,0.000257490038430318],"backgroundColor":"rgba(255,165,0,0.2)","borderColor":"rgba(255,165,0,0.8)","pointBackgroundColor":"rgba(255,165,0,0.8)","pointBorderColor":"#fff","pointHoverBackgroundColor":"#fff","pointHoverBorderColor":"rgba(255,165,0,0.8)"},{"label":"8","data":[0.996851385409263,0.000549592743080441,0.000568227535355721,0.000736894787295973,0.000528565785023627,0.000765333739981508],"backgroundColor":"rgba(160,32,240,0.2)","borderColor":"rgba(160,32,240,0.8)","pointBackgroundColor":"rgba(160,32,240,0.8)","pointBorderColor":"#fff","pointHoverBackgroundColor":"#fff","pointHoverBorderColor":"rgba(160,32,240,0.8)"}]},"options":{"responsive":true,"title":{"display":true,"text":"Distribuição de Tópico por Discurso"},"scale":{"ticks":{"min":0},"pointLabels":{"fontSize":18}},"tooltips":{"enabled":false,"mode":"label"},"legend":{"display":true}}},"evals":[],"jsHooks":[]}</script>
+<pre class="r"><code>  radargama&lt;-tddgamaspeech%&gt;%spread(topic, gamma)%&gt;%select(-1)
+  
+  chartJSRadar(radargama,showToolTipLabel = FALSE,
+               main = &quot;Distribuição de Discurso por Tópico&quot;, labs =(rownames(radargama)))</code></pre>
+<canvas id="htmlwidget-7" class="chartJSRadar html-widget" width="672" height="480"></canvas>
+<script type="application/json" data-for="htmlwidget-7">{"x":{"data":{"labels":["1","2","3","4","5","6","7","8"],"datasets":[{"label":"1","data":[9.24709012522306e-005,0.000118556056845805,8.31020610348985e-005,9.05993981680603e-005,0.000143947556327631,0.000232865629375816,0.000199346449340697,0.996851385409263],"backgroundColor":"rgba(255,0,0,0.2)","borderColor":"rgba(255,0,0,0.8)","pointBackgroundColor":"rgba(255,0,0,0.8)","pointBorderColor":"#fff","pointHoverBackgroundColor":"#fff","pointHoverBorderColor":"rgba(255,0,0,0.8)"},{"label":"2","data":[9.91470613697546e-005,9.89474736114652e-005,8.69686398695367e-005,7.55452360190403e-005,0.000143110143616136,0.99871384323031,0.000178887444874126,0.000549592743080441],"backgroundColor":"rgba(0,255,0,0.2)","borderColor":"rgba(0,255,0,0.8)","pointBackgroundColor":"rgba(0,255,0,0.8)","pointBorderColor":"#fff","pointHoverBackgroundColor":"#fff","pointHoverBorderColor":"rgba(0,255,0,0.8)"},{"label":"3","data":[8.47533311591501e-005,0.000122147558616468,7.71066577403947e-005,9.4230109682607e-005,0.000136921723316773,0.000217151585003942,0.99892673057599,0.000568227535355721],"backgroundColor":"rgba(0,0,255,0.2)","borderColor":"rgba(0,0,255,0.8)","pointBackgroundColor":"rgba(0,0,255,0.8)","pointBorderColor":"#fff","pointHoverBackgroundColor":"#fff","pointHoverBorderColor":"rgba(0,0,255,0.8)"},{"label":"4","data":[0.000106314318068569,0.99941149474423,9.55265139386915e-005,0.999546543032343,0.000172014700747587,0.000270546561908819,0.000262863013225196,0.000736894787295973],"backgroundColor":"rgba(255,255,0,0.2)","borderColor":"rgba(255,255,0,0.8)","pointBackgroundColor":"rgba(255,255,0,0.8)","pointBorderColor":"#fff","pointHoverBackgroundColor":"#fff","pointHoverBorderColor":"rgba(255,255,0,0.8)"},{"label":"5","data":[0.000110310390922364,9.66540831475908e-005,9.85243076696364e-005,7.51525646342708e-005,0.999170599982387,0.000218731408469132,0.000174682478140245,0.000528565785023627],"backgroundColor":"rgba(255,0,255,0.2)","borderColor":"rgba(255,0,255,0.8)","pointBackgroundColor":"rgba(255,0,255,0.8)","pointBorderColor":"#fff","pointHoverBackgroundColor":"#fff","pointHoverBorderColor":"rgba(255,0,255,0.8)"},{"label":"6","data":[0.999507003997228,0.000152200083547389,0.999558771819747,0.000117929659151838,0.000233405893605645,0.000346861584931984,0.000257490038430318,0.000765333739981508],"backgroundColor":"rgba(0,255,255,0.2)","borderColor":"rgba(0,255,255,0.8)","pointBackgroundColor":"rgba(0,255,255,0.8)","pointBorderColor":"#fff","pointHoverBackgroundColor":"#fff","pointHoverBorderColor":"rgba(0,255,255,0.8)"}]},"options":{"responsive":true,"title":{"display":true,"text":"Distribuição de Discurso por Tópico"},"scale":{"ticks":{"min":0},"pointLabels":{"fontSize":18}},"tooltips":{"enabled":false,"mode":"label"},"legend":{"display":true}}},"evals":[],"jsHooks":[]}</script>
+<pre class="r"><code>tdd_betapres %&gt;%
+    group_by(topic) %&gt;%
+    top_n(10, beta) %&gt;%
+    ungroup() %&gt;%
+    mutate(topic = paste0(&quot;Topic &quot;, topic),
+           term = reorder_within(term, beta, topic)) %&gt;%
+    ggplot(aes(term, beta, fill = as.factor(topic))) +
+    geom_col(alpha = 0.8, show.legend = FALSE) +
+    facet_wrap(~ topic, scales = &quot;free_y&quot;) +
+    coord_flip() +
+    scale_x_reordered()+
+  labs(x = NULL, y = expression(beta),
+         title = &quot;Bigramas com Maior Probabilidade em cada tópico&quot;)</code></pre>
+<p><img src="/post/2019-01-10-possedobonoro_files/figure-html/bigraphispeech-1.png" width="672" /></p>
+<pre class="r"><code>  radargama&lt;-tdd_gamapres%&gt;%spread(document, gamma)%&gt;%select(-1)
+  
+ chartJSRadar(radargama,showToolTipLabel = FALSE,
+               main = &quot;Distribuição de Tópico por Discurso&quot;, labs =(rownames(radargama)))</code></pre>
+<canvas id="htmlwidget-8" class="chartJSRadar html-widget" width="672" height="480"></canvas>
+<script type="application/json" data-for="htmlwidget-8">{"x":{"data":{"labels":["1","2","3","4","5","6"],"datasets":[{"label":"1","data":[2.47916938943117e-005,5.16953111123804e-005,4.93840524418598e-005,4.76197736741083e-005,0.999750820008942,7.56891599354168e-005],"backgroundColor":"rgba(255,0,0,0.2)","borderColor":"rgba(255,0,0,0.8)","pointBackgroundColor":"rgba(255,0,0,0.8)","pointBorderColor":"#fff","pointHoverBackgroundColor":"#fff","pointHoverBorderColor":"rgba(255,0,0,0.8)"},{"label":"2","data":[2.52834578371199e-005,5.18620856520723e-005,4.73008617942371e-005,0.999751340520076,4.7665197932919e-005,7.65478767069331e-005],"backgroundColor":"rgba(0,255,0,0.2)","borderColor":"rgba(0,255,0,0.8)","pointBackgroundColor":"rgba(0,255,0,0.8)","pointBorderColor":"#fff","pointHoverBackgroundColor":"#fff","pointHoverBorderColor":"rgba(0,255,0,0.8)"},{"label":"3","data":[3.62189400124955e-005,8.36519825461576e-005,0.999615407206631,7.52229446842308e-005,7.75820700713484e-005,0.000111916856054429],"backgroundColor":"rgba(0,0,255,0.2)","borderColor":"rgba(0,0,255,0.8)","pointBackgroundColor":"rgba(0,0,255,0.8)","pointBorderColor":"#fff","pointHoverBackgroundColor":"#fff","pointHoverBorderColor":"rgba(0,0,255,0.8)"},{"label":"4","data":[7.17359131021132e-005,0.9992463139993,0.000159323574853484,0.000155231962786674,0.000154552292502598,0.000212842257454968],"backgroundColor":"rgba(255,255,0,0.2)","borderColor":"rgba(255,255,0,0.8)","pointBackgroundColor":"rgba(255,255,0,0.8)","pointBorderColor":"#fff","pointHoverBackgroundColor":"#fff","pointHoverBorderColor":"rgba(255,255,0,0.8)"},{"label":"5","data":[0.933062559626691,0.000644820000081384,0.000619809819615716,0.00060136770038252,0.000596828837245929,0.0644746140159832],"backgroundColor":"rgba(255,0,255,0.2)","borderColor":"rgba(255,0,255,0.8)","pointBackgroundColor":"rgba(255,0,255,0.8)","pointBorderColor":"#fff","pointHoverBackgroundColor":"#fff","pointHoverBorderColor":"rgba(255,0,255,0.8)"}]},"options":{"responsive":true,"title":{"display":true,"text":"Distribuição de Tópico por Discurso"},"scale":{"ticks":{"min":0},"pointLabels":{"fontSize":18}},"tooltips":{"enabled":false,"mode":"label"},"legend":{"display":true}}},"evals":[],"jsHooks":[]}</script>
+<pre class="r"><code>  radargama&lt;-tdd_gamapres%&gt;%spread(topic, gamma)%&gt;%select(-1)
+  
+  chartJSRadar(radargama,showToolTipLabel = FALSE,
+               main = &quot;Distribuição de Discurso por Tópico&quot;, labs =(rownames(radargama)))</code></pre>
+<canvas id="htmlwidget-9" class="chartJSRadar html-widget" width="672" height="480"></canvas>
+<script type="application/json" data-for="htmlwidget-9">{"x":{"data":{"labels":["1","2","3","4","5"],"datasets":[{"label":"1","data":[2.47916938943117e-005,2.52834578371199e-005,3.62189400124955e-005,7.17359131021132e-005,0.933062559626691],"backgroundColor":"rgba(255,0,0,0.2)","borderColor":"rgba(255,0,0,0.8)","pointBackgroundColor":"rgba(255,0,0,0.8)","pointBorderColor":"#fff","pointHoverBackgroundColor":"#fff","pointHoverBorderColor":"rgba(255,0,0,0.8)"},{"label":"2","data":[5.16953111123804e-005,5.18620856520723e-005,8.36519825461576e-005,0.9992463139993,0.000644820000081384],"backgroundColor":"rgba(0,255,0,0.2)","borderColor":"rgba(0,255,0,0.8)","pointBackgroundColor":"rgba(0,255,0,0.8)","pointBorderColor":"#fff","pointHoverBackgroundColor":"#fff","pointHoverBorderColor":"rgba(0,255,0,0.8)"},{"label":"3","data":[4.93840524418598e-005,4.73008617942371e-005,0.999615407206631,0.000159323574853484,0.000619809819615716],"backgroundColor":"rgba(0,0,255,0.2)","borderColor":"rgba(0,0,255,0.8)","pointBackgroundColor":"rgba(0,0,255,0.8)","pointBorderColor":"#fff","pointHoverBackgroundColor":"#fff","pointHoverBorderColor":"rgba(0,0,255,0.8)"},{"label":"4","data":[4.76197736741083e-005,0.999751340520076,7.52229446842308e-005,0.000155231962786674,0.00060136770038252],"backgroundColor":"rgba(255,255,0,0.2)","borderColor":"rgba(255,255,0,0.8)","pointBackgroundColor":"rgba(255,255,0,0.8)","pointBorderColor":"#fff","pointHoverBackgroundColor":"#fff","pointHoverBorderColor":"rgba(255,255,0,0.8)"},{"label":"5","data":[0.999750820008942,4.7665197932919e-005,7.75820700713484e-005,0.000154552292502598,0.000596828837245929],"backgroundColor":"rgba(255,0,255,0.2)","borderColor":"rgba(255,0,255,0.8)","pointBackgroundColor":"rgba(255,0,255,0.8)","pointBorderColor":"#fff","pointHoverBackgroundColor":"#fff","pointHoverBorderColor":"rgba(255,0,255,0.8)"},{"label":"6","data":[7.56891599354168e-005,7.65478767069331e-005,0.000111916856054429,0.000212842257454968,0.0644746140159832],"backgroundColor":"rgba(0,255,255,0.2)","borderColor":"rgba(0,255,255,0.8)","pointBackgroundColor":"rgba(0,255,255,0.8)","pointBorderColor":"#fff","pointHoverBackgroundColor":"#fff","pointHoverBorderColor":"rgba(0,255,255,0.8)"}]},"options":{"responsive":true,"title":{"display":true,"text":"Distribuição de Discurso por Tópico"},"scale":{"ticks":{"min":0},"pointLabels":{"fontSize":18}},"tooltips":{"enabled":false,"mode":"label"},"legend":{"display":true}}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<div id="consideracoes-finais" class="section level2">
+<h2>Considerações Finais</h2>
+<p>A única constante no universo é a mudança. Ou seja, esse texto pode ser editado/ampliado a qualquer momento. Pedimos ao leitor que nos envie dúvidas, críticas e/ou sugestões para seguirmos melhorando. Nesse <a href="https://github.com/aserranoni/possedobonoro">link</a> você pode encontrar o código, dados e imagens que utilizamos aqui. Obrigado por ter lido!</p>
+<p><a href="mailto:arielserranoni@gmail.com">Ariel</a></p>
+<p><a href="mailto:wilson.anjos@usp.br">Wilson</a></p>
+</div>
+    
+        </div>
+    </section>
+
+    <footer class="post-full-footer">
+      <section class="author-card">
+        <img class="author-profile-image" src="/img/ghost-icon.png" alt="Author" />
+        <section class="author-card-content">
+            <h4 class="author-card-name"><a href="/">Ariel Serranoni</a></h4>
+                <p>Your description here</p>
+        </section>
+      </section>
+    </footer>
+</article>
+    
+    
+
+
+<div id="disqus_thread"></div>
+<script>
+
+
+
+
+
+(function() { 
+var d = document, s = d.createElement('script');
+s.src = 'https://aserranoni.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+</div>
+</main>
+
+
+<aside class="read-next outer">
+  <div class="inner">
+    <div class="read-next-feed">      
+      
+
+      
+      
+    </div>
+  </div>
+</aside>
+
+<div class="floating-header">
+  <div class="floating-header-logo">
+    <a href="/">
+      <img src="/hugo-logo.png" alt="" />
+      <span></span>
+    </a>
+  </div>
+  <span class="floating-header-divider">&mdash;</span>
+  <div class="floating-header-title">Posse do Bonoro</div>
+  <div class="floating-header-share">
+    <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+     <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/></svg>
+    </div>
+    
+    <a class="floating-header-share-tw" href="https://twitter.com/share?text=Posse%20do%20Bonoro&amp;url=%2fpost%2fwtf-is-slug%2f"
+          onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
+      </a>
+      <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=%2fpost%2fwtf-is-slug%2f"
+          onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
+      </a>
+  </div>
+
+  <progress class="progress" value="0">
+    <div class="progress-container">
+      <span class="progress-bar"></span>
+    </div>
+  </progress>
+</div>
+
+
+
+<footer class="site-footer outer">
+  <div class="site-footer-content inner">
+    <section class="copyright" style="line-height: 1.3em;">
+      <a href="/">EM</a> © 2018 <br>
+      <span style="font-size: 0.8em; color: #555;">Hugo port of <a href="https://github.com/TryGhost/Casper">Casper 2.1.7</a> by <a href="https://www.telematika.org">EM</a></span>
+    </section>
+    <nav class="site-footer-nav">
+        <a href="/">Latest Posts</a>
+        <a href="https://www.facebook.com/arielserranoni" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://twitter.com/Arilove_" target="_blank" rel="noopener">Twitter</a>
+        <a href="https://github.com/aserranoni" target="_blank" rel="noopener">Github</a>
+        <a href="https://www.linkedin.com/in/ariel-serranoni-1b762815a" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://medium.com/@arielserranoni" target="_blank" rel="noopener">Medium</a>
+    </nav>  
+  </div>
+</footer>
+
+</div>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="/js/jquery.fitvids.js"></script>
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+    <script>
+
+
+
+
+
+$(document).ready(function () {
+    
+    var $postContent = $(".post-full-content");
+    $postContent.fitVids();
+    
+
+    var progressBar = document.querySelector('progress');
+    var header = document.querySelector('.floating-header');
+    var title = document.querySelector('.post-full-title');
+
+    var lastScrollY = window.scrollY;
+    var lastWindowHeight = window.innerHeight;
+    var lastDocumentHeight = $(document).height();
+    var ticking = false;
+
+    function onScroll() {
+        lastScrollY = window.scrollY;
+        requestTick();
+    }
+
+    function onResize() {
+        lastWindowHeight = window.innerHeight;
+        lastDocumentHeight = $(document).height();
+        requestTick();
+    }
+
+    function requestTick() {
+        if (!ticking) {
+            requestAnimationFrame(update);
+        }
+        ticking = true;
+    }
+
+    function update() {
+        var trigger = title.getBoundingClientRect().top + window.scrollY;
+        var triggerOffset = title.offsetHeight + 35;
+        var progressMax = lastDocumentHeight - lastWindowHeight;
+
+        
+        if (lastScrollY >= trigger + triggerOffset) {
+            header.classList.add('floating-active');
+        } else {
+            header.classList.remove('floating-active');
+        }
+
+        progressBar.setAttribute('max', progressMax);
+        progressBar.setAttribute('value', lastScrollY);
+
+        ticking = false;
+    }
+
+    window.addEventListener('scroll', onScroll, {passive: true});
+    window.addEventListener('resize', onResize, false);
+
+    update();
+});
+</script>
+<script id="dsq-count-scr" src="//aserranoni.disqus.com/count.js" async></script>
+
+</body></html>
