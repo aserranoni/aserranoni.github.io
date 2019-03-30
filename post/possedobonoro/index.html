@@ -9,41 +9,41 @@
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="shortcut icon" href="http://aserranoni.github.io/favicon.ico" />
-    <link rel="canonical" href="http://aserranoni.github.io/post/possedobonoro/" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="canonical" href="/post/possedobonoro/" />
 
-     <meta name="description" content="bláblá" /> 
+     <meta name="description" content="Neste artigo vamos cobrir alguns tópicos básicos em análise quantitativa de textos (NLP) utilizando uma base de dados consistindo de todos os discursos de posse presidencial desde a redemocratização do Brasil em 1989." /> 
 
      
     
     <meta name="twitter:card" content="summary_large_image"/>
-    <meta name="twitter:image" content="http://aserranoni.github.io/img/bonoro.jpeg"/>
+    <meta name="twitter:image" content="/img/bonoro.jpeg"/>
     
  
     <meta name="twitter:title" content="Print(Hello, Brazil!): Uma Análise Quantitativa da Posse de Bolsonaro"/>
-    <meta name="twitter:description" content="bláblá"/>
-    <meta name="twitter:url" content="http://aserranoni.github.io/post/possedobonoro/" />
+    <meta name="twitter:description" content="Neste artigo vamos cobrir alguns tópicos básicos em análise quantitativa de textos (NLP) utilizando uma base de dados consistindo de todos os discursos de posse presidencial desde a redemocratização do Brasil em 1989."/>
+    <meta name="twitter:url" content="/post/possedobonoro/" />
     <meta name="twitter:site" content="@Arilove_"/>
 
     <meta property="og:site_name" content="" />
     <meta property="og:title" content="Print(Hello, Brazil!): Uma Análise Quantitativa da Posse de Bolsonaro &middot; blablabla" />
-    <meta property="og:url" content="http://aserranoni.github.io/post/possedobonoro/" />
+    <meta property="og:url" content="/post/possedobonoro/" />
     <meta property="article:publisher" content="https://www.facebook.com/arielserranoni" />
 
     <meta property="og:type" content="article" />
-    <meta property="og:description" content="bláblá" />
+    <meta property="og:description" content="Neste artigo vamos cobrir alguns tópicos básicos em análise quantitativa de textos (NLP) utilizando uma base de dados consistindo de todos os discursos de posse presidencial desde a redemocratização do Brasil em 1989." />
 
     <meta property="article:published_time" content="2019-01-10T00:00:00Z" />
     <meta property="article:tag" content="R" /><meta property="article:tag" content="NLP" />
 
-    <meta property="og:image" content="http://aserranoni.github.io/img/bonoro.jpeg"/>
+    <meta property="og:image" content="/img/bonoro.jpeg"/>
 
 
     <meta name="generator" content="Hugo 0.54.0" />
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" type="text/css" href="http://aserranoni.github.io/built/screen.css" /> 
-    <link rel="stylesheet" type="text/css" href="http://aserranoni.github.io/css/casper-two.css" /> 
+    <link rel="stylesheet" type="text/css" href="/built/screen.css" /> 
+    <link rel="stylesheet" type="text/css" href="/css/casper-two.css" /> 
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css" />
     
 
@@ -65,15 +65,15 @@
         
         
             <li class="" role="menuitem">
-              <a href="http://aserranoni.github.io/">Home</a>
+              <a href="/">Home</a>
             </li>
         
             <li class="" role="menuitem">
-              <a href="http://aserranoni.github.io/about/">About me</a>
+              <a href="/about/">About me</a>
             </li>
         
             <li class="" role="menuitem">
-              <a href="http://aserranoni.github.io/categories/">Posts</a>
+              <a href="/categories/">Posts</a>
             </li>
         
       </ul></div>
@@ -105,21 +105,21 @@
     <header class="post-full-header">
         <section class="post-full-meta">
             <time class="post-full-meta-date" datetime="2019-01-10">10 January 2019</time>
-                <span class="date-divider">/</span> <a href="http://aserranoni.github.io/tags/r/">#R</a>&nbsp;<a href="http://aserranoni.github.io/tags/nlp/">#NLP</a>&nbsp;
+                <span class="date-divider">/</span> <a href="/tags/r/">#R</a>&nbsp;<a href="/tags/nlp/">#NLP</a>&nbsp;
         </section>
         <h1 class="post-full-title">Print(Hello, Brazil!): Uma Análise Quantitativa da Posse de Bolsonaro</h1>
     </header>
     
-    <figure class="post-full-image" style="background-image: url(http://aserranoni.github.io/img/bonoro.jpeg)">
+    <figure class="post-full-image" style="background-image: url(/img/bonoro.jpeg)">
     </figure>
 
     <section class="post-full-content">
         <div class="kg-card-markdown">
         
-<script src="http://aserranoni.github.io/rmarkdown-libs/kePrint/kePrint.js"></script>
-<script src="http://aserranoni.github.io/rmarkdown-libs/htmlwidgets/htmlwidgets.js"></script>
-<script src="http://aserranoni.github.io/rmarkdown-libs/chart.js/./dist/Chart.min.js"></script>
-<script src="http://aserranoni.github.io/rmarkdown-libs/chartJSRadar-binding/chartJSRadar.js"></script>
+<script src="/rmarkdown-libs/kePrint/kePrint.js"></script>
+<script src="/rmarkdown-libs/htmlwidgets/htmlwidgets.js"></script>
+<script src="/rmarkdown-libs/chart.js/./dist/Chart.min.js"></script>
+<script src="/rmarkdown-libs/chartJSRadar-binding/chartJSRadar.js"></script>
 
 
 <div id="introducao" class="section level2">
@@ -296,7 +296,7 @@ for (i in 1:nrow(dados)) {
     ggtitle(paste(&quot;Nuvem de frequência no discurso de&quot;, as.character(dados$ano[i]), sep = &quot; &quot;)) +
     theme_minimal()) %&gt;% print()
 }</code></pre>
-<p><img src="http://aserranoni.github.io/post/2019-01-10-possedobonoro_files/figure-html/nuvabs-1.png" width="672" /><img src="http://aserranoni.github.io/post/2019-01-10-possedobonoro_files/figure-html/nuvabs-2.png" width="672" /><img src="http://aserranoni.github.io/post/2019-01-10-possedobonoro_files/figure-html/nuvabs-3.png" width="672" /><img src="http://aserranoni.github.io/post/2019-01-10-possedobonoro_files/figure-html/nuvabs-4.png" width="672" /><img src="http://aserranoni.github.io/post/2019-01-10-possedobonoro_files/figure-html/nuvabs-5.png" width="672" /><img src="http://aserranoni.github.io/post/2019-01-10-possedobonoro_files/figure-html/nuvabs-6.png" width="672" /><img src="http://aserranoni.github.io/post/2019-01-10-possedobonoro_files/figure-html/nuvabs-7.png" width="672" /><img src="http://aserranoni.github.io/post/2019-01-10-possedobonoro_files/figure-html/nuvabs-8.png" width="672" /></p>
+<p><img src="/post/2019-01-10-possedobonoro_files/figure-html/nuvabs-1.png" width="672" /><img src="/post/2019-01-10-possedobonoro_files/figure-html/nuvabs-2.png" width="672" /><img src="/post/2019-01-10-possedobonoro_files/figure-html/nuvabs-3.png" width="672" /><img src="/post/2019-01-10-possedobonoro_files/figure-html/nuvabs-4.png" width="672" /><img src="/post/2019-01-10-possedobonoro_files/figure-html/nuvabs-5.png" width="672" /><img src="/post/2019-01-10-possedobonoro_files/figure-html/nuvabs-6.png" width="672" /><img src="/post/2019-01-10-possedobonoro_files/figure-html/nuvabs-7.png" width="672" /><img src="/post/2019-01-10-possedobonoro_files/figure-html/nuvabs-8.png" width="672" /></p>
 <p>Os próximos gráficos também são nuvens de palavras, porém carregam diferenças em relação às vizualizações anteriores. A primeira delas é a função utilizada. Embora sejam ambas da biblioteca <code>ggwordcloud</code>, a primeira se comporta como uma opção para o <em>layer</em> <code>geom</code> do pacote <code>ggplot2</code> e se encaixa perfeitamente com os outros recursos desse pacote. Enquanto isso, a função <code>ggwordcloud2</code> tem o intuito de produzir resultados similares aos obtidos usando o pacote <code>wordcloud2</code>. Além disso, no ’<em>chunk</em> acima usamos o ranqueamento de uma palavra com relação à frequência para determinar se uma palavra apareceria ou não na nuvem de palavras. Abaixo, o critério é outro. Calculamos a média e o desvio padrão da frequência de palavras no texto e escolhemos as palavras com frequência maior ou igual à média mais duas vezes o desvio padrão.</p>
 <pre class="r"><code>## Nuvem - desvio padrão
 
@@ -307,7 +307,7 @@ for (i in 1:nrow(dados)) {
   aux &lt;- aux %&gt;% filter(Freq - med &gt; 2 * sd)
   ggwordcloud2(aux) %&gt;% print()
 }</code></pre>
-<p><img src="http://aserranoni.github.io/post/2019-01-10-possedobonoro_files/figure-html/nuvstat-1.png" width="672" /><img src="http://aserranoni.github.io/post/2019-01-10-possedobonoro_files/figure-html/nuvstat-2.png" width="672" /><img src="http://aserranoni.github.io/post/2019-01-10-possedobonoro_files/figure-html/nuvstat-3.png" width="672" /><img src="http://aserranoni.github.io/post/2019-01-10-possedobonoro_files/figure-html/nuvstat-4.png" width="672" /><img src="http://aserranoni.github.io/post/2019-01-10-possedobonoro_files/figure-html/nuvstat-5.png" width="672" /><img src="http://aserranoni.github.io/post/2019-01-10-possedobonoro_files/figure-html/nuvstat-6.png" width="672" /><img src="http://aserranoni.github.io/post/2019-01-10-possedobonoro_files/figure-html/nuvstat-7.png" width="672" /><img src="http://aserranoni.github.io/post/2019-01-10-possedobonoro_files/figure-html/nuvstat-8.png" width="672" /></p>
+<p><img src="/post/2019-01-10-possedobonoro_files/figure-html/nuvstat-1.png" width="672" /><img src="/post/2019-01-10-possedobonoro_files/figure-html/nuvstat-2.png" width="672" /><img src="/post/2019-01-10-possedobonoro_files/figure-html/nuvstat-3.png" width="672" /><img src="/post/2019-01-10-possedobonoro_files/figure-html/nuvstat-4.png" width="672" /><img src="/post/2019-01-10-possedobonoro_files/figure-html/nuvstat-5.png" width="672" /><img src="/post/2019-01-10-possedobonoro_files/figure-html/nuvstat-6.png" width="672" /><img src="/post/2019-01-10-possedobonoro_files/figure-html/nuvstat-7.png" width="672" /><img src="/post/2019-01-10-possedobonoro_files/figure-html/nuvstat-8.png" width="672" /></p>
 </div>
 <div id="mil-jeitos-de-contar-palavras" class="section level2">
 <h2>Mil Jeitos de Contar Palavras</h2>
@@ -653,7 +653,7 @@ word_lengths %&gt;%
     plot.title = element_text(hjust = 0.5),
     panel.grid.minor = element_blank()
   )</code></pre>
-<p><img src="http://aserranoni.github.io/post/2019-01-10-possedobonoro_files/figure-html/wordlength-1.png" width="672" /></p>
+<p><img src="/post/2019-01-10-possedobonoro_files/figure-html/wordlength-1.png" width="672" /></p>
 <pre class="r"><code>#####################
 
 # word length dist por presidente
@@ -674,7 +674,7 @@ word_lengths %&gt;%
     plot.title = element_text(hjust = 0.5),
     panel.grid.minor = element_blank()
   )</code></pre>
-<p><img src="http://aserranoni.github.io/post/2019-01-10-possedobonoro_files/figure-html/wordlength-2.png" width="672" /></p>
+<p><img src="/post/2019-01-10-possedobonoro_files/figure-html/wordlength-2.png" width="672" /></p>
 <pre class="r"><code># word length dist por doc
 
 
@@ -692,7 +692,7 @@ word_lengths %&gt;%
     plot.title = element_text(hjust = 0.5),
     panel.grid.minor = element_blank()
   )</code></pre>
-<p><img src="http://aserranoni.github.io/post/2019-01-10-possedobonoro_files/figure-html/wordlength-3.png" width="672" /></p>
+<p><img src="/post/2019-01-10-possedobonoro_files/figure-html/wordlength-3.png" width="672" /></p>
 <pre class="r"><code>## Comparando dentro da lingua usando a tabela sentilex
 
 distpcomp &lt;- sentiLex_lem_PT02 %&gt;% as.data.frame() %&gt;% select(term) %&gt;% mutate(tam = nchar(term))
@@ -711,7 +711,7 @@ distpcomp %&gt;%
     plot.title = element_text(hjust = 0.5),
     panel.grid.minor = element_blank()
   )</code></pre>
-<p><img src="http://aserranoni.github.io/post/2019-01-10-possedobonoro_files/figure-html/wordlength-4.png" width="672" /></p>
+<p><img src="/post/2019-01-10-possedobonoro_files/figure-html/wordlength-4.png" width="672" /></p>
 <p>As próximas perguntas que surgem naturalmente são quais palavras foram mais ditas e quando isso aconteceu. O gráfico a seguir mostra quais foram as palavras mais faladas no total e a sua distribuição por discurso.</p>
 <p><strong>P.S</strong>: O gráfico também fica bonito dividindo por presidente ;)</p>
 <pre class="r"><code>####################
@@ -743,7 +743,7 @@ plot_total %&gt;%
     plot.subtitle = element_text(vjust = 1),
     plot.caption = element_text(vjust = 1)
   ) + labs(x = NULL, fill = &quot;Ano&quot;)</code></pre>
-<p><img src="http://aserranoni.github.io/post/2019-01-10-possedobonoro_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+<p><img src="/post/2019-01-10-possedobonoro_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
 <p>Uma boa maneira de se vizualizar distribuições de números absolutos é o gráfico de radar. Abaixo temos as distribuições das frequências das palavras “governo” e “brasileiros”. Aqui temos um bom exemplo de uma situação em que é indispensável duplicar as medidas de Temer e Bolsonaro.</p>
 <pre class="r"><code>palavras_chave2 &lt;- c(&quot;governo&quot;, &quot;brasileiros&quot;, &quot;mulheres&quot;)
 
@@ -791,7 +791,7 @@ tidyfrase %&gt;%
     title = &quot;Palavras mais Frequentes por Discurso&quot;,
     subtitle = &quot; &quot;
   )</code></pre>
-<p><img src="http://aserranoni.github.io/post/2019-01-10-possedobonoro_files/figure-html/mostundesirablefreq%20-1.png" width="672" /></p>
+<p><img src="/post/2019-01-10-possedobonoro_files/figure-html/mostundesirablefreq%20-1.png" width="672" /></p>
 <pre class="r"><code># Palavras mais faladas por presidente
 tidyfrase %&gt;%
   group_by(presidas) %&gt;%
@@ -812,7 +812,7 @@ tidyfrase %&gt;%
     title = &quot;Palavras mais Frequentes por Presidente&quot;,
     subtitle = &quot; &quot;
   )</code></pre>
-<p><img src="http://aserranoni.github.io/post/2019-01-10-possedobonoro_files/figure-html/mostundesirablefreq%20-2.png" width="672" /></p>
+<p><img src="/post/2019-01-10-possedobonoro_files/figure-html/mostundesirablefreq%20-2.png" width="672" /></p>
 <p>De certa forma, os gráficos acima confirmam a nossa impressão ao olhar as primeiras nuvens de palavras: existem palavras que se repetem muitas vezes num discurso presidencial por natureza. Esse fato nos atrapalha na tarefa de identificar as diferenças entre cada instância. Para lidar com esse problema, usamos uma técnica muito simples e surpreendentemente ,comum em análise automatizada de textos, que é eliminar sumariamente esses termos, esperando que os próximos no ranking tragam informações relevantes. Além disso, eliminamos as palavras “é”, “assim” e “ainda”. Finalmente, vamos eliminar palavras com três letras ou menos.</p>
 <pre class="r"><code>undesirable_words &lt;- (((plot_total %&gt;% select(word, n) %&gt;% arrange(desc(n)))$word) %&gt;% unique())[1:15]
 undesirable_words &lt;- c(as.character(undesirable_words), &quot;é&quot;, &quot;assim&quot;, &quot;ainda&quot;)</code></pre>
@@ -838,7 +838,7 @@ tidyfrase %&gt;%
     title = &quot;Palavras mais Frequentes por Discurso&quot;,
     subtitle = &quot; &quot;
   )</code></pre>
-<p><img src="http://aserranoni.github.io/post/2019-01-10-possedobonoro_files/figure-html/mostfreqwordspeechpres-1.png" width="672" /></p>
+<p><img src="/post/2019-01-10-possedobonoro_files/figure-html/mostfreqwordspeechpres-1.png" width="672" /></p>
 <pre class="r"><code># Palavras mais faladas por presidente
 
 tidyfrase %&gt;%
@@ -862,7 +862,7 @@ tidyfrase %&gt;%
     title = &quot;Palavras mais Frequentes por Presidente&quot;,
     subtitle = &quot; &quot;
   )</code></pre>
-<p><img src="http://aserranoni.github.io/post/2019-01-10-possedobonoro_files/figure-html/mostfreqwordspeechpres-2.png" width="672" /></p>
+<p><img src="/post/2019-01-10-possedobonoro_files/figure-html/mostfreqwordspeechpres-2.png" width="672" /></p>
 <p>À primeira vista, parece que nossa última filtragem produziu resultados positivos em termos de informação. Adotaremos esse procedimento em muitos lugares daqui em diante.</p>
 </div>
 <div id="a-estatistica-tf-idf" class="section level2">
@@ -895,7 +895,7 @@ tfrases2 %&gt;%
     title = &quot;TF-IDF de Palavras por Discurso&quot;,
     subtitle = &quot; &quot;
   )</code></pre>
-<p><img src="http://aserranoni.github.io/post/2019-01-10-possedobonoro_files/figure-html/tfidfspeech-1.png" width="672" /></p>
+<p><img src="/post/2019-01-10-possedobonoro_files/figure-html/tfidfspeech-1.png" width="672" /></p>
 <pre class="r"><code># TF-IDF de PALAVRAS por presidente
 
 tfrases &lt;- tidyfrase %&gt;%
@@ -924,7 +924,7 @@ tfrases %&gt;%
     title = &quot;TF-IDF de Palavras por Presidente&quot;,
     subtitle = &quot; &quot;
   )</code></pre>
-<p><img src="http://aserranoni.github.io/post/2019-01-10-possedobonoro_files/figure-html/tfidfspeech-2.png" width="672" /></p>
+<p><img src="/post/2019-01-10-possedobonoro_files/figure-html/tfidfspeech-2.png" width="672" /></p>
 <p>Em seguida, fizemos uma grande variedade de nuvens de palavras utilizando vários tipos de nuvens de palavras baseadas no TF-IDF das palavras, não incluímos esses resultados no texto para economizar um pouco da paciência do leitor.</p>
 <pre class="r"><code># #Nuvem - numero abs - presidas
 #
@@ -1019,7 +1019,7 @@ bigrams_pres %&gt;%
     title = &quot;Frequencia de Bigramas por Presidente&quot;,
     subtitle = &quot; &quot;
   )</code></pre>
-<p><img src="http://aserranoni.github.io/post/2019-01-10-possedobonoro_files/figure-html/firstbigraphics-1.png" width="672" /></p>
+<p><img src="/post/2019-01-10-possedobonoro_files/figure-html/firstbigraphics-1.png" width="672" /></p>
 <pre class="r"><code>bigrams_discursos %&gt;%
   top_n(7) %&gt;%
   slice(1:7) %&gt;%
@@ -1036,7 +1036,7 @@ bigrams_pres %&gt;%
     title = &quot;Frequencia de Bigramas por Discurso&quot;,
     subtitle = &quot; &quot;
   )</code></pre>
-<p><img src="http://aserranoni.github.io/post/2019-01-10-possedobonoro_files/figure-html/firstbigraphics-2.png" width="672" /></p>
+<p><img src="/post/2019-01-10-possedobonoro_files/figure-html/firstbigraphics-2.png" width="672" /></p>
 <p>Também decidimos calcular o TF-IDF de bigramas num texto, por que não? A adaptação que fizemos no TF-IDF é bem pequena. Apenas utilizamos a frequência de bigramas ao invés da frequência de palavras.</p>
 <pre class="r"><code>## MAIS GRAFICOS - TD-IDF de Bigramas- pq nao?
 
@@ -1062,7 +1062,7 @@ bigramspres_tdidf %&gt;%
     title = &quot;TF-IDF de Bigramas por Presidente&quot;,
     subtitle = &quot;&quot;
   )</code></pre>
-<p><img src="http://aserranoni.github.io/post/2019-01-10-possedobonoro_files/figure-html/bigramtfidf-1.png" width="672" /></p>
+<p><img src="/post/2019-01-10-possedobonoro_files/figure-html/bigramtfidf-1.png" width="672" /></p>
 <pre class="r"><code>## GRAFICO BIGRAMAS-TD-IDF DISCURSO
 bigramsdoc_tdidf %&gt;%
   top_n(7) %&gt;%
@@ -1082,7 +1082,7 @@ bigramsdoc_tdidf %&gt;%
     title = &quot;TF-IDF de Bigramas por Discurso&quot;,
     subtitle = &quot; &quot;
   )</code></pre>
-<p><img src="http://aserranoni.github.io/post/2019-01-10-possedobonoro_files/figure-html/bigramtfidf-2.png" width="672" /></p>
+<p><img src="/post/2019-01-10-possedobonoro_files/figure-html/bigramtfidf-2.png" width="672" /></p>
 </div>
 <div id="graficos" class="section level2">
 <h2>Graf(ic)os</h2>
@@ -1125,7 +1125,7 @@ ggraph(bigram_graph, layout = &quot;fr&quot;) +
     plot.title = element_text(hjust = 0.5)
   ) +
   ggtitle(&quot;Bigram Network&quot;)</code></pre>
-<p><img src="http://aserranoni.github.io/post/2019-01-10-possedobonoro_files/figure-html/bigramnet-1.png" width="672" /></p>
+<p><img src="/post/2019-01-10-possedobonoro_files/figure-html/bigramnet-1.png" width="672" /></p>
 <div id="redes-de-similaridade" class="section level3">
 <h3>Redes de Similaridade</h3>
 <p>Uma coisa importante a se questionar sobre um conjunto de textos é o grau de similaridade entre eles. O principal empecilho que surge ao abordar esse problema é o de como quantificar a similaridade entre dois documentos. Uma primeira ideia seria contabilizar o número de palavras compartilhadas pelos textos. Entretanto, acreditamos que essa idéia pode ser melhor aproveitada para conjuntos de documentos maiores e mais variados, pois no nosso caso, teríamos muita similaridade entre todos os textos devido à natureza da ocasião. Alternativamente, vamos considerar o nível de similaridade entre dois textos com a soma do TF-IDF das palavras que aparecem em ambos. Quanto mais alto é esse número, mais palavras importantes são compartilhadas pelos textos.</p>
@@ -1169,7 +1169,7 @@ ggraph(similarity_graphwdocs, layout = &quot;fr&quot;) +
     plot.title = element_text(hjust = 0.5)
   ) +
   ggtitle(&quot;Rede de Similaridade Baseada no TF-IDF de Palavras&quot;)</code></pre>
-<p><img src="http://aserranoni.github.io/post/2019-01-10-possedobonoro_files/figure-html/similaritynetwords-1.png" width="672" /></p>
+<p><img src="/post/2019-01-10-possedobonoro_files/figure-html/similaritynetwords-1.png" width="672" /></p>
 <pre class="r"><code>## Via presidents
 ## Duplicar Temer e bonoro
 tfrases &lt;- tfrases %&gt;%
@@ -1219,7 +1219,7 @@ ggraph(similarity_graphwpres, layout = &quot;fr&quot;) +
     plot.title = element_text(hjust = 0.5)
   ) +
   ggtitle(&quot;Rede de Similaridade Baseada no TF-IDF de Palavras&quot;)</code></pre>
-<p><img src="http://aserranoni.github.io/post/2019-01-10-possedobonoro_files/figure-html/similaritynetwords-2.png" width="672" /></p>
+<p><img src="/post/2019-01-10-possedobonoro_files/figure-html/similaritynetwords-2.png" width="672" /></p>
 <p>Agora vamos experimentar fazer outras redes de similaridade, mas desta vez vamos partir do TF-IDF de bigramas que calculamos recentemente e aplicar exatamente os mesmos meios usados acima.</p>
 <pre class="r"><code># Similaridade Via Bigramas-Docs
 
@@ -1259,7 +1259,7 @@ ggraph(similarity_graphbdocs, layout = &quot;fr&quot;) +
     plot.title = element_text(hjust = 0.5)
   ) +
   ggtitle(&quot;Rede de Similaridade Baseada no TF-IDF de Bigramas&quot;)</code></pre>
-<p><img src="http://aserranoni.github.io/post/2019-01-10-possedobonoro_files/figure-html/similaritynetbigrams-1.png" width="672" /></p>
+<p><img src="/post/2019-01-10-possedobonoro_files/figure-html/similaritynetbigrams-1.png" width="672" /></p>
 <pre class="r"><code>## Via presidents
 
 bigramspres_tdidf &lt;- bigramspres_tdidf %&gt;%
@@ -1308,7 +1308,7 @@ ggraph(similarity_graphbpres, layout = &quot;fr&quot;) +
     plot.title = element_text(hjust = 0.5)
   ) +
   ggtitle(&quot;Rede de Similaridade Baseada no TF-IDF de Bigramas&quot;)</code></pre>
-<p><img src="http://aserranoni.github.io/post/2019-01-10-possedobonoro_files/figure-html/similaritynetbigrams-2.png" width="672" /></p>
+<p><img src="/post/2019-01-10-possedobonoro_files/figure-html/similaritynetbigrams-2.png" width="672" /></p>
 <!-- ##Modelagem de Tópicos -->
 <!-- Numa tentativa de ajudar o leitor a se adequar ao quarto princípio exposto no início do texto, vamos tentar explicar brevemente como funcionam os modelos estruturais de tópicos, ou sua tradução favorita para *Structural Topic Models*. Estes são o principal objeto tratado pelo pacote `stm`, cuja descrição está [disponível na internet](https://cran.r-project.org/web/packages/stm/vignettes/stmVignette.pdf). Possivelmente, o modelo de tópicos mais conhecido é o [LDA](https://en.wikipedia.org/wiki/Latent_Dirichlet_allocation) (*Latent Dirichilet Allocation*). Ao aplicar esta técnica, considera-se que cada documento é uma mistura de tópicos, desconhecidos *a priori*, em alguma proporção também desconhecida. Além disso, cada tópico é visto como uma mistura de palavras, em outra proporção desconhecida. O LDA estima a proporção de cada tópico para cada documento e também a distribuição de termos em cada tópico. O nome do modelo se deve à utilização da conjugação   [Dirichilet-Multinomial](https://people.eecs.berkeley.edu/~stephentu/writeups/dirichlet-conjugate-prior.pdf), o que é comum em estatística bayesiana ao se tratar problemas de 'categorização'. Modelos estruturais são, de maneira muito resumida, LDAs modificados com a opção extra de considerar metadados(autor, data etc.) dos documentos e complicando um pouquinho as contas ao se utilizar de [regressão logística](https://pt.wikipedia.org/wiki/Regress%C3%A3o_log%C3%ADstica) em alguns passos intermediários.  -->
 <!-- Existem inúmeros jeitos diferentes de aplicar o modelo e vamos explorar um pouco deles ao fazer alguns testes. Para isso, vamos primeiro deixar nossos dados no formato ideal para as funções do `stm`. Não existe apenas uma maneira de se tratar um `data frame` e no próximo *chunk* exploramos duas dessas possibilidades: A primeira delas é a função `cast_dfm` do pacote `tidytext` e a segunda é a função `textProcessor` do próprio pacote `stm`. Apesar de ambas terem formato semelhante ao `tab_frase` (e portanto também podem travar seu computador) é interessante ver como essas funções transformam tabelas diferentes em similares. Enquanto a função `cast_dfm` traz a vantagem de se encaixar bem com formatos alheios ao `stm`. Por outro lado, tratar dados utilizando a função `textProcessor` simplifica muito o processo de mineração de dados, levando-os diretamente de um formato crú para um modelo de machine learning com poucas linhas de código. -->
@@ -1595,9 +1595,9 @@ ggraph(similarity_graphbpres, layout = &quot;fr&quot;) +
 
     <footer class="post-full-footer">
       <section class="author-card">
-        <img class="author-profile-image" src="http://aserranoni.github.io/img/minha_foto.jpg" alt="Author" />
+        <img class="author-profile-image" src="/img/minha_foto.jpg" alt="Author" />
         <section class="author-card-content">
-            <h4 class="author-card-name"><a href="http://aserranoni.github.io/">Ariel Serranoni</a></h4>
+            <h4 class="author-card-name"><a href="/">Ariel Serranoni</a></h4>
                 <p>Your description here</p>
         </section>
       </section>
@@ -1640,7 +1640,7 @@ s.setAttribute('data-timestamp', +new Date());
 
 <div class="floating-header">
   <div class="floating-header-logo">
-    <a href="http://aserranoni.github.io/">
+    <a href="/">
       
       <span></span>
     </a>
@@ -1652,11 +1652,11 @@ s.setAttribute('data-timestamp', +new Date());
      <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/></svg>
     </div>
     
-    <a class="floating-header-share-tw" href="https://twitter.com/share?text=Print%28Hello%2c%20Brazil%21%29%3a%20Uma%20An%c3%a1lise%20Quantitativa%20da%20Posse%20de%20Bolsonaro&amp;url=http%3a%2f%2faserranoni.github.io%2fpost%2fpossedobonoro%2f"
+    <a class="floating-header-share-tw" href="https://twitter.com/share?text=Print%28Hello%2c%20Brazil%21%29%3a%20Uma%20An%c3%a1lise%20Quantitativa%20da%20Posse%20de%20Bolsonaro&amp;url=%2fpost%2fpossedobonoro%2f"
           onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
       </a>
-      <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2faserranoni.github.io%2fpost%2fpossedobonoro%2f"
+      <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=%2fpost%2fpossedobonoro%2f"
           onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
       </a>
@@ -1674,11 +1674,11 @@ s.setAttribute('data-timestamp', +new Date());
 <footer class="site-footer outer">
   <div class="site-footer-content inner">
     <section class="copyright" style="line-height: 1.3em;">
-      <a href="http://aserranoni.github.io/"></a> © 2018 <br>
+      <a href="/"></a> © 2018 <br>
       <span style="font-size: 0.8em; color: #555;">Hugo port of <a href="https://github.com/TryGhost/Casper">Casper 2.1.7</a> by <a href="https://www.telematika.org">EM</a></span>
     </section>
     <nav class="site-footer-nav">
-        <a href="http://aserranoni.github.io/">Latest Posts</a>
+        <a href="/">Latest Posts</a>
         <a href="https://www.facebook.com/arielserranoni" target="_blank" rel="noopener">Facebook</a>
         <a href="https://twitter.com/Arilove_" target="_blank" rel="noopener">Twitter</a>
         <a href="https://github.com/aserranoni" target="_blank" rel="noopener">Github</a>
@@ -1691,7 +1691,7 @@ s.setAttribute('data-timestamp', +new Date());
 </div>
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
 <script type="text/javascript" src="//code.jquery.com/jquery-3.2.1.min.js"></script>
-<script type="text/javascript" src="http://aserranoni.github.io/js/jquery.fitvids.js"></script>
+<script type="text/javascript" src="/js/jquery.fitvids.js"></script>
 
 <script>hljs.initHighlightingOnLoad();</script>
 
