@@ -12,13 +12,23 @@
     
     
     <item>
-      <title>blog-tutorial-1</title>
+      <title>Como Criar um Blog como esse? Um Mini-Guia PrÃƒÂ¡tico - Parte 1</title>
       <link>/post/blog-tutorial-1/</link>
       <pubDate>Sun, 31 Mar 2019 00:00:00 +0000</pubDate>
       
       <guid>/post/blog-tutorial-1/</guid>
-      <description>#Introdução
-Não me considero um expert em nenhum dos assuntos que vou tocar aqui. Eu demorei mais do que gostaria para fazer esse site, e acredito que outros irão fatalmente se deparar com vários dos mesmos obstáculos que eu encontrei. Além disso, quero registrar o processo para o caso em que eu tenha que fazer algo parecido no futuro. Só um guia passo a passo para set-up um site em blogdown.</description>
+      <description>IntroduçãoEu demorei mais tempo do que o necessário para fazer esse blog. Por isso, decidi reuniras dicas que mais me ajudaram para que outros possam ser mais rápidos que eu.
+Não me considero um expert em nenhum dos tópicos que vou tocar aqui, por isso não tenho a intenção de explicar em detalhes o comportamento de todos os serviços que vamos utilizar. Esse texto deve ser entendido como um guia passo a passo para criar um site como este.</description>
+    </item>
+    
+    <item>
+      <title>Como Criar um Blog como esse? Um Mini-Guia Prático - Parte 2</title>
+      <link>/post/blog-tutorial-2/</link>
+      <pubDate>Sun, 31 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/blog-tutorial-2/</guid>
+      <description>Introduçãoblá
+Adicionando funcionalidadesEditando aparência</description>
     </item>
     
     <item>

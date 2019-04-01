@@ -1,0 +1,22 @@
+---
+title: Como Criar um Blog como esse? Um Mini-Guia Prático - Parte 2
+draft: true
+author: Ariel Serranoni
+description: Segunda parte do mini-guia de como criar um blog usando
+date: '2019-03-31'
+slug: blog-tutorial-2
+tags:
+  - R
+  - BLOGDOWN
+image: img/blog-tutorial.jpg
+authorAvatar: img/minha_foto.jpg
+
+---
+
+# Introdução
+
+blá
+
+# Adicionando funcionalidades
+
+# Editando aparência

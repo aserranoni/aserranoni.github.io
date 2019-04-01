@@ -6,19 +6,38 @@
     <description>Recent content on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-BR</language>
-    <lastBuildDate>Sun, 31 Mar 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 14 Apr 2015 22:17:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>blog-tutorial-1</title>
+      <title>Sobre</title>
+      <link>/about/</link>
+      <pubDate>Tue, 14 Apr 2015 22:17:00 +0000</pubDate>
+      
+      <guid>/about/</guid>
+      <description>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Yow !</description>
+    </item>
+    
+    <item>
+      <title>Como Criar um Blog como esse? Um Mini-Guia PrÃƒÂ¡tico - Parte 1</title>
       <link>/post/blog-tutorial-1/</link>
       <pubDate>Sun, 31 Mar 2019 00:00:00 +0000</pubDate>
       
       <guid>/post/blog-tutorial-1/</guid>
-      <description>#Introdução
-Não me considero um expert em nenhum dos assuntos que vou tocar aqui. Eu demorei mais do que gostaria para fazer esse site, e acredito que outros irão fatalmente se deparar com vários dos mesmos obstáculos que eu encontrei. Além disso, quero registrar o processo para o caso em que eu tenha que fazer algo parecido no futuro. Só um guia passo a passo para set-up um site em blogdown.</description>
+      <description>IntroduçãoEu demorei mais tempo do que o necessário para fazer esse blog. Por isso, decidi reuniras dicas que mais me ajudaram para que outros possam ser mais rápidos que eu.
+Não me considero um expert em nenhum dos tópicos que vou tocar aqui, por isso não tenho a intenção de explicar em detalhes o comportamento de todos os serviços que vamos utilizar. Esse texto deve ser entendido como um guia passo a passo para criar um site como este.</description>
+    </item>
+    
+    <item>
+      <title>Como Criar um Blog como esse? Um Mini-Guia Prático - Parte 2</title>
+      <link>/post/blog-tutorial-2/</link>
+      <pubDate>Sun, 31 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/blog-tutorial-2/</guid>
+      <description>Introduçãoblá
+Adicionando funcionalidadesEditando aparência</description>
     </item>
     
     <item>
@@ -28,15 +47,6 @@ Não me considero um expert em nenhum dos assuntos que vou tocar aqui. Eu demore
       
       <guid>/post/possedobonoro/</guid>
       <description>IntroduçãoDurante períodos eleitorais, a discussão sobre métodos estatísticos sempre vem à tona devido à constante divulgação de pesquisas eleitorais. Em particular, a constante propagação de falácias pelo então candidato Jair Bolsonaro e a discrepância entre os resultados apontados pelas pesquisas e aqueles apurados nas urnas aumentaram muito a disconfiança sobre os métodos utilizados. Para mais detalhes a respeito da metodologia empregada em pesquisas eleitorais, recomendamos este artigo.</description>
-    </item>
-    
-    <item>
-      <title>Sobre</title>
-      <link>/about/</link>
-      <pubDate>Tue, 14 Apr 2015 22:17:00 +0000</pubDate>
-      
-      <guid>/about/</guid>
-      <description>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Yow !</description>
     </item>
     
   </channel>
