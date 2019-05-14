@@ -1,17 +1,21 @@
 ---
 title: "Print(Hello, Brazil!): Uma Análise Quantitativa da Posse de Bolsonaro"
-author: "Ariel Serranoni"
-authorAvatar: "img/minha_foto.jpg"
+authors:
+  - "Ariel Serranoni"
+  - "Wilson dos Anjos"
+authorAvatars:
+  - "img/minha_foto.jpg"
+  - "img/wilson.jpg"
 date: '2019-01-10'
 image: img/bonoro.jpeg
 slug: possedobonoro
 description: "Neste artigo vamos cobrir alguns tópicos básicos em análise quantitativa de textos (NLP) utilizando uma base de dados consistindo de todos os discursos de posse presidencial desde a redemocratização do Brasil em 1989."
 tags:
-- R
-- NLP
+  - R
+  - NLP
 categories:
-- R
-- NLP
+  - R
+  - NLP
 ---
 
 

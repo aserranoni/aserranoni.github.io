@@ -1,0 +1,103 @@
+---
+title: "Como Criar um Blog como esse? Um Mini-Guia Prático - Parte 1"
+author: "Ariel Serranoni"
+date: '2019-03-31'
+description: Primeira parte do mini-guia de como criar um blog usando o Rstudio, blogdown
+  e Hugo. Vamos ver como hospedar um site no Github e editar seu conteÃƒÂºdo.
+
+image: img/blog-tutorial.jpg
+slug: blog-tutorial-1
+tags:
+- R
+- BLOGDOWN
+authorAvatar: img/minha_foto.jpg
+---
+
+#Introdução
+
+  Eu demorei mais tempo do que o necessário para fazer esse blog. Por isso, decidi reunir as dicas que mais me ajudaram para que outros possam ser mais rápidos que eu.  
+  
+Não me considero um expert em nenhum dos tópicos que vou tocar aqui, por isso não tenho a intenção de explicar em detalhes o comportamento de todos os serviços que vamos utilizar. Esse texto deve ser entendido como um guia passo a passo para criar um site como este. Dividi o material em 2 partes. Essa primeira parte trata da criação do site, hospedagem no github, e gerenciamento de conteúdo. Na segunda parte, veremos como adicionar algumas funcionalidades ao blog e como editar alguns aspectos da sua aparência. Sem mais delongas, vamos ao que interessa.
+
+#Contextualização e pré-requisitos
+
+Antes de colocar a mão na massa, é importante ter uma noção mínima a respeito das ferramentas que vamos utilizar. A parte 'local' do processo será feita utilizando o [RStudio](https://www.rstudio.com/),
+que é uma IDE voltada para desenvolvimento utilizando a linguagem R e o pacote blogdown. Essa biblioteca utiliza o framework [Hugo](https://gohugo.io/) para organizar os seus arquivos e configurações no formato especificado.  
+Depois de criar uma primeira versão do site na sua máquina, vamos utilizar o [Git](https://git-scm.com/), que é uma ferramenta para gerenciamento de projetos, que chamaremos de repositórios e o [Github](https://github.com/), que é um espaço gratuito na internet para armazenar repositórios git.
+
+
+#Criar ambiente e hospedar seu site no GitHub
+
+Para seguir esse guia é preciso ter o RStudio funcionando no seu computador. Além disso é preciso ter uma conta no Github. Usuários de Windows também precisam do git bash instalado no pc. A primeira tarefa é criar uma versão local do site. Abra o RStudio e rode o seguinte comando no console:
+
+``` {r, eval=FALSE}
+install.packages("blogdown")
+```
+
+Agora crie um novo projeto e uma janela como essa deverá aparecer
+
+![](/img/Capturar4.JPG){width=50% height=50%}
+
+Selecione 
+
+
+![](/img/Captura5.JPG){width=50% height=50%}
+
+selecione o ícone rosa
+
+
+![](/img/Capturar6.JPG){width=50% height=50%}
+
+
+Escolha um [destes temas](https://themes.gohugo.io/). Esse passo é muito importante. Seguir todos os passos desse guia pode demorar vinte minutos, mas personalizar pode ser realmente difícil, principalmente se você não é familiar com desenvolvimento web. No meu caso escolhi o tema casper two levando em conta o aspecto estético. Outros templates como o Academic são muito utilizados e por isso você pode ter mais facilidade de encontrar respostas para eventuais dúvidas.  
+ 
+
+Finalmente rode o seguinte comandos em R
+
+```{r , eval=FALSE}
+blogdown::build_site()
+```
+
+Aqui é importante olhar para a diferença entre o comando anterior e o 
+
+```{r, eval=FALSE}
+blogdown::serve_site()
+```
+
+Finalmente chegou a hora de fazer o upload seu site na internet
+
+Na sua conta do github, vamos criar o repositório que vai armazenar nosso produto final. Primeiro clique em
+ 
+![](/img/Capturar.JPG){width=75% height=75%}
+
+Agora 
+
+
+![](/img/Capturar2.JPG){width=75% height=75%}
+
+
+
+![](/img/Capturar3.JPG){width=100% height=100%}
+
+
+Abra o git bash, navegue a até pasta do seu projeto e rode os seguintes comandos:
+
+```
+cd public 
+git init
+git add .
+git remote add origin linkquevccopiou
+git commit -m "teste"
+git push origin master
+
+```
+Pronto. Agora você já pode acessar o seu site de qualquer lugar do mundo!
+
+# Editando o Conteúdo
+
+O primeiro passo para personalizar o nosso site vai ser trocar o conteúdo que vem com o template pelas suas próprias postagens. Vamos começar apagando os textos indesejados. Navegue até a pasta blá e apague. Navegue até a outra pasta e apague
+
+
+#Considerações Finais
+
+Como disse no início desse texto, não sou um expert nessas ferramentas, caso alguém tenha alguma sugestão de como fazer algum dos passos que eu descrevi aqui 
