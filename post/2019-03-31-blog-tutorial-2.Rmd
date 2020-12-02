@@ -10,13 +10,27 @@ tags:
   - BLOGDOWN
 image: img/blog-tutorial.jpg
 authorAvatar: img/minha_foto.jpg
-
 ---
 
 # Introdução
 
-blá
+ Finalmente tomei coragem para voltar aqui com a segunda parte do mini tutorial de como fazer seu próprio blog
+com RStudio, Hugo e Github. Pessoalmente, muito do meu site foi baseado nos artigos do Esteban Moro, então muito do que vou explicar aqui também pode ser encontrado na página dele. Além disso, pretendo
+continuar aprimorando o site conforme descobrir outras funções interessantes que podem ser incorporadas
+sem grandes dificuldades, conforme isso acontecer tentarei atualizar o post. Se sentirem falta de alguma coisa ou tiverem novas ideias, por favor incluam nos seu comentários,
 
 # Adicionando funcionalidades
 
+## Disqus
+A primeira deficiência que eu notei ao construir o blog foi a falta de qualquer tipo de interação com o leitor. Uma ferramenta que está disponível gratuitamente e lida com esse problema é o Disqus
+
+## Google Analytics
+
+Outra coisa que senti falta foi que, até onde eu sei o github não disponibiliza nenhum tipo de ferramenta para saber quantas pessoas visitaram seu site. Para resolver esse inconveniente estou utilizando o também gratuito Google Analytics
+
+## Altmetrics
+ Finalmente, uma outra coisa que é interessante para qualquer pessoa que esteja construindo um blog é acompanhar a repercussão do seu trabalho. Para isso estou utilizando o Altmetrics
+
 # Editando aparência
+
+Nessa parte vamos ver como mudar algumas características básicas do tema, que é contruído em Hugo, você pode procurar por mais detalhes em

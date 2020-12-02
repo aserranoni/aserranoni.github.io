@@ -15,8 +15,6 @@ authorAvatar: img/minha_foto.jpg
 
 # Introdução
 
-blá
-
 # Adicionando funcionalidades
 
 # Editando aparência
