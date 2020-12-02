@@ -1,10 +1,10 @@
 ---
-title: Como Criar um Blog como Esse? Um Mini-Guia Prático
+title: Como Criar um Blog como Esse? Um Mini-Guia Prático - Parte 1
 author: "Ariel Serranoni"
 date: '2019-03-31'
-description: Um mini-guia de como criar um blog usando o Rstudio, Blogdown, e Hugo. Vamos ver como criar um blog e hospedá-lo no Github.
+description: Primeira parte do mini-guia de como criar um blog usando o Rstudio, blogdown e Hugo. Vamos ver como criar um blog e hospedá-lo no Github. Depois daremos os primeiros passos para editar o conteúdo deste novo site.
 image: img/blog-tutorial.jpg
-slug: blog-tutorial
+slug: blog-tutorial-1
 categories:
 - R
 - BLOGDOWN
@@ -14,35 +14,20 @@ tags:
 authorAvatar: img/minha_foto.jpg
 ---
 
-# Introdução
+#Introdução
 
-  Eu demorei mais tempo do que o necessário para fazer esse blog. Por isso, decidi 
-  reunir algumas dicas nesse post na esperança que outros possam ser mais rápidos. 
-  Além disso, não sou especialista em nenhum dos tópicos que vou tocar aqui. Sendo assim, 
-  não tenho a  intenção de explicar com detalhes o comportamento de todos os serviços
-  que vamos utilizar. Este texto deve ser entendido como um guia passo a passo para criar 
-  um site como este. Ao final, deixarei alguns links e e sugestões para aqueles que quiserem 
-  se aprofundar no assunto.
+  Eu demorei mais tempo do que o necessário para fazer esse blog. Por isso, decidi reunir as dicas que mais me ajudaram para que outros possam ser mais rápidos. Também não me considero um expert em nenhum dos tópicos que vou tocar aqui, portanto não tenho a intenção de explicar com detalhes o comportamento de todos os serviços que vamos utilizar. Este texto deve ser entendido como um guia passo a passo para criar um site como este e está dividido em duas partes. Esta primeira parte trata da criação do site, hospedagem no github, e gerenciamento de conteúdo. Na segunda parte, veremos como adicionar algumas funcionalidades ao blog e como editar alguns aspectos da sua aparência. Sem mais delongas, vamos ao que interessa.
 
-## Contextualização e Pré-Requisitos
+#Contextualização e pré-requisitos
 
-Antes de colocar a mão na massa, é importante ter uma noção mínima a respeito das 
-ferramentas que vamos utilizar. A parte 'local' do processo será feita utilizando o 
-[RStudio](https://www.rstudio.com/), que é uma IDE voltada para desenvolvimento utilizando
-a linguagem R. Também vamos utilizar um pacote para o R chamado blogdown. Essa 
-biblioteca utiliza o framework [Hugo](https://gohugo.io/) para organizar certos arquivos 
-no formato de um site.  Depois de criar uma primeira versão do blog na sua máquina, 
-vamos utilizar o [Git](https://git-scm.com/), que é uma ferramenta para versionamento de 
-projetos, que chamaremos de repositórios, e o [Github](https://github.com/), que é um 
-espaço gratuito na internet para armazenar repositórios git.
+Antes de colocar a mão na massa, é importante ter uma noção mínima a respeito das ferramentas que vamos utilizar. A parte 'local' do processo será feita utilizando o [RStudio](https://www.rstudio.com/),
+que é uma IDE voltada para desenvolvimento utilizando a linguagem R. Também vamos utilizar um pacote para o R chamado blogdown. Essa biblioteca utiliza o framework [Hugo](https://gohugo.io/) para organizar certos arquivos no formato de um site.  
+Depois de criar uma primeira versão do blog na sua máquina, vamos utilizar o [Git](https://git-scm.com/), que é uma ferramenta para gerenciamento de projetos, que chamaremos de repositórios, e o [Github](https://github.com/), que é um espaço gratuito na internet para armazenar repositórios git.
 
 
-# Criando Ambiente e Hospedando Seu Site no GitHub
+#Criar ambiente e hospedar seu site no GitHub
 
-Para seguir esse guia é necessário ter o RStudio funcionando no seu computador. Além 
-disso é preciso ter uma conta no Github. Usuários de Windows como eu também deverão 
-ter o Git Bash instalado. A primeira tarefa é criar uma versão local do site. Abra o RStudio e 
-rode o seguinte comando no console:
+Para seguir esse guia é necessário ter o RStudio funcionando no seu computador. Além disso é preciso ter uma conta no Github. Usuários de Windows como eu também deverão ter o Git Bash instalado. A primeira tarefa é criar uma versão local do site. Abra o RStudio e rode o seguinte comando no console:
 
 ``` {r, eval=FALSE}
 install.packages("blogdown")
@@ -56,19 +41,12 @@ Selecione criar projeto em uma pasta nova (opção de cima).
 
 ![](/img/Captura5.JPG){width=50% height=50%}
 
-Selecione a opção "Website using blogdown", que também pode ser identificada pelo 
-ícone rosa.
+Selecione a opção "Website using blogdown", que também pode ser identificada pelo ícone rosa.
 
 ![](/img/Capturar6.JPG){width=50% height=50%}
 
 
-Agora preencha todos os campos e escolha um [destes temas](https://themes.gohugo.io/).
-Esse passo é muito importante, pois personalizar o produto deste guia pode ser realmente
-difícil, principalmente se você não for familiar com desenvolvimento web. No meu caso 
-escolhi o tema casper two levando em conta o aspecto estético. Outros templates como o 
-Academic são muito utilizados e por isso você pode ter mais facilidade de encontrar 
-respostas para eventuais dúvidas sobre customização. Feito isso, rode uma das seguintes 
-funções:
+Agora preencha todos os campos e escolha um [destes temas](https://themes.gohugo.io/). Esse passo é muito importante, pois personalizar o produto deste guia pode ser realmente difícil, principalmente se você não for familiar com desenvolvimento web. No meu caso escolhi o tema casper two levando em conta o aspecto estético. Outros templates como o Academic são muito utilizados e por isso você pode ter mais facilidade de encontrar respostas para eventuais dúvidas sobre customização. Feito isso, rode uma das seguintes funções:
 
 ```{r , eval=FALSE}
 blogdown::build_site()
@@ -76,35 +54,28 @@ blogdown::build_site()
 blogdown::serve_site()
 ```
 
-A principal diferença entre os comandos acima é a edição interativa. Enquanto o 
-`build_site` apenas executa os comandos Hugo necessários para compilar o projeto, o 
-`serve_site` cria uma versão local que vc pode editar olhando as mudanças que que estão
-acontecendo na página. Para mais informações sobre o assunto, basta acessar 
+A principal diferença entre os comandos acima é a edição interativa. Enquanto o `build_site` apenas executa os comandos Hugo necessários para compilar o projeto, o `serve_site` cria uma versão local que vc pode editar olhando as mudanças que que estão acontecendo na página. Para mais informações sobre o assunto, basta acessar 
 [este link](https://bookdown.org/yihui/blogdown/local-preview.html).
 
 
 ## Hospedagem
 
-Finalmente chegou a hora de fazer o upload do seu site na internet. Na sua conta do github, 
-vamos criar o repositório que vai armazenar a página. Primeiro escolha criar um novo 
-repositório. Na imagem abaixo esta opção está representada pelo ícone verde.
+Finalmente chegou a hora de fazer o upload do seu site na internet. Na sua conta do github, vamos criar o repositório que vai armazenar a página. Primeiro escolha criar um novo repositório. Na imagem abaixo esta opção está representada pelo ícone verde.
  
 ![](/img/Capturar.JPG){width=75% height=75%}
 
-Agora preencha o formulário de modo que o repositório seja público e seu nome esteja no formato `suaconta.github.io`.
+Agora preencha o formulário de modo que o repositório seja público e tenha nome no formato `suaconta.github.io`.  
 
 
 ![](/img/Capturar2.JPG){width=75% height=75%}
 
-Nesse ponto já temos o nosso espaço na internet aguardando para receber os arquivos. Para
-esse passo final, copie o link análogo ao da imagem abaixo que você recebeu. 
+Nesse ponto já temos o nosso espaço na internet aguardando para receber os arquivos. Para esse passo final, copie o link análogo ao da imagem abaixo que você recebeu. 
 
 
 ![](/img/Capturar3.JPG){width=100% height=100%}
 
 
-Finalmente, vamos armazenar os arquivos do site neste repositório. Abra o git bash, 
-navegue a até pasta do seu projeto e rode os seguintes comandos:
+Finalmente, vamos armazenar os arquivos do site neste repositório. Abra o git bash, navegue a até pasta do seu projeto e rode os seguintes comandos:
 
 ```
 cd public 
@@ -115,71 +86,39 @@ git commit -m "teste"
 git push origin master
 
 ```
-Pronto! Agora você já pode acessar o seu site de qualquer lugar do mundo através do 
-endereço `https://suaconta.github.io`.
+Pronto! Agora você já pode acessar o seu site de qualquer lugar do mundo através do endereço `https://suaconta.github.io`.
 
 # Editando o Conteúdo
 
-O primeiro passo para personalizar seu blog vai ser trocar o conteúdo que vem com o 
-template pelas suas próprias postagens. Vamos começar apagando os textos indesejados. 
+O primeiro passo para personalizar seu blog vai ser trocar o conteúdo que vem com o template pelas suas próprias postagens. Vamos começar apagando os textos indesejados. 
 
-Navegue até a pasta `nomedoprojeto/content/post` e apague todos os arquivos. Também 
-apague os elementos  indesejados na pasta `public`. Agora vamos inserir nosso próprio 
-conteúdo. Para tal, você pode usar o addin conforme a figura abaixo.
+Navegue até a pasta `nomedoprojeto/content/post` e apague todos os arquivos. Também apague os elementos  indesejados na pasta `public`. Agora vamos inserir nosso próprio conteúdo. Para tal, você pode usar o addin conforme a figura abaixo.
 
 ![](/img/addin.JPG){width=50% height=50%}
 
-Depois preencha o seguinte formulário. Não se preocupe em errar aqui pois tudo que você 
-escrever nesse passo será reversível.
+Depois preencha o seguinte formulário. Não se preocupe em errar aqui pois tudo que você escrever nesse passo será reversível.
 
 ![](/img/fillnewpost.JPG){width=50% height=50%}
 
-Não se assuste se receber um erro, apenas clique ok e acesse o arquivo que foi criado na 
-pasta `content/post`. O seu novo texto consiste de duas partes, os metadados e o corpo do 
-texto. Os metadados são escritos na liguagem `yaml` e incluem informações sobre o artigo, 
-como autor, data, título, e descrição. Como exemplo deixo os metadados deste texto para 
-que sua interferência na aparência de um post fique evidente:
+Não se assuste se receber um erro, apenas clique ok e acesse o arquivo que foi criado na pasta `content/post`. O seu novo texto consiste de duas partes, os metadados e o corpo do texto. Os metadados são escritos na liguagem `yaml` e incluem informações sobre o artigo, como autor, data, título, e descrição. Como exemplo deixo os metadados deste texto para que sua interferência na aparência de um post fique evidente:
 
 ![](/img/metdata.JPG){width=75% height=75%}
 
-O corpo do texto deverá ser escrito em `Markdown`. Se esse nome não for familiar para você,
-consulte o segundo capítulo [neste link](https://bookdown.org/yihui/rmarkdown/) para 
-algumas informações básicas.
+O corpo do texto deverá ser escrito em linguagem `(R)Markdown`. Se esse nome não for familiar para você, consulte o segundo capítulo [neste link](https://bookdown.org/yihui/rmarkdown/) para algumas informações básicas.
 
-Quando for o momento de atualizar a versão on-line do seu blog basta realizar o seguinte 
-processo:
-primeiro compile o projeto utilizando, por exemplo, o comando `blogdown::serve_site()` 
-e em seguida faça 
-um novo `push` do seu site no github. Para isso navegue até a pasta `public` no Git Bash e 
-rode os seguintes comandos.
+Quando for o momento de atualizar a versão on-line do seu blog basta realizar o seguinte processo:
+primeiro compile o projeto utilizando, por exemplo, o comando `blogdown::serve_site()` e em seguida faça 
+um novo `push` do seu site no github. Para isso navegue até a pasta `public` no Git Bash e rode os seguintes comandos.
 
 ```
 git add .
 git commit -m "meuprimeiropost"
 git push origin master
 ```
-# Indo Além
 
-Seguindo os passos descritos acima, somos capazes de criar um criar nosso próprio site, o 
-que por si só já é um grande feito. Entretanto, o existem muitas ferramentas que podem ser
-utilizadas para adicionar funcionalidades ao seu blog. Por exemplo, a plataforma disqus 
-permite que adicionemos comentários aos posts, possibilitando interacao entre o autor e o 
-leitor. Por sua vez, o [Google Analytics](https://analytics.google.com) tem a função de 
-monitorar os acessos e o publico do seu site. Enquanto isso, a ferramenta 
-[Altmetrics](https://www.altmetric.com/) registra os  compartilhamentos do seu trabalho. 
-O que eu faco pessoalmente é adicionar funcoes conforme a  necessidade. 
-No meu caso, muitas das informacoes eu peguei no estebam moro (links) 
+#Considerações Finais
 
-# Considerações Finais
-
-Praticamente todos os passos que descrevi nesse texto podem ser feitos outras maneiras, 
-então não se sinta preso aos passos descritos aqui. Por exemplo, uma alternativa para criar 
-um novo post é usar a função `blogdown::new_post()`. À medida em que você for se 
-acostumando  com o funcionamento de todas as peças do seu site, você deve começar 
-a ter o seu próprio  jeito de fazer cada coisa. A intenção aqui foi mostrar cada etapa da 
-forma mais acessível que  consegui, para que pessoas sem experiência em programação 
-também pudessem seguir o guia. 
+Praticamente todos os passos que descrevi nesse texto podem ser feitos outras maneiras, então não se sinta preso aos passos descritos aqui. Por exemplo, uma alternativa para criar um novo post é usar a função `blogdown::new_post()`. À medida que você se acostumar com o funcionamento de todas as peças do seu site deve começar a ter o seu próprio jeito de fazer cada coisa. A intenção aqui foi mostrar cada etapa a forma mais acessível, para que pessoas sem experiência em programação também pudessem seguir o guia. 
 
 Espero que este texto tenha sido útil.
-Por favor, deixe um comentário educado com suas impressões/sugestões sobre o texto e o 
-blog. Obrigado! 
+Por favor, deixe um comentário educado com suas impressões/sugestões sobre o texto e o blog. Obrigado! 
